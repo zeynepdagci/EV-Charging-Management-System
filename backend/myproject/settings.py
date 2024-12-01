@@ -85,6 +85,11 @@ DATABASES = {
     }
 }
 
+# AWS Configuration
+import boto3
+
+boto3.setup_default_session(region_name="your_region")
+
 
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators

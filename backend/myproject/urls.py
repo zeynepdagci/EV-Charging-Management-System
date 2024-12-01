@@ -15,8 +15,10 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 
-from django.contrib import admin
 from django.urls import path
-from myapp import views
+from .cognito_auth import CognitoSignupView, CognitoLoginView
 
-urlpatterns = [path("admin/", admin.site.urls), path("", views.home, name="home")]
+urlpatterns = [
+    path("signup/", CognitoSignupView.as_view(), name="signup"),
+    path("login/", CognitoLoginView.as_view(), name="login"),
+]
