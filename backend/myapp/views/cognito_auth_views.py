@@ -3,6 +3,7 @@ import hmac
 import hashlib
 import base64
 from botocore.exceptions import ClientError
+from rest_framework import permissions
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework.request import Request
@@ -29,6 +30,8 @@ def get_secret_hash(username):
 
 
 class CognitoSignupView(APIView):
+    permission_classes = [permissions.AllowAny]
+
     def post(self, request):
         # Extract data from request
         email = request.data.get("email")
@@ -64,6 +67,8 @@ class CognitoSignupView(APIView):
 
 
 class CognitoLoginView(APIView):
+    permission_classes = [permissions.AllowAny]
+
     def post(self, request: Request):
         email = request.data.get("email")
         password = request.data.get("password")

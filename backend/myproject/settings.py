@@ -1,3 +1,5 @@
+# settings.py
+
 """
 Django settings for myproject project.
 
@@ -10,6 +12,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
+from datetime import timedelta
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -38,6 +41,8 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "myapp",
+    "rest_framework",
+    "rest_framework_simplejwt",
 ]
 
 MIDDLEWARE = [
@@ -76,7 +81,7 @@ WSGI_APPLICATION = "myproject.wsgi.application"
 
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.mysql",  # Depending on your database engine, e.g., 'django.db.backends.mysql' for MySQL
+        "ENGINE": "django.db.backends.mysql",
         "NAME": "ev_charging_management_system",
         "USER": "admin",
         "PASSWORD": "Zi2ZvXO8iv9zW3Y7Qn0I",
@@ -131,3 +136,24 @@ STATIC_URL = "static/"
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+# Django REST Framework Settings
+REST_FRAMEWORK = {
+    "DEFAULT_AUTHENTICATION_CLASSES": (
+        "myproject.cognito_jwt_authentication.CognitoJWTAuthentication",
+    ),
+    "DEFAULT_PERMISSION_CLASSES": ("rest_framework.permissions.IsAuthenticated",),
+}
+
+SIMPLE_JWT = {
+    "ACCESS_TOKEN_LIFETIME": timedelta(minutes=60),  # Access token valid for 60 minutes
+    "REFRESH_TOKEN_LIFETIME": timedelta(days=1),  # Refresh token valid for 1 day
+    "ROTATE_REFRESH_TOKENS": True,
+    "BLACKLIST_AFTER_ROTATION": True,
+    "ALGORITHM": "HS256",
+    "SIGNING_KEY": SECRET_KEY,  # Use your Django secret key for signing
+    "AUTH_HEADER_TYPES": ("Bearer",),
+    "USER_ID_FIELD": "user_id",  # Field from UserProfile that uniquely identifies the user
+    "USER_ID_CLAIM": "sub",
+    "TOKEN_USER_CLASS": "myapp.models.UserProfile",  # Reference to your UserProfile model
+}
