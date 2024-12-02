@@ -16,8 +16,14 @@ Including another URLconf
 """
 
 from django.urls import path
-from myapp.views.charging_station_views import AddChargingStationView
-from myapp.views.cognito_auth_views import CognitoSignupView, CognitoLoginView
+from myapp.views.charging_station_views import (
+    AddChargingStationView,
+    GetUserChargingStationsView,
+)
+from myapp.views.cognito_auth_views import (
+    CognitoSignupView,
+    CognitoLoginView,
+)
 
 urlpatterns = [
     path("signup/", CognitoSignupView.as_view(), name="signup"),
@@ -26,5 +32,10 @@ urlpatterns = [
         "charging-stations/add/",
         AddChargingStationView.as_view(),
         name="add_charging_station",
+    ),
+    path(
+        "charging-stations/user/",
+        GetUserChargingStationsView.as_view(),
+        name="get-user-charging-stations",
     ),
 ]
