@@ -19,6 +19,7 @@ from django.urls import path
 from myapp.views.charging_station_views import (
     AddChargingStationView,
     GetUserChargingStationsView,
+    GetAllChargingStationsView,
 )
 from myapp.views.cognito_auth_views import (
     CognitoSignupView,
@@ -37,5 +38,10 @@ urlpatterns = [
         "charging-stations/user/",
         GetUserChargingStationsView.as_view(),
         name="get-user-charging-stations",
+    ),
+    path(
+        "charging-stations/all/",
+        GetAllChargingStationsView.as_view(),
+        name="get-all-charging-stations",
     ),
 ]

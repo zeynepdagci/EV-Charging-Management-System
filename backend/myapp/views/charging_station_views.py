@@ -42,12 +42,36 @@ class GetUserChargingStationsView(APIView):
         # Check if the user has a 'seller' role
         if user_profile.role != "seller":
             return Response(
-                {"error": "You do not have permission to fetch charging stations."},
+                {
+                    "error": "You do not have permission to fetch these charging stations."
+                },
                 status=status.HTTP_403_FORBIDDEN,
             )
 
         # Fetch all charging stations for the authenticated seller
         charging_stations = ChargingStation.objects.filter(operator=user_profile)
+
+        # Serialize the charging station data
+        serializer = ChargingStationSerializer(charging_stations, many=True)
+        return Response(serializer.data, status=status.HTTP_200_OK)
+
+
+class GetAllChargingStationsView(APIView):
+    permission_classes = [permissions.IsAuthenticated]
+
+    def get(self, request):
+        # Ensure the user is authenticated
+        user_profile = request.user
+
+        # Check if the user has a 'seller' role
+        if user_profile.role != "buyer":
+            return Response(
+                {"error": "You do not have permission to fetch all charging stations."},
+                status=status.HTTP_403_FORBIDDEN,
+            )
+
+        # Fetch all charging stations
+        charging_stations = ChargingStation.objects.all()
 
         # Serialize the charging station data
         serializer = ChargingStationSerializer(charging_stations, many=True)
