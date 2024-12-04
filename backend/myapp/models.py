@@ -1,4 +1,5 @@
 from django.db import models
+from django.utils import timezone
 
 
 class UserProfile(models.Model):
@@ -6,6 +7,8 @@ class UserProfile(models.Model):
         max_length=255, unique=True
     )  # Stores Cognito User ID
     email: models.EmailField = models.EmailField(unique=True)
+    first_name: models.CharField = models.CharField(max_length=255)
+    last_name: models.CharField = models.CharField(max_length=255)
     role: models.CharField = models.CharField(
         max_length=20,
         choices=[("buyer", "Buyer"), ("seller", "Seller"), ("admin", "Admin")],
@@ -66,3 +69,23 @@ class ChargingStation(models.Model):
 
     def __str__(self) -> str:
         return f"Station {self.station_id} at {self.location}"
+
+
+class Reservation(models.Model):
+    user = models.ForeignKey(
+        UserProfile, on_delete=models.CASCADE, related_name="reservations"
+    )
+    charging_station = models.ForeignKey(
+        ChargingStation, on_delete=models.CASCADE, related_name="reservations"
+    )
+    start_time = models.DateTimeField()
+    end_time = models.DateTimeField()
+    created_at = models.DateTimeField(default=timezone.now)
+
+    def __str__(self) -> str:
+        return f"Reservation by {self.user.email} at {self.charging_station.name} from {self.start_time} to {self.end_time}"
+
+    def duration(self) -> int:
+        """Returns the duration of the reservation in minutes."""
+        delta = self.end_time - self.start_time
+        return delta.total_seconds() // 60

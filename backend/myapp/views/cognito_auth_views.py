@@ -35,6 +35,8 @@ class CognitoSignupView(APIView):
     def post(self, request):
         # Extract data from request
         email = request.data.get("email")
+        first_name = request.data.get("first_name")
+        last_name = request.data.get("last_name")
         password = request.data.get("password")
         role = request.data.get("role", "buyer")
 
@@ -53,7 +55,11 @@ class CognitoSignupView(APIView):
             )
             # Create local UserProfile instance
             UserProfile.objects.create(
-                user_id=response["UserSub"], email=email, role=role
+                user_id=response["UserSub"],
+                email=email,
+                role=role,
+                first_name=first_name,
+                last_name=last_name,
             )
             return Response(
                 {

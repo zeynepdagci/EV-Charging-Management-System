@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/5.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.1/ref/settings/
 """
+import boto3
 
 from datetime import timedelta
 from pathlib import Path
@@ -91,9 +92,6 @@ DATABASES = {
         "PORT": "3306",
     }
 }
-
-# AWS Configuration
-import boto3
 
 boto3.setup_default_session(region_name="your_region")
 
