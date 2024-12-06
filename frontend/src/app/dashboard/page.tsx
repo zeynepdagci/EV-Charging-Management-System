@@ -1,4 +1,6 @@
+import OpenChargeMap from "@/components/Dashboard/E-commerce";
 import { Metadata } from "next";
+import DefaultLayout from "@/components/Layouts/DefaultLaout";
 import React from "react";
 import SignIn from "@/app/auth/signin/page";
 
@@ -11,7 +13,10 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <>
-      <SignIn />
+      <DefaultLayout>
+        <OpenChargeMap />
+      </DefaultLayout>
+
     </>
   );
 }

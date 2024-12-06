@@ -46,7 +46,7 @@ const SigninWithPassword: React.FC = () => {
         console.log("Sign in successful");
 
         // Redirect to dashboard page
-        window.location.href = "/";
+        window.location.href = "/dashboard";
       } else {
         const errorData = await response.json();
         setError(errorData.message || "Sign in failed. Please try again.");

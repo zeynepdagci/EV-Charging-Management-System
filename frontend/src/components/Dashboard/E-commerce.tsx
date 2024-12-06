@@ -10,12 +10,20 @@ interface ChargingStation {
   ID: number;
   AddressInfo: {
     Title: string;
+    AddressLine1?: string;
+    Town?: string;
+    StateOrProvince?: string;
+    Postcode?: string;
+    Country?: { Title: string };
     Latitude: number;
     Longitude: number;
   };
   Connections?: Array<{
     PowerKW?: number;
+    Quantity?: number;
+    ConnectionType?: { Title: string };
   }>;
+  StatusType?: { IsOperational: boolean };
 }
 
 export default function Dashboard() {
@@ -60,7 +68,15 @@ export default function Dashboard() {
                 <Popup>
                   <strong>{station.AddressInfo.Title}</strong>
                   <br />
-                  Power: {station.Connections?.[0]?.PowerKW || "N/A"} kW
+                  <em>{station.AddressInfo.AddressLine1 || "N/A"}</em>
+                  <br />
+                  {station.AddressInfo.Town || "N/A"}, {station.AddressInfo.Postcode || "N/A"}
+                  <br />
+                  <strong>Power:</strong> {station.Connections?.[0]?.PowerKW || "N/A"} kW
+                  <br />
+                  <strong>Type:</strong> {station.Connections?.[0]?.ConnectionType?.Title || "N/A"}
+                  <br />
+                  <strong>Status:</strong> {station.StatusType?.IsOperational ? "Operational" : "Not Operational"}
                   <br />
                   <button
                     onClick={() => handleReserve(station.ID)}
