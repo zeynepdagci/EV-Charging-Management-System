@@ -55,9 +55,6 @@ const ContactForm = () => {
   };
 
   return (
-    <DefaultLayout>
-      <Breadcrumb pageName="Contact Form" />
-
       <div className="flex flex-col items-center justify-center px-4">
         {/* Centered Contact Form */}
         <div className="w-full max-w-4xl rounded-lg border-4 border-white bg-white shadow-lg dark:border-dark-3 dark:bg-gray-dark">
@@ -136,7 +133,6 @@ const ContactForm = () => {
           </form>
         </div>
       </div>
-    </DefaultLayout>
   );
 };
 

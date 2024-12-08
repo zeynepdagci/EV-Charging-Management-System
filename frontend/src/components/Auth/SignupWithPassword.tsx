@@ -14,7 +14,7 @@ export default function SignupWithPassword() {
   const [success, setSuccess] = useState("");
 
   // Handle form input changes
-  const handleChange = (e) => {
+  const handleChange = (e: any) => {
     const { name, value } = e.target;
     setData((prevData) => ({
       ...prevData,
@@ -23,7 +23,7 @@ export default function SignupWithPassword() {
   };
 
   // Handle form submission for signing up
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: any) => {
     e.preventDefault();
     setError(""); // Reset error message
     setSuccess(""); // Reset success message
