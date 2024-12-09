@@ -1,12 +1,12 @@
-"use client";  // This is necessary for using hooks like useState and useEffect in a Client Component
-
+"use client"
 import React, { useState, useEffect } from "react";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 import FilterSidebar from "../Map/FilterSideBar";
-import { IconButton, Typography } from "@mui/material";
+import { IconButton, Typography, Button } from "@mui/material";  // Import Button from MUI
 import MenuIcon from "@mui/icons-material/Menu";
+import { loadStripe } from "@stripe/stripe-js";
 
 // Define the type for the charging station data
 interface ChargingStation {
@@ -69,6 +69,39 @@ export default function Dashboard() {
     fetchStations();
   }, [filters]); // Re-fetch stations when filters change
 
+
+  const stripePromise = loadStripe("pk_test_51QTtdYIcvWpTvnoduZ2Pd0i5NblzFzfmlNP6wFzj8cFgFnlBkLhmWe9QTb5AiIbkdtZ4XpbJEQGrQYOfp6ji5ZzB00M3iaV4za"); // Replace with your Stripe public key
+
+  // Handler for the Reserve button
+  const handleReserve = async (stationID: number) => {
+    // checkout();
+    // try {
+    //   const response = await fetch("/create-checkout-session", {  // Your backend endpoint
+    //     method: "POST",
+    //     body: JSON.stringify({ stationID }),
+    //     headers: {
+    //       "Content-Type": "application/json",
+    //     },
+    //   });
+
+    //   const session = await response.json();  // Session from your server
+    //   const stripe = await stripePromise;
+
+    //   // Redirect to Stripe Checkout page
+    //   const { error } = await stripe!.redirectToCheckout({
+    //     sessionId: session.id,
+    //   });
+
+    //   if (error) {
+    //     console.error("Error during Stripe Checkout:", error);
+    //   }
+    // } catch (error) {
+    //   console.error("Error during reservation:", error);
+    // }
+    console.log(`Reserved charging station with ID: ${stationID}`);
+    // Add your reservation logic here (e.g., API call, state change, etc.)
+  };
+
   return (
     <div style={{ height: "100vh" }}>
       <Typography variant="h4" gutterBottom>
@@ -106,6 +139,27 @@ export default function Dashboard() {
                   <br />
                   <strong>Status:</strong>{" "}
                   {station.StatusType?.IsOperational ? "Available" : "In Use"}
+                  <br />
+                  {/* <Button
+                    variant="contained"
+                    color="primary"
+                    onClick={() => handleReserve(station.ID)}
+                    style={{ marginTop: "10px" }}
+                  >
+                    Reserve
+                  </Button> */}
+                  <form action="/api/checkout_sessions" method="POST">
+                    <section>
+                      <Button
+                        variant="contained"
+                        color="primary"
+                        type="submit"
+                        style={{ marginTop: "10px" }}
+                      >
+                        Reserve
+                      </Button>
+                    </section>
+                  </form>
                 </Popup>
               </Marker>
             )
