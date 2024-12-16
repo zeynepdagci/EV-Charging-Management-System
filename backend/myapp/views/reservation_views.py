@@ -5,6 +5,7 @@ from django.utils import timezone
 from myapp.models import Reservation
 from myapp.serializers import ReservationSerializer
 from typing import Any
+from django.shortcuts import get_object_or_404
 
 
 class CreateReservationView(APIView):
@@ -49,3 +50,40 @@ class GetUserReservationsView(APIView):
         # Serialize the reservation data
         serializer = ReservationSerializer(reservations, many=True)
         return Response(serializer.data, status=status.HTTP_200_OK)
+
+
+class CancelReservationView(APIView):
+    permission_classes = [permissions.IsAuthenticated]
+
+    def delete(self, request: Any, reservation_id: int) -> Response:
+        user_profile = request.user
+
+        # Fetch reservation and check ownership
+        reservation = get_object_or_404(
+            Reservation, id=reservation_id, user=user_profile
+        )
+
+        # Delete reservation
+        reservation.delete()
+        return Response(
+            {"message": "Reservation canceled successfully."},
+            status=status.HTTP_200_OK,
+        )
+
+
+class UpdateReservationView(APIView):
+    permission_classes = [permissions.IsAuthenticated]
+
+    def put(self, request: Any, reservation_id: int) -> Response:
+        user_profile = request.user
+        reservation = get_object_or_404(
+            Reservation, id=reservation_id, user=user_profile
+        )
+
+        # Deserialize request
+        serializer = ReservationSerializer(reservation, data=request.data, partial=True)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_200_OK)
+
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)

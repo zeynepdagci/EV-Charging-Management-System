@@ -2,8 +2,9 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status, permissions
 from django.shortcuts import get_object_or_404
-from myapp.models import ChargingStation
+from myapp.models import ChargingStation, UserProfile
 from myapp.serializers import ChargingStationSerializer
+from typing import Any
 import logging
 
 logger = logging.getLogger(__name__)
@@ -76,3 +77,67 @@ class GetAllChargingStationsView(APIView):
         # Serialize the charging station data
         serializer = ChargingStationSerializer(charging_stations, many=True)
         return Response(serializer.data, status=status.HTTP_200_OK)
+
+
+class DeleteChargingStationView(APIView):
+    permission_classes: list[Any] = [permissions.IsAuthenticated]
+
+    def delete(self, request: Any, station_id: int) -> Response:
+        user_profile: UserProfile = request.user
+
+        # Check role-based permission
+        if user_profile.role != "seller":
+            return Response(
+                {
+                    "error": "You do not have permission to delete this charging station."
+                },
+                status=status.HTTP_403_FORBIDDEN,
+            )
+
+        # Fetch and delete the charging station
+        charging_station: ChargingStation = get_object_or_404(
+            ChargingStation, station_id=station_id, operator=user_profile
+        )
+        charging_station.delete()
+        logger.info(
+            f"Charging station {station_id} deleted by user {user_profile.email}"
+        )
+
+        return Response(
+            {"message": "Charging station deleted successfully."},
+            status=status.HTTP_204_NO_CONTENT,
+        )
+
+
+class UpdateChargingStationView(APIView):
+    permission_classes = [permissions.IsAuthenticated]
+
+    def put(self, request: Any, station_id: int) -> Response:
+        user_profile: UserProfile = request.user
+
+        # Check role-based permission
+        if user_profile.role != "seller":
+            return Response(
+                {
+                    "error": "You do not have permission to update this charging station."
+                },
+                status=status.HTTP_403_FORBIDDEN,
+            )
+
+        # Fetch the charging station to be updated
+        charging_station: ChargingStation = get_object_or_404(
+            ChargingStation, station_id=station_id, operator=user_profile
+        )
+
+        # Deserialize and validate request data
+        serializer = ChargingStationSerializer(
+            charging_station, data=request.data, partial=True
+        )
+        if serializer.is_valid():
+            serializer.save()
+            logger.info(
+                f"Charging station {station_id} updated by user {user_profile.email}"
+            )
+            return Response(serializer.data, status=status.HTTP_200_OK)
+
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)

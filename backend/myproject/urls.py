@@ -21,15 +21,18 @@ from myapp.views.charging_station_views import (
     AddChargingStationView,
     GetUserChargingStationsView,
     GetAllChargingStationsView,
+    DeleteChargingStationView,
+    UpdateChargingStationView,
 )
 from myapp.views.cognito_auth_views import (
     CognitoSignupView,
     CognitoLoginView,
 )
-
 from myapp.views.reservation_views import (
     CreateReservationView,
     GetUserReservationsView,
+    CancelReservationView,
+    UpdateReservationView,
 )
 
 
@@ -60,5 +63,25 @@ urlpatterns = [
         "get-user-reservations",
         GetUserReservationsView.as_view(),
         name="get-user-reservations",
+    ),
+    path(
+        "charging-stations/<int:station_id>/delete/",
+        DeleteChargingStationView.as_view(),
+        name="delete-charging-station",
+    ),
+    path(
+        "charging-stations/<int:station_id>/update/",
+        UpdateChargingStationView.as_view(),
+        name="update-charging-station",
+    ),
+    path(
+        "reservations/<int:reservation_id>/cancel/",
+        CancelReservationView.as_view(),
+        name="cancel-reservation",
+    ),
+    path(
+        "reservations/<int:reservation_id>/update/",
+        UpdateReservationView.as_view(),
+        name="cancel-reservation",
     ),
 ]
