@@ -16,16 +16,22 @@ export default function FilterSidebar({
     setFilters,
     fetchStations,
 }: FilterSidebarProps) {
-    const [localFilters, setLocalFilters] = useState(filters);
+    // Make sure localFilters has the correct type
+    const [localFilters, setLocalFilters] = useState<{ minPowerKw: number; distance: number; status: string }>(filters);
 
-    const handleFilterChange = (e: React.ChangeEvent<HTMLInputElement | { name?: string | undefined; value: unknown }>) => {
+    // Handle input change and update local filters
+    const handleFilterChange = (
+        e: React.ChangeEvent<HTMLInputElement | { name?: string | undefined; value: unknown }>
+    ) => {
         setLocalFilters({ ...localFilters, [e.target.name!]: e.target.value });
     };
 
+    // Handle status change (Select component)
     const handleStatusChange = (e: SelectChangeEvent<string>) => {
         setLocalFilters({ ...localFilters, status: e.target.value });
     };
 
+    // Apply filters and close the sidebar
     const applyFilters = () => {
         setFilters(localFilters);
         fetchStations();
@@ -38,6 +44,7 @@ export default function FilterSidebar({
                 <Typography variant="h6" color="primary">
                     Filters
                 </Typography>
+
                 <Box my={2}>
                     <TextField
                         label="Minimum Power (kW)"
@@ -46,8 +53,10 @@ export default function FilterSidebar({
                         value={localFilters.minPowerKw}
                         onChange={handleFilterChange}
                         fullWidth
+                        inputProps={{ min: 0 }}  // Ensure non-negative numbers for power
                     />
                 </Box>
+
                 <Box my={2}>
                     <TextField
                         label="Distance (km)"
@@ -56,8 +65,10 @@ export default function FilterSidebar({
                         value={localFilters.distance}
                         onChange={handleFilterChange}
                         fullWidth
+                        inputProps={{ min: 1 }}  // Ensure distance is at least 1 km
                     />
                 </Box>
+
                 <Box my={2}>
                     <FormControl fullWidth>
                         <InputLabel>Status</InputLabel>
@@ -72,9 +83,11 @@ export default function FilterSidebar({
                         </Select>
                     </FormControl>
                 </Box>
+
                 <Button onClick={applyFilters} color="primary" variant="contained" fullWidth>
                     Apply Filters
                 </Button>
+
                 <Button onClick={onClose} color="secondary" fullWidth>
                     Cancel
                 </Button>

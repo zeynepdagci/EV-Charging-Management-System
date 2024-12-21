@@ -43,6 +43,8 @@ const SigninWithPassword: React.FC = () => {
         const tokens = await response.json();
         localStorage.setItem("accessToken", tokens.access);
         localStorage.setItem("refreshToken", tokens.refresh);
+        localStorage.setItem("role", tokens.role);
+
         console.log("Sign in successful");
 
         // Redirect to dashboard page

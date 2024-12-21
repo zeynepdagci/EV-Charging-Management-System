@@ -49,21 +49,41 @@ export default function Dashboard() {
     const { minPowerKw, distance, status } = filters;
     const latitude = 51.509865; // Set to user's location or predefined value
     const longitude = -0.118092; // Set to user's location or predefined value
-
+  
     fetch(
       `https://api.openchargemap.io/v3/poi?latitude=${latitude}&longitude=${longitude}&distance=${distance}&minpowerkw=${minPowerKw}&key=334e438a-617a-45e6-82d9-59b9423c7962`
     )
       .then((response) => response.json())
       .then((data) => {
-        // Filter stations based on the selected status
+        // Filter stations based on the selected status and power filter
         const filteredStations = data.filter((station: ChargingStation) => {
-          if (status === "All") return true; // No filter applied
+          // Log station data to inspect PowerKW and its type
+          const powerKW = station.Connections?.[0]?.PowerKW;
+  
+          console.log(`Station ID: ${station.ID}, PowerKW: ${powerKW}, Type of PowerKW: ${typeof powerKW}, Min Power Filter: ${minPowerKw}`);
+  
+          // Check that PowerKW exists, is a number, and meets the minPowerKw filter
+          const isPowerValid =
+            powerKW && !isNaN(powerKW) && typeof powerKW === 'number' && powerKW >= minPowerKw;
+  
+          // Log whether each station passes the power filter
+          console.log(`Station ID: ${station.ID} passed power filter: ${isPowerValid}`);
+  
+          // Filter based on status
           const operational = station.StatusType?.IsOperational;
-          return status === "Available" ? operational : !operational;  // Filter based on availability
+          const isStatusValid = status === "All" || (status === "Available" && operational) || (status === "In Use" && !operational);
+  
+          // Only return stations that pass both the power and status filters
+          return isPowerValid && isStatusValid;
         });
+  
+        console.log("Filtered Stations after Power Filter:", filteredStations); // Debugging log
+  
         setChargingStations(filteredStations);
-      });
+      })
+      .catch((error) => console.error("Error fetching stations:", error));
   };
+  
 
   useEffect(() => {
     fetchStations();
@@ -104,9 +124,6 @@ export default function Dashboard() {
 
   return (
     <div style={{ height: "100vh" }}>
-      <Typography variant="h4" gutterBottom>
-        EV Charging Station Locator
-      </Typography>
       <IconButton onClick={() => setSidebarOpen(true)}>
         <MenuIcon />
       </IconButton>

@@ -5,6 +5,8 @@ import Link from "next/link";
 export default function SignupWithPassword() {
   const [data, setData] = useState({
     email: "",
+    first_name: "",
+    last_name: "",
     password: "",
     confirm_password: "",
     role: "buyer", // Default role for signup
@@ -41,6 +43,8 @@ export default function SignupWithPassword() {
         },
         body: JSON.stringify({
           email: data.email,
+          first_name: data.first_name,
+          last_name: data.last_name,
           password: data.password,
           role: data.role,
         }),
@@ -50,10 +54,13 @@ export default function SignupWithPassword() {
         setSuccess("Account created successfully. Please sign in.");
         setData({
           email: "",
+          first_name: "",
+          last_name: "",
           password: "",
           confirm_password: "",
-          role: "buyer",
+          role: "",
         });
+        window.location.href = "/auth/signin";
       } else {
         const errorData = await response.json();
         setError(errorData.message || "Sign up failed. Please try again.");
@@ -76,6 +83,34 @@ export default function SignupWithPassword() {
           value={data.email}
           onChange={handleChange}
           placeholder="Enter your email"
+          className="w-full rounded-lg border border-stroke bg-transparent py-[15px] pl-6 pr-11 font-medium text-dark outline-none focus:border-primary focus-visible:shadow-none dark:border-dark-3 dark:bg-dark-2 dark:text-white dark:focus:border-primary"
+        />
+      </div>
+
+      <div className="mb-4">
+        <label htmlFor="first_name" className="mb-2.5 block font-medium text-dark dark:text-white">
+          First Name
+        </label>
+        <input
+          type="first_name"
+          name="first_name"
+          value={data.first_name}
+          onChange={handleChange}
+          placeholder="Enter your first name"
+          className="w-full rounded-lg border border-stroke bg-transparent py-[15px] pl-6 pr-11 font-medium text-dark outline-none focus:border-primary focus-visible:shadow-none dark:border-dark-3 dark:bg-dark-2 dark:text-white dark:focus:border-primary"
+        />
+      </div>
+
+      <div className="mb-4">
+        <label htmlFor="last_name" className="mb-2.5 block font-medium text-dark dark:text-white">
+          Last Name
+        </label>
+        <input
+          type="last_name"
+          name="last_name"
+          value={data.last_name}
+          onChange={handleChange}
+          placeholder="Enter your last name"
           className="w-full rounded-lg border border-stroke bg-transparent py-[15px] pl-6 pr-11 font-medium text-dark outline-none focus:border-primary focus-visible:shadow-none dark:border-dark-3 dark:bg-dark-2 dark:text-white dark:focus:border-primary"
         />
       </div>
