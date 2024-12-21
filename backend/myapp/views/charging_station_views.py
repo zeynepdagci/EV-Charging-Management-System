@@ -6,6 +6,7 @@ from myapp.models import ChargingStation, UserProfile
 from myapp.serializers import ChargingStationSerializer
 from typing import Any
 import logging
+from myapp.utils.geocoding import get_coordinates_from_address
 
 logger = logging.getLogger(__name__)
 
@@ -25,12 +26,53 @@ class AddChargingStationView(APIView):
             )
 
         # Deserialize request data
-        serializer = ChargingStationSerializer(data=request.data)
+        # serializer = ChargingStationSerializer(data=request.data)
+        # if serializer.is_valid():
+        #     address = serializer.validated_data.get("address")
+        #     if address:
+        #         coordinates = get_coordinates_from_address(address)
+        #         if coordinates:
+        #             serializer.validated_data["latitude"] = coordinates[0]
+        #             serializer.validated_data["longitude"] = coordinates[1]
+        #         else:
+        #             return Response(
+        #                 {"error": "Could not fetch coordinates for the given address."},
+        #                 status=status.HTTP_400_BAD_REQUEST,
+        #             )
+        #     # Set operator to the current seller
+        #     serializer.save(operator=user_profile)
+        #     return Response(serializer.data, status=status.HTTP_201_CREATED)
+        # return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+        serializer_data = request.data.copy()  # Create a copy of request.data to modify
+
+        # Perform address-to-coordinate conversion before serialization
+        location = serializer_data.get("location")
+
+        if location:
+            coordinates = get_coordinates_from_address(location)   
+            logger.warning("coordinates")     
+            if coordinates:
+                serializer_data["latitude"] = coordinates[0]
+                serializer_data["longitude"] = coordinates[1]
+            else:
+                return Response(
+                    {"error": "Could not fetch coordinates for the given address."},
+                    status=status.HTTP_400_BAD_REQUEST,
+                )
+        else:
+            logger.warning("No address provided in the request.")
+
+        serializer = ChargingStationSerializer(data=serializer_data)
         if serializer.is_valid():
-            # Set operator to the current seller
-            serializer.save(operator=user_profile)
+            serializer.save(operator=request.user)
+            logger.info(f"Charging station created: {serializer.data}")
             return Response(serializer.data, status=status.HTTP_201_CREATED)
+
+        # Log serializer validation errors
+        logger.error(f"Serializer errors: {serializer.errors}")
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
 
 
 class GetUserChargingStationsView(APIView):

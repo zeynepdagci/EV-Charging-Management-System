@@ -10,6 +10,7 @@ const Logout = () => {
     const router = useRouter();
     localStorage.removeItem("accessToken");
     localStorage.removeItem("refreshToken");
+    localStorage.removeItem("role");
     console.log("Logout successful");
     
     // Redirect to sign-in page
