@@ -1,96 +1,112 @@
-"use client"
+"use client";
 import React, { useState, useEffect } from "react";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 import FilterSidebar from "../Map/FilterSideBar";
-import { IconButton, Typography, Button } from "@mui/material";  // Import Button from MUI
+import { IconButton, Typography, Button } from "@mui/material"; // Import Button from MUI
 import MenuIcon from "@mui/icons-material/Menu";
 import { loadStripe } from "@stripe/stripe-js";
 
 // Define the type for the charging station data
-interface ChargingStation {
-  ID: number;
-  AddressInfo: {
-    Title: string;
-    AddressLine1?: string;
-    Town?: string;
-    StateOrProvince?: string;
-    Postcode?: string;
-    Country?: { Title: string };
-    Latitude: number;
-    Longitude: number;
-  };
-  Connections?: Array<{
-    PowerKW?: number;
-    Quantity?: number;
-    ConnectionType?: { Title: string };
-  }>;
-  StatusType?: { IsOperational: boolean };  // Operational status from the API (Available/In Use)
+interface ChargingStationData {
+  station_id: number;
+  location: string;
+  latitude: number;
+  longitude: number;
+  availability_status: string;
+  charging_speed: string;
+  power_capacity: number;
+  price_per_kwh: number;
+  connector_types: string;
 }
 
-export default function Dashboard() {
-  const [chargingStations, setChargingStations] = useState<ChargingStation[]>([]);
-  const [isSidebarOpen, setSidebarOpen] = useState(false);
-  const [filters, setFilters] = useState({ minPowerKw: 50, distance: 10, status: "All" });
+// Create a custom icon using images from the public folder
+const customIcon = new L.Icon({
+  iconUrl: "/images/icon/marker-icon.png",
+  shadowUrl: "/images/icon/marker-shadow.png",
+  iconSize: [25, 41],
+  iconAnchor: [12, 41],
+  popupAnchor: [1, -34],
+  shadowSize: [41, 41],
+});
 
-  // Create a custom icon using images from the public folder
-  const customIcon = new L.Icon({
-    iconUrl: "/images/icon/marker-icon.png",
-    shadowUrl: "/images/icon/marker-shadow.png",
-    iconSize: [25, 41],
-    iconAnchor: [12, 41],
-    popupAnchor: [1, -34],
-    shadowSize: [41, 41],
+// Fetch stations from backend
+const fetchStations = async () => {
+  const token = localStorage.getItem("accessToken");
+
+  const response = await fetch("http://127.0.0.1:8000/charging-stations/all/", {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${token}`, // Add Bearer token
+    },
   });
 
-  // Fetch stations with filters and status from API
-  const fetchStations = () => {
-    const { minPowerKw, distance, status } = filters;
-    const latitude = 51.509865; // Set to user's location or predefined value
-    const longitude = -0.118092; // Set to user's location or predefined value
-  
-    fetch(
-      `https://api.openchargemap.io/v3/poi?latitude=${latitude}&longitude=${longitude}&distance=${distance}&minpowerkw=${minPowerKw}&key=334e438a-617a-45e6-82d9-59b9423c7962`
-    )
-      .then((response) => response.json())
-      .then((data) => {
-        // Filter stations based on the selected status and power filter
-        const filteredStations = data.filter((station: ChargingStation) => {
-          // Log station data to inspect PowerKW and its type
-          const powerKW = station.Connections?.[0]?.PowerKW;
-  
-          console.log(`Station ID: ${station.ID}, PowerKW: ${powerKW}, Type of PowerKW: ${typeof powerKW}, Min Power Filter: ${minPowerKw}`);
-  
-          // Check that PowerKW exists, is a number, and meets the minPowerKw filter
-          const isPowerValid =
-            powerKW && !isNaN(powerKW) && typeof powerKW === 'number' && powerKW >= minPowerKw;
-  
-          // Log whether each station passes the power filter
-          console.log(`Station ID: ${station.ID} passed power filter: ${isPowerValid}`);
-  
-          // Filter based on status
-          const operational = station.StatusType?.IsOperational;
-          const isStatusValid = status === "All" || (status === "Available" && operational) || (status === "In Use" && !operational);
-  
-          // Only return stations that pass both the power and status filters
-          return isPowerValid && isStatusValid;
-        });
-  
-        console.log("Filtered Stations after Power Filter:", filteredStations); // Debugging log
-  
-        setChargingStations(filteredStations);
-      })
-      .catch((error) => console.error("Error fetching stations:", error));
-  };
-  
+  const responseJSON = await response.json();
+
+  if (!response.ok) {
+    throw new Error(responseJSON);
+  }
+
+  console.log("Stations: ", responseJSON);
+  return responseJSON;
+};
+
+export default function Dashboard() {
+  const [chargingStations, setChargingStations] = useState<
+    ChargingStationData[]
+  >([]);
+  const [filteredChargingStations, setFilteredChargingStations] = useState<
+    ChargingStationData[]
+  >([]);
+  const [isSidebarOpen, setSidebarOpen] = useState(false);
+  const [filters, setFilters] = useState({
+    minPowerKw: 50,
+    distance: 10,
+    status: "All",
+  });
+
+  // Filter stations based on the selected status and power filter
+  useEffect(() => {
+    console.log("Filters:", filters);
+    const { minPowerKw, status } = filters;
+
+    const filteredStations = chargingStations.filter(
+      (station: ChargingStationData) => {
+        const isPowerValid = station.power_capacity >= minPowerKw;
+
+        // Filter based on status
+        const isStatusValid =
+          status === "All" ||
+          (status === "Available" &&
+            station.availability_status === "available") ||
+          (status === "In Use" &&
+            station.availability_status === "unavailable");
+
+        // Only return stations that pass both the power and status filters
+        return isPowerValid && isStatusValid;
+      },
+    );
+
+    setFilteredChargingStations(filteredStations);
+  }, [filters, chargingStations]); // Re-filter stations when filters or stations change
 
   useEffect(() => {
-    fetchStations();
-  }, [filters]); // Re-fetch stations when filters change
+    fetchStations()
+      .then((stations) => {
+        setChargingStations(stations);
+      })
+      .catch((error) => {
+        console.error("Error fetching stations:", error);
+        // Redirect to login page as token is invalid or expired
+        window.location.href = "/auth/signin";
+      });
+  }, []); // Fetch stations when the component mounts (on initial render)
 
-
-  const stripePromise = loadStripe("pk_test_51QTtdYIcvWpTvnoduZ2Pd0i5NblzFzfmlNP6wFzj8cFgFnlBkLhmWe9QTb5AiIbkdtZ4XpbJEQGrQYOfp6ji5ZzB00M3iaV4za"); // Replace with your Stripe public key
+  const stripePromise = loadStripe(
+    "pk_test_51QTtdYIcvWpTvnoduZ2Pd0i5NblzFzfmlNP6wFzj8cFgFnlBkLhmWe9QTb5AiIbkdtZ4XpbJEQGrQYOfp6ji5ZzB00M3iaV4za",
+  ); // Replace with your Stripe public key
 
   // Handler for the Reserve button
   const handleReserve = async (stationID: number) => {
@@ -132,32 +148,27 @@ export default function Dashboard() {
         onClose={() => setSidebarOpen(false)}
         filters={filters}
         setFilters={setFilters}
-        fetchStations={fetchStations}
       />
-      <MapContainer center={[51.509865, -0.118092]} zoom={13} style={{ height: "500px", width: "100%" }}>
+      <MapContainer
+        center={[51.509865, -0.118092]}
+        zoom={13}
+        style={{ height: "500px", width: "100%" }}
+      >
         <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-        {chargingStations.map(
-          (station) =>
-            station.AddressInfo?.Latitude &&
-            station.AddressInfo?.Longitude && (
-              <Marker
-                key={station.ID}
-                position={[station.AddressInfo.Latitude, station.AddressInfo.Longitude]}
-                icon={customIcon}
-              >
-                <Popup>
-                  <strong>{station.AddressInfo.Title}</strong>
-                  <br />
-                  <em>{station.AddressInfo.AddressLine1 || "N/A"}</em>
-                  <br />
-                  {station.AddressInfo.Town || "N/A"}, {station.AddressInfo.Postcode || "N/A"}
-                  <br />
-                  <strong>Power:</strong> {station.Connections?.[0]?.PowerKW || "N/A"} kW
-                  <br />
-                  <strong>Status:</strong>{" "}
-                  {station.StatusType?.IsOperational ? "Available" : "In Use"}
-                  <br />
-                  {/* <Button
+        {filteredChargingStations.map((station) => (
+          <Marker
+            key={station.station_id}
+            position={[station.latitude, station.longitude]}
+            icon={customIcon}
+          >
+            <Popup>
+              <strong>{station.location}</strong>
+              <br />
+              <strong>Power:</strong> {station.power_capacity} kW
+              <br />
+              <strong>Status:</strong> {station.availability_status}
+              <br />
+              {/* <Button
                     variant="contained"
                     color="primary"
                     onClick={() => handleReserve(station.ID)}
@@ -165,22 +176,21 @@ export default function Dashboard() {
                   >
                     Reserve
                   </Button> */}
-                  <form action="/api/checkout_sessions" method="POST">
-                    <section>
-                      <Button
-                        variant="contained"
-                        color="primary"
-                        type="submit"
-                        style={{ marginTop: "10px" }}
-                      >
-                        Reserve
-                      </Button>
-                    </section>
-                  </form>
-                </Popup>
-              </Marker>
-            )
-        )}
+              <form action="/api/checkout_sessions" method="POST">
+                <section>
+                  <Button
+                    variant="contained"
+                    color="primary"
+                    type="submit"
+                    style={{ marginTop: "10px" }}
+                  >
+                    Reserve
+                  </Button>
+                </section>
+              </form>
+            </Popup>
+          </Marker>
+        ))}
       </MapContainer>
     </div>
   );
