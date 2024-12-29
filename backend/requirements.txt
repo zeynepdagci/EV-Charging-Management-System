@@ -6,3 +6,4 @@ django-cors-headers
 boto3
 boto3-stubs
 mysqlclient
+stripe

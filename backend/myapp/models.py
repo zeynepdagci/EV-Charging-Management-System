@@ -81,6 +81,7 @@ class Reservation(models.Model):
     start_time = models.DateTimeField()
     end_time = models.DateTimeField()
     created_at = models.DateTimeField(default=timezone.now)
+    is_paid = models.BooleanField(default=False)
 
     def __str__(self) -> str:
         return f"Reservation by {self.user.email} at {self.charging_station.name} from {self.start_time} to {self.end_time}"

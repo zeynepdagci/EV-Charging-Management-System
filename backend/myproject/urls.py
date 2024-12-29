@@ -34,7 +34,10 @@ from myapp.views.reservation_views import (
     CancelReservationView,
     UpdateReservationView,
 )
-
+from myapp.views.stripe_views import (
+    CreateStripePaymentIntentView,
+    stripe_webhook,
+)
 
 urlpatterns = [
     path("signup/", CognitoSignupView.as_view(), name="signup"),
@@ -84,4 +87,10 @@ urlpatterns = [
         UpdateReservationView.as_view(),
         name="cancel-reservation",
     ),
+    path(
+        "create-payment-intent/",
+        CreateStripePaymentIntentView.as_view(),
+        name="create-payment-intent",
+    ),
+    path("stripe-webhook/", stripe_webhook, name="stripe-webhook"),
 ]

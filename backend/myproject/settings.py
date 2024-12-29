@@ -33,7 +33,11 @@ STRIPE_PUBLISHABLE_KEY = "pk_test_51QTtdYIcvWpTvnoduZ2Pd0i5NblzFzfmlNP6wFzj8cFgF
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    "127.0.0.1",
+    "localhost",
+    "9fb5-2a02-6b6f-fb43-d200-6d47-591-f0b1-12ad.ngrok-free.app",
+]
 
 
 # Application definition
