@@ -7,6 +7,7 @@ import FilterSidebar from "../Map/FilterSideBar";
 import { IconButton, Typography, Button } from "@mui/material"; // Import Button from MUI
 import MenuIcon from "@mui/icons-material/Menu";
 import { loadStripe } from "@stripe/stripe-js";
+import ReserveButton from "../Map/ReserveButton";
 
 // Define the type for the charging station data
 interface ChargingStationData {
@@ -176,18 +177,11 @@ export default function Dashboard() {
                   >
                     Reserve
                   </Button> */}
-              <form action="/api/checkout_sessions" method="POST">
-                <section>
-                  <Button
-                    variant="contained"
-                    color="primary"
-                    type="submit"
-                    style={{ marginTop: "10px" }}
-                  >
-                    Reserve
-                  </Button>
-                </section>
-              </form>
+              <ReserveButton
+                chargingStationId={1}
+                startTime="2024-12-30T13:30:00Z"
+                endTime="2024-12-30T14:00:00Z"
+              />
             </Popup>
           </Marker>
         ))}

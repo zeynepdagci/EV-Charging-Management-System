@@ -84,7 +84,7 @@ class Reservation(models.Model):
     is_paid = models.BooleanField(default=False)
 
     def __str__(self) -> str:
-        return f"Reservation by {self.user.email} at {self.charging_station.name} from {self.start_time} to {self.end_time}"
+        return f"Reservation by {self.user.email} at {self.charging_station.location} from {self.start_time} to {self.end_time}"
 
     def duration(self) -> int:
         """Returns the duration of the reservation in minutes."""

@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/5.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.1/ref/settings/
 """
+import os
 import boto3
 
 from datetime import timedelta
@@ -28,7 +29,7 @@ SECRET_KEY = "django-insecure-hv3k8wdm%0^k!d!(63)t@)9&#@w(_e#b-s7s85w&!ql3+68y^d
 
 STRIPE_SECRET_KEY = "sk_test_51QTtdYIcvWpTvnodpB1UjGeytPF4grF5AlhJADQpRBZGb0ojqelnheZiizqF3m1yFU5wcG8trCEeq1oEiWGKHTUT004zOsP3Eb"
 STRIPE_PUBLISHABLE_KEY = "pk_test_51QTtdYIcvWpTvnoduZ2Pd0i5NblzFzfmlNP6wFzj8cFgFnlBkLhmWe9QTb5AiIbkdtZ4XpbJEQGrQYOfp6ji5ZzB00M3iaV4za"
-
+STRIPE_WEBHOOK_SECRET = "whsec_0OKWCuyaD7GXSdMXEbJ3dw9ScDhZzeCE"
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -36,7 +37,7 @@ DEBUG = True
 ALLOWED_HOSTS = [
     "127.0.0.1",
     "localhost",
-    "9fb5-2a02-6b6f-fb43-d200-6d47-591-f0b1-12ad.ngrok-free.app",
+    "b029-209-35-66-213.ngrok-free.app",
 ]
 
 
@@ -192,3 +193,50 @@ CORS_ALLOW_METHODS = [
     "POST",
     "PUT",
 ]
+
+LOGGING = {
+    "version": 1,  # Indicates the format of the logging configuration
+    "disable_existing_loggers": False,  # Retain Django's default loggers
+    "formatters": {
+        "verbose": {
+            "format": "{levelname} {asctime} {module} {message}",
+            "style": "{",
+        },
+        "simple": {
+            "format": "{levelname} {message}",
+            "style": "{",
+        },
+    },
+    "handlers": {
+        "console": {
+            "level": "DEBUG",
+            "class": "logging.StreamHandler",
+            "formatter": "simple",  # Use the "simple" formatter
+        },
+        "file": {
+            "level": "DEBUG",
+            "class": "logging.FileHandler",
+            "filename": os.path.join(
+                BASE_DIR, "debug.log"
+            ),  # Log to a file named debug.log
+            "formatter": "verbose",  # Use the "verbose" formatter
+        },
+    },
+    "loggers": {
+        "django": {
+            "handlers": ["console", "file"],
+            "level": "INFO",
+            "propagate": True,  # Pass logs to parent loggers
+        },
+        "myapp": {
+            "handlers": ["console", "file"],
+            "level": "DEBUG",
+            "propagate": False,
+        },
+    },
+}
+
+CELERY_BROKER_URL = "redis://localhost:6379/0"  # Redis URL
+CELERY_ACCEPT_CONTENT = ["json"]
+CELERY_TASK_SERIALIZER = "json"
+CELERY_TIMEZONE = "UTC"

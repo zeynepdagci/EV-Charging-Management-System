@@ -102,7 +102,6 @@ class CognitoLoginView(APIView):
                     "id_token": id_token,
                     "refresh": str(refresh),
                     "access": str(refresh.access_token),
-                    "role": user.role
                 }
             )
         except ClientError as e:

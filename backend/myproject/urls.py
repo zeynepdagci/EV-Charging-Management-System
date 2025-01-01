@@ -35,7 +35,7 @@ from myapp.views.reservation_views import (
     UpdateReservationView,
 )
 from myapp.views.stripe_views import (
-    CreateStripePaymentIntentView,
+    CreateCheckoutSessionView,
     stripe_webhook,
 )
 
@@ -88,9 +88,9 @@ urlpatterns = [
         name="cancel-reservation",
     ),
     path(
-        "create-payment-intent/",
-        CreateStripePaymentIntentView.as_view(),
-        name="create-payment-intent",
+        "create-checkout-session/",
+        CreateCheckoutSessionView.as_view(),
+        name="create-checkout-session",
     ),
     path("stripe-webhook/", stripe_webhook, name="stripe-webhook"),
 ]

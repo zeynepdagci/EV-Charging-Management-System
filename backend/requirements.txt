@@ -7,3 +7,6 @@ boto3
 boto3-stubs
 mysqlclient
 stripe
+celery[redis]
+django-celery-beat
+gunicorn
