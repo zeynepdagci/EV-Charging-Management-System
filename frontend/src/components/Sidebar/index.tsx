@@ -355,16 +355,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
                 src={"/images/logo/logo-dark.svg"}
                 alt="Logo"
                 priority
-                className="dark:hidden"
-                style={{ width: "auto", height: "auto" }}
-              />
-              <Image
-                width={176}
-                height={32}
-                src={"/images/logo/logo.svg"}
-                alt="Logo"
-                priority
-                className="hidden dark:block"
+                className="dark:invert"
                 style={{ width: "auto", height: "auto" }}
               />
             </Link>

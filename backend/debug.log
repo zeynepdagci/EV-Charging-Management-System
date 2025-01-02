@@ -2285,3 +2285,8 @@ INFO 2025-01-02 03:17:55,335 basehttp "POST /validate-token/ HTTP/1.1" 200 14
 INFO 2025-01-02 03:17:55,684 basehttp "POST /validate-token/ HTTP/1.1" 200 14
 INFO 2025-01-02 03:17:56,678 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
 INFO 2025-01-02 03:17:57,078 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 03:20:49,298 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 03:24:08,569 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 03:24:08,930 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 03:24:09,622 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 03:24:10,015 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
