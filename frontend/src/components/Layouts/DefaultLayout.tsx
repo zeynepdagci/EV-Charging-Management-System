@@ -6,25 +6,19 @@ import Cookies from "js-cookie";
 
 export default function DefaultLayout({
   children,
+  showUserSpecificContent = true,
 }: {
   children: React.ReactNode;
+  showUserSpecificContent?: boolean;
 }) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
-
-  useEffect(() => {
-    // Check if there is a token in cookies when the component mounts
-    if (Cookies.get("accessToken") !== undefined) {
-      setIsAuthenticated(true);
-    }
-  }, []);
 
   return (
     <>
       {/* <!-- ===== Page Wrapper Star ===== --> */}
       <div className="flex h-screen overflow-hidden">
         {/* <!-- ===== Sidebar Star ===== --> */}
-        {isAuthenticated && (
+        {showUserSpecificContent && (
           <Sidebar sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
         )}
         {/* <!-- ===== Sidebar End ===== --> */}
@@ -35,7 +29,7 @@ export default function DefaultLayout({
           <Header
             sidebarOpen={sidebarOpen}
             setSidebarOpen={setSidebarOpen}
-            isAuthenticated={isAuthenticated}
+            showUserSpecificContent={showUserSpecificContent}
           />
           {/* <!-- ===== Header End ===== --> */}
 
