@@ -2290,3 +2290,287 @@ INFO 2025-01-02 03:24:08,569 basehttp "POST /validate-token/ HTTP/1.1" 200 14
 INFO 2025-01-02 03:24:08,930 basehttp "POST /validate-token/ HTTP/1.1" 200 14
 INFO 2025-01-02 03:24:09,622 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
 INFO 2025-01-02 03:24:10,015 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 03:24:45,945 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 03:47:48,694 basehttp "POST /login/ HTTP/1.1" 200 1679
+INFO 2025-01-02 03:47:49,063 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 03:47:52,412 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 03:47:52,842 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 03:48:03,629 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 03:48:04,012 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 03:48:04,708 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 03:48:05,072 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 03:48:25,294 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 03:48:25,637 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 03:48:26,861 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 03:48:27,195 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 03:48:29,172 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 03:48:29,513 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 03:48:30,847 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 03:48:31,190 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 03:48:31,660 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 03:48:31,993 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 03:48:32,969 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 03:48:33,371 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 03:49:37,154 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 03:49:39,150 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 03:49:39,638 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 03:49:42,280 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 03:49:43,622 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 03:49:45,655 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 03:49:46,065 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 03:49:56,758 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 03:50:02,736 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 03:50:03,151 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 03:50:04,767 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 03:50:10,156 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 03:50:16,126 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 03:50:16,474 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 03:51:07,761 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 03:51:15,527 basehttp "POST /login/ HTTP/1.1" 200 1672
+INFO 2025-01-02 03:51:16,916 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+WARNING 2025-01-02 03:51:17,858 log Forbidden: /charging-stations/all/
+WARNING 2025-01-02 03:51:17,859 basehttp "GET /charging-stations/all/ HTTP/1.1" 403 70
+INFO 2025-01-02 03:51:18,206 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+WARNING 2025-01-02 03:51:18,226 log Forbidden: /charging-stations/all/
+WARNING 2025-01-02 03:51:18,227 basehttp "GET /charging-stations/all/ HTTP/1.1" 403 70
+INFO 2025-01-02 03:51:18,566 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 03:51:18,616 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 03:51:18,966 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+WARNING 2025-01-02 03:51:19,893 log Forbidden: /charging-stations/all/
+WARNING 2025-01-02 03:51:19,894 basehttp "GET /charging-stations/all/ HTTP/1.1" 403 70
+WARNING 2025-01-02 03:51:20,234 log Forbidden: /charging-stations/all/
+WARNING 2025-01-02 03:51:20,235 basehttp "GET /charging-stations/all/ HTTP/1.1" 403 70
+INFO 2025-01-02 03:51:20,238 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 03:51:20,584 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 03:51:21,930 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+WARNING 2025-01-02 03:51:22,792 log Forbidden: /charging-stations/all/
+WARNING 2025-01-02 03:51:22,793 basehttp "GET /charging-stations/all/ HTTP/1.1" 403 70
+INFO 2025-01-02 03:51:23,130 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+WARNING 2025-01-02 03:51:23,167 log Forbidden: /charging-stations/all/
+WARNING 2025-01-02 03:51:23,168 basehttp "GET /charging-stations/all/ HTTP/1.1" 403 70
+INFO 2025-01-02 03:51:23,468 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 03:51:24,500 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 03:51:24,854 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+WARNING 2025-01-02 03:51:25,732 log Forbidden: /charging-stations/all/
+WARNING 2025-01-02 03:51:25,733 basehttp "GET /charging-stations/all/ HTTP/1.1" 403 70
+WARNING 2025-01-02 03:51:26,084 log Forbidden: /charging-stations/all/
+WARNING 2025-01-02 03:51:26,085 basehttp "GET /charging-stations/all/ HTTP/1.1" 403 70
+INFO 2025-01-02 03:51:26,102 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 03:51:26,448 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 03:51:26,811 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+WARNING 2025-01-02 03:51:27,645 log Forbidden: /charging-stations/all/
+WARNING 2025-01-02 03:51:27,646 basehttp "GET /charging-stations/all/ HTTP/1.1" 403 70
+INFO 2025-01-02 03:51:28,001 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+WARNING 2025-01-02 03:51:28,019 log Forbidden: /charging-stations/all/
+WARNING 2025-01-02 03:51:28,020 basehttp "GET /charging-stations/all/ HTTP/1.1" 403 70
+INFO 2025-01-02 03:51:28,353 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 03:51:28,359 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 03:51:28,730 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+WARNING 2025-01-02 03:51:29,738 log Forbidden: /charging-stations/all/
+WARNING 2025-01-02 03:51:29,739 basehttp "GET /charging-stations/all/ HTTP/1.1" 403 70
+WARNING 2025-01-02 03:51:30,074 log Forbidden: /charging-stations/all/
+WARNING 2025-01-02 03:51:30,075 basehttp "GET /charging-stations/all/ HTTP/1.1" 403 70
+INFO 2025-01-02 03:51:30,087 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 03:51:30,426 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 03:51:30,773 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+WARNING 2025-01-02 03:51:32,755 log Forbidden: /charging-stations/all/
+WARNING 2025-01-02 03:51:32,757 basehttp "GET /charging-stations/all/ HTTP/1.1" 403 70
+WARNING 2025-01-02 03:51:33,144 log Forbidden: /charging-stations/all/
+WARNING 2025-01-02 03:51:33,145 basehttp "GET /charging-stations/all/ HTTP/1.1" 403 70
+INFO 2025-01-02 03:51:33,171 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 03:51:33,521 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 03:51:33,837 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+WARNING 2025-01-02 03:51:35,298 log Forbidden: /charging-stations/all/
+WARNING 2025-01-02 03:51:35,299 basehttp "GET /charging-stations/all/ HTTP/1.1" 403 70
+INFO 2025-01-02 03:51:35,625 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+WARNING 2025-01-02 03:51:35,631 log Forbidden: /charging-stations/all/
+WARNING 2025-01-02 03:51:35,631 basehttp "GET /charging-stations/all/ HTTP/1.1" 403 70
+INFO 2025-01-02 03:51:36,006 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 03:51:36,352 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 03:51:36,967 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+WARNING 2025-01-02 03:51:37,838 log Forbidden: /charging-stations/all/
+WARNING 2025-01-02 03:51:37,839 basehttp "GET /charging-stations/all/ HTTP/1.1" 403 70
+INFO 2025-01-02 03:51:38,166 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+WARNING 2025-01-02 03:51:38,196 log Forbidden: /charging-stations/all/
+WARNING 2025-01-02 03:51:38,196 basehttp "GET /charging-stations/all/ HTTP/1.1" 403 70
+INFO 2025-01-02 03:51:38,493 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 03:51:38,530 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 03:51:38,862 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+WARNING 2025-01-02 03:51:40,252 log Forbidden: /charging-stations/all/
+WARNING 2025-01-02 03:51:40,252 basehttp "GET /charging-stations/all/ HTTP/1.1" 403 70
+WARNING 2025-01-02 03:51:40,617 log Forbidden: /charging-stations/all/
+WARNING 2025-01-02 03:51:40,618 basehttp "GET /charging-stations/all/ HTTP/1.1" 403 70
+INFO 2025-01-02 03:51:40,971 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 03:51:41,326 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 03:51:41,598 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+WARNING 2025-01-02 03:51:42,777 log Forbidden: /charging-stations/all/
+WARNING 2025-01-02 03:51:42,777 basehttp "GET /charging-stations/all/ HTTP/1.1" 403 70
+WARNING 2025-01-02 03:51:43,104 log Forbidden: /charging-stations/all/
+WARNING 2025-01-02 03:51:43,104 basehttp "GET /charging-stations/all/ HTTP/1.1" 403 70
+INFO 2025-01-02 03:51:43,132 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 03:51:43,451 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 03:51:43,797 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+WARNING 2025-01-02 03:51:45,283 log Forbidden: /charging-stations/all/
+WARNING 2025-01-02 03:51:45,283 basehttp "GET /charging-stations/all/ HTTP/1.1" 403 70
+WARNING 2025-01-02 03:51:45,623 log Forbidden: /charging-stations/all/
+INFO 2025-01-02 03:51:45,624 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+WARNING 2025-01-02 03:51:45,624 basehttp "GET /charging-stations/all/ HTTP/1.1" 403 70
+INFO 2025-01-02 03:51:45,989 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 03:51:46,348 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+WARNING 2025-01-02 03:51:48,823 log Forbidden: /charging-stations/all/
+WARNING 2025-01-02 03:51:48,823 basehttp "GET /charging-stations/all/ HTTP/1.1" 403 70
+INFO 2025-01-02 03:51:49,167 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+WARNING 2025-01-02 03:51:49,181 log Forbidden: /charging-stations/all/
+WARNING 2025-01-02 03:51:49,182 basehttp "GET /charging-stations/all/ HTTP/1.1" 403 70
+INFO 2025-01-02 03:51:49,507 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 03:51:49,572 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 03:51:49,928 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 03:52:45,797 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 03:52:46,186 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+WARNING 2025-01-02 03:52:47,219 log Forbidden: /charging-stations/all/
+WARNING 2025-01-02 03:52:47,220 basehttp "GET /charging-stations/all/ HTTP/1.1" 403 70
+INFO 2025-01-02 03:52:47,554 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+WARNING 2025-01-02 03:52:47,560 log Forbidden: /charging-stations/all/
+WARNING 2025-01-02 03:52:47,561 basehttp "GET /charging-stations/all/ HTTP/1.1" 403 70
+INFO 2025-01-02 03:52:47,916 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 03:52:47,927 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 03:52:48,274 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+WARNING 2025-01-02 03:52:49,344 log Forbidden: /charging-stations/all/
+WARNING 2025-01-02 03:52:49,344 basehttp "GET /charging-stations/all/ HTTP/1.1" 403 70
+WARNING 2025-01-02 03:52:49,679 log Forbidden: /charging-stations/all/
+WARNING 2025-01-02 03:52:49,679 basehttp "GET /charging-stations/all/ HTTP/1.1" 403 70
+INFO 2025-01-02 03:52:49,715 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 03:52:50,059 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 03:52:50,378 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+WARNING 2025-01-02 03:52:51,261 log Forbidden: /charging-stations/all/
+WARNING 2025-01-02 03:52:51,261 basehttp "GET /charging-stations/all/ HTTP/1.1" 403 70
+INFO 2025-01-02 03:52:51,585 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+WARNING 2025-01-02 03:52:51,627 log Forbidden: /charging-stations/all/
+WARNING 2025-01-02 03:52:51,627 basehttp "GET /charging-stations/all/ HTTP/1.1" 403 70
+INFO 2025-01-02 03:52:51,929 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 03:52:51,977 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 03:52:52,416 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+WARNING 2025-01-02 03:52:53,738 log Forbidden: /charging-stations/all/
+WARNING 2025-01-02 03:52:53,739 basehttp "GET /charging-stations/all/ HTTP/1.1" 403 70
+WARNING 2025-01-02 03:52:54,065 log Forbidden: /charging-stations/all/
+WARNING 2025-01-02 03:52:54,067 basehttp "GET /charging-stations/all/ HTTP/1.1" 403 70
+INFO 2025-01-02 03:52:54,094 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 03:52:54,427 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 03:52:54,853 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+WARNING 2025-01-02 03:52:55,821 log Forbidden: /charging-stations/all/
+WARNING 2025-01-02 03:52:55,823 basehttp "GET /charging-stations/all/ HTTP/1.1" 403 70
+INFO 2025-01-02 03:52:56,151 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+WARNING 2025-01-02 03:52:56,170 log Forbidden: /charging-stations/all/
+WARNING 2025-01-02 03:52:56,171 basehttp "GET /charging-stations/all/ HTTP/1.1" 403 70
+INFO 2025-01-02 03:52:56,500 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 03:52:56,512 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 03:52:56,878 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+WARNING 2025-01-02 03:52:57,729 log Forbidden: /charging-stations/all/
+WARNING 2025-01-02 03:52:57,737 basehttp "GET /charging-stations/all/ HTTP/1.1" 403 70
+INFO 2025-01-02 03:52:58,106 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+WARNING 2025-01-02 03:52:58,107 log Forbidden: /charging-stations/all/
+WARNING 2025-01-02 03:52:58,107 basehttp "GET /charging-stations/all/ HTTP/1.1" 403 70
+INFO 2025-01-02 03:52:58,439 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 03:52:58,439 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 03:52:58,784 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+WARNING 2025-01-02 03:52:59,646 log Forbidden: /charging-stations/all/
+WARNING 2025-01-02 03:52:59,647 basehttp "GET /charging-stations/all/ HTTP/1.1" 403 70
+WARNING 2025-01-02 03:52:59,986 log Forbidden: /charging-stations/all/
+WARNING 2025-01-02 03:52:59,986 basehttp "GET /charging-stations/all/ HTTP/1.1" 403 70
+INFO 2025-01-02 03:52:59,991 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 03:53:00,425 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 03:53:00,802 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+WARNING 2025-01-02 03:53:01,755 log Forbidden: /charging-stations/all/
+WARNING 2025-01-02 03:53:01,755 basehttp "GET /charging-stations/all/ HTTP/1.1" 403 70
+INFO 2025-01-02 03:53:02,093 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+WARNING 2025-01-02 03:53:02,098 log Forbidden: /charging-stations/all/
+WARNING 2025-01-02 03:53:02,098 basehttp "GET /charging-stations/all/ HTTP/1.1" 403 70
+INFO 2025-01-02 03:53:02,419 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 03:53:02,433 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 03:57:58,157 basehttp "POST /login/ HTTP/1.1" 200 1672
+INFO 2025-01-02 03:57:58,561 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+WARNING 2025-01-02 03:57:59,706 log Forbidden: /charging-stations/all/
+WARNING 2025-01-02 03:57:59,707 basehttp "GET /charging-stations/all/ HTTP/1.1" 403 70
+WARNING 2025-01-02 03:58:00,041 log Forbidden: /charging-stations/all/
+WARNING 2025-01-02 03:58:00,041 basehttp "GET /charging-stations/all/ HTTP/1.1" 403 70
+INFO 2025-01-02 03:58:00,049 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 03:58:00,471 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 03:58:00,828 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+WARNING 2025-01-02 03:58:01,940 log Forbidden: /charging-stations/all/
+WARNING 2025-01-02 03:58:01,941 basehttp "GET /charging-stations/all/ HTTP/1.1" 403 70
+INFO 2025-01-02 03:58:02,301 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+WARNING 2025-01-02 03:58:02,310 log Forbidden: /charging-stations/all/
+WARNING 2025-01-02 03:58:02,311 basehttp "GET /charging-stations/all/ HTTP/1.1" 403 70
+INFO 2025-01-02 03:58:02,652 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 03:58:02,695 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 03:58:03,046 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+WARNING 2025-01-02 03:58:04,192 log Forbidden: /charging-stations/all/
+WARNING 2025-01-02 03:58:04,192 basehttp "GET /charging-stations/all/ HTTP/1.1" 403 70
+INFO 2025-01-02 03:58:04,547 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+WARNING 2025-01-02 03:58:04,548 log Forbidden: /charging-stations/all/
+WARNING 2025-01-02 03:58:04,549 basehttp "GET /charging-stations/all/ HTTP/1.1" 403 70
+INFO 2025-01-02 03:58:04,874 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 03:58:05,202 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+WARNING 2025-01-02 03:58:06,300 log Forbidden: /charging-stations/all/
+WARNING 2025-01-02 03:58:06,300 basehttp "GET /charging-stations/all/ HTTP/1.1" 403 70
+WARNING 2025-01-02 03:58:06,625 log Forbidden: /charging-stations/all/
+WARNING 2025-01-02 03:58:06,626 basehttp "GET /charging-stations/all/ HTTP/1.1" 403 70
+INFO 2025-01-02 03:58:06,657 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 03:58:06,970 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 03:58:07,308 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 04:02:21,268 basehttp "OPTIONS /login/ HTTP/1.1" 200 0
+INFO 2025-01-02 04:02:22,193 basehttp "POST /login/ HTTP/1.1" 200 1679
+INFO 2025-01-02 04:02:22,571 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 04:02:23,729 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 04:02:24,100 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 04:07:54,579 autoreload /Users/catalin/Coding/EV-Charging-Management-System/backend/myapp/views/cognito_auth_views.py changed, reloading.
+INFO 2025-01-02 04:07:55,264 autoreload Watching for file changes with StatReloader
+INFO 2025-01-02 04:08:02,244 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 04:08:15,288 basehttp "POST /login/ HTTP/1.1" 200 1688
+INFO 2025-01-02 04:08:15,672 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+WARNING 2025-01-02 04:08:16,783 log Forbidden: /charging-stations/all/
+WARNING 2025-01-02 04:08:16,783 basehttp "GET /charging-stations/all/ HTTP/1.1" 403 70
+WARNING 2025-01-02 04:08:17,116 log Forbidden: /charging-stations/all/
+WARNING 2025-01-02 04:08:17,117 basehttp "GET /charging-stations/all/ HTTP/1.1" 403 70
+INFO 2025-01-02 04:08:17,125 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 04:08:17,469 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 04:08:17,826 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+WARNING 2025-01-02 04:08:18,966 log Forbidden: /charging-stations/all/
+WARNING 2025-01-02 04:08:18,967 basehttp "GET /charging-stations/all/ HTTP/1.1" 403 70
+WARNING 2025-01-02 04:08:19,331 log Forbidden: /charging-stations/all/
+WARNING 2025-01-02 04:08:19,332 basehttp "GET /charging-stations/all/ HTTP/1.1" 403 70
+INFO 2025-01-02 04:08:19,332 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 04:08:19,685 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 04:08:20,019 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+WARNING 2025-01-02 04:08:21,132 log Forbidden: /charging-stations/all/
+WARNING 2025-01-02 04:08:21,133 basehttp "GET /charging-stations/all/ HTTP/1.1" 403 70
+WARNING 2025-01-02 04:08:21,465 log Forbidden: /charging-stations/all/
+WARNING 2025-01-02 04:08:21,466 basehttp "GET /charging-stations/all/ HTTP/1.1" 403 70
+INFO 2025-01-02 04:08:21,871 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 04:08:22,211 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 04:08:22,500 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+WARNING 2025-01-02 04:08:23,301 log Forbidden: /charging-stations/all/
+WARNING 2025-01-02 04:08:23,301 basehttp "GET /charging-stations/all/ HTTP/1.1" 403 70
+WARNING 2025-01-02 04:08:23,632 log Forbidden: /charging-stations/all/
+WARNING 2025-01-02 04:08:23,632 basehttp "GET /charging-stations/all/ HTTP/1.1" 403 70
+INFO 2025-01-02 04:08:23,639 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 04:08:23,988 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 04:08:24,320 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+WARNING 2025-01-02 04:08:25,390 log Forbidden: /charging-stations/all/
+WARNING 2025-01-02 04:08:25,391 basehttp "GET /charging-stations/all/ HTTP/1.1" 403 70
+INFO 2025-01-02 04:08:25,740 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+WARNING 2025-01-02 04:08:25,760 log Forbidden: /charging-stations/all/
+WARNING 2025-01-02 04:08:25,760 basehttp "GET /charging-stations/all/ HTTP/1.1" 403 70
+INFO 2025-01-02 04:08:26,100 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 04:08:26,119 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 04:08:26,475 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 04:21:21,193 autoreload /Users/catalin/Coding/EV-Charging-Management-System/backend/myproject/cognito_jwt_authentication.py changed, reloading.
+INFO 2025-01-02 04:21:21,832 autoreload Watching for file changes with StatReloader
+INFO 2025-01-02 04:21:38,224 autoreload /Users/catalin/Coding/EV-Charging-Management-System/backend/myproject/cognito_jwt_authentication.py changed, reloading.
+INFO 2025-01-02 04:21:38,621 autoreload Watching for file changes with StatReloader
+INFO 2025-01-02 04:21:42,831 autoreload /Users/catalin/Coding/EV-Charging-Management-System/backend/myproject/cognito_jwt_authentication.py changed, reloading.
+INFO 2025-01-02 04:21:43,161 autoreload Watching for file changes with StatReloader
+INFO 2025-01-02 04:21:54,937 autoreload /Users/catalin/Coding/EV-Charging-Management-System/backend/myproject/cognito_jwt_authentication.py changed, reloading.
+INFO 2025-01-02 04:21:55,568 autoreload Watching for file changes with StatReloader
+INFO 2025-01-02 04:32:57,180 autoreload /Users/catalin/Coding/EV-Charging-Management-System/backend/myproject/cognito_jwt_authentication.py changed, reloading.
+INFO 2025-01-02 04:32:57,607 autoreload Watching for file changes with StatReloader
