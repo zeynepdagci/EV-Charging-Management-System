@@ -102,9 +102,6 @@ DATABASES = {
     }
 }
 
-boto3.setup_default_session(region_name="your_region")
-
-
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
 
@@ -146,25 +143,19 @@ STATIC_URL = "static/"
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
+COGNITO_AWS_REGION = "eu-north-1"
+COGNITO_USER_POOL = "eu-north-1_Of3sycnhD"
+COGNITO_AUDIENCE = "13o77rhl3m3inmn0nl31dpd1m1"
+
+COGNITO_USER_MODEL = "myapp.UserProfile"
+AUTH_USER_MODEL = "myapp.UserProfile"
+
 # Django REST Framework Settings
 REST_FRAMEWORK = {
     "DEFAULT_AUTHENTICATION_CLASSES": (
-        "myproject.cognito_jwt_authentication.CognitoJWTAuthentication",
+        "django_cognito_jwt.JSONWebTokenAuthentication",
     ),
     "DEFAULT_PERMISSION_CLASSES": ("rest_framework.permissions.IsAuthenticated",),
-}
-
-SIMPLE_JWT = {
-    "ACCESS_TOKEN_LIFETIME": timedelta(minutes=60),  # Access token valid for 60 minutes
-    "REFRESH_TOKEN_LIFETIME": timedelta(days=1),  # Refresh token valid for 1 day
-    "ROTATE_REFRESH_TOKENS": True,
-    "BLACKLIST_AFTER_ROTATION": True,
-    "ALGORITHM": "HS256",
-    "SIGNING_KEY": SECRET_KEY,  # Use your Django secret key for signing
-    "AUTH_HEADER_TYPES": ("Bearer",),
-    "USER_ID_FIELD": "user_id",  # Field from UserProfile that uniquely identifies the user
-    "USER_ID_CLAIM": "sub",
-    "TOKEN_USER_CLASS": "myapp.models.UserProfile",  # Reference to your UserProfile model
 }
 
 CORS_ALLOWED_ORIGINS = [

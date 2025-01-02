@@ -50,8 +50,8 @@ class AddChargingStationView(APIView):
         location = serializer_data.get("location")
 
         if location:
-            coordinates = get_coordinates_from_address(location)   
-            logger.warning("coordinates")     
+            coordinates = get_coordinates_from_address(location)
+            logger.warning("coordinates")
             if coordinates:
                 serializer_data["latitude"] = coordinates[0]
                 serializer_data["longitude"] = coordinates[1]
@@ -74,14 +74,12 @@ class AddChargingStationView(APIView):
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
-
 class GetUserChargingStationsView(APIView):
     permission_classes = [permissions.IsAuthenticated]
 
     def get(self, request):
         # Ensure the user is authenticated
         user_profile = request.user
-
         # Check if the user has a 'seller' role
         if user_profile.role != "seller":
             return Response(
@@ -103,16 +101,6 @@ class GetAllChargingStationsView(APIView):
     permission_classes = [permissions.IsAuthenticated]
 
     def get(self, request):
-        # Ensure the user is authenticated
-        user_profile = request.user
-
-        # Check if the user has a 'seller' role
-        if user_profile.role != "buyer":
-            return Response(
-                {"error": "You do not have permission to fetch all charging stations."},
-                status=status.HTTP_403_FORBIDDEN,
-            )
-
         # Fetch all charging stations
         charging_stations = ChargingStation.objects.all()
 

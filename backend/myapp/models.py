@@ -1,8 +1,22 @@
 from django.db import models
 from django.utils import timezone
+from django.db import IntegrityError
+from django.contrib.auth.models import AbstractBaseUser, PermissionsMixin
+from django.contrib.auth.models import UserManager as _UserManager
 
 
-class UserProfile(models.Model):
+class UserManager(_UserManager):
+    def get_or_create_for_cognito(self, payload):
+        cognito_id = payload["sub"]
+
+        return self.get(user_id=cognito_id)
+
+
+class UserProfile(AbstractBaseUser, PermissionsMixin):
+    last_login = None
+    password = None
+    is_superuser = None
+
     user_id: models.CharField = models.CharField(
         max_length=255, unique=True
     )  # Stores Cognito User ID
@@ -13,6 +27,11 @@ class UserProfile(models.Model):
         max_length=20,
         choices=[("buyer", "Buyer"), ("seller", "Seller"), ("admin", "Admin")],
     )
+
+    USERNAME_FIELD = "email"
+    REQUIRED_FIELDS = []
+
+    objects = UserManager()
 
 
 class ChargingStation(models.Model):

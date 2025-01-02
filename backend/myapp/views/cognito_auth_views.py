@@ -96,12 +96,9 @@ class CognitoLoginView(APIView):
             # Generate JWT Tokens for user
             id_token = response["AuthenticationResult"]["IdToken"]
             user = get_object_or_404(UserProfile, email=email)
-            refresh = RefreshToken.for_user(user)
             return Response(
                 {
-                    "id_token": id_token,
-                    "refresh": str(refresh),
-                    "access": str(refresh.access_token),
+                    "access": id_token,
                     "role": user.role,
                 }
             )
