@@ -7,6 +7,7 @@ import Image from "next/image";
 import SidebarItem from "@/components/Sidebar/SidebarItem";
 import ClickOutside from "@/components/ClickOutside";
 import useLocalStorage from "@/hooks/useLocalStorage";
+import Cookies from "js-cookie";
 
 interface SidebarProps {
   sidebarOpen: boolean;
@@ -40,7 +41,7 @@ const menuGroups = [
           </svg>
         ),
         label: "Charging Stations",
-        route: "/dashboard"
+        route: "/dashboard",
       },
       {
         icon: (
@@ -67,8 +68,9 @@ const menuGroups = [
           </svg>
         ),
         label: "Manage Charging Stations",
-        route: "/manage-charging-stations"
+        route: "/manage-charging-stations",
       },
+      ,
       // ,
       // {
       //   icon: (
@@ -115,7 +117,6 @@ const menuGroups = [
       //   label: "Calendar",
       //   route: "/calendar",
       // }
-      ,
       {
         icon: (
           <svg
@@ -188,9 +189,7 @@ const menuGroups = [
         ),
         label: "Tables",
         route: "#",
-        children: [
-          { label: "Tables", route: "/tables" },
-        ],
+        children: [{ label: "Tables", route: "/tables" }],
       },
       {
         icon: (
@@ -211,7 +210,7 @@ const menuGroups = [
           </svg>
         ),
         label: "QuickSight",
-        route: "/quicksightdashboard",        
+        route: "/quicksightdashboard",
       },
       // {
       //   icon: (
@@ -317,7 +316,6 @@ const menuGroups = [
   // },
 ];
 
-
 const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
   const pathname = usePathname();
 
@@ -327,9 +325,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
   const [userRole, setUserRoleAuthenticated] = useState(false);
 
   useEffect(() => {
-    const token = localStorage.getItem("accessToken");
-
-    if (token) {
+    if (Cookies.get("accessToken") !== undefined) {
       setIsAuthenticated(true);
     }
 
@@ -344,10 +340,11 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
     <ClickOutside onClick={() => setSidebarOpen(false)}>
       {isAuthenticated && (
         <aside
-          className={`absolute left-0 top-0 z-9999 flex h-screen w-72.5 flex-col overflow-y-hidden border-r border-stroke bg-white dark:border-stroke-dark dark:bg-gray-dark lg:static lg:translate-x-0 ${sidebarOpen
+          className={`absolute left-0 top-0 z-9999 flex h-screen w-72.5 flex-col overflow-y-hidden border-r border-stroke bg-white dark:border-stroke-dark dark:bg-gray-dark lg:static lg:translate-x-0 ${
+            sidebarOpen
               ? "translate-x-0 duration-300 ease-linear"
               : "-translate-x-full"
-            }`}
+          }`}
         >
           {/* <!-- SIDEBAR HEADER --> */}
           <div className="flex items-center justify-between gap-2 px-6 py-5.5 lg:py-6.5 xl:py-10">
@@ -402,7 +399,11 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
                     {group.name}
                   </h3>
                   <ul className="mb-6 flex flex-col gap-2">
-                    {group.menuItems.filter((menuItem, menuIndex) => !(menuIndex === 1 && !userRole))
+                    {group.menuItems
+                      .filter(
+                        (menuItem, menuIndex) =>
+                          !(menuIndex === 1 && !userRole),
+                      )
                       .map((menuItem, menuIndex) => (
                         <SidebarItem
                           key={menuIndex}
@@ -417,11 +418,10 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
             </nav>
             {/* <!-- Sidebar Menu --> */}
           </div>
-        </aside>)}
+        </aside>
+      )}
     </ClickOutside>
   );
 };
 
 export default Sidebar;
-
-

@@ -1,12 +1,11 @@
 import OpenChargeMap from "@/components/Dashboard";
 import { Metadata } from "next";
-import DefaultLayout from "@/components/Layouts/DefaultLaout";
+import DefaultLayout from "@/components/Layouts/DefaultLayout";
 import React from "react";
 import Breadcrumb from "@/components/Breadcrumbs/Breadcrumb";
 
 export const metadata: Metadata = {
-  title:
-    "Next.js EV Dashboard Page | NextAdmin - Next.js Dashboard Kit",
+  title: "Next.js EV Dashboard Page | NextAdmin - Next.js Dashboard Kit",
   description: "This is Next.js Home page for NextAdmin Dashboard Kit",
 };
 

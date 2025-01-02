@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import Breadcrumb from "@/components/Breadcrumbs/Breadcrumb";
 import { Metadata } from "next";
-import DefaultLayout from "@/components/Layouts/DefaultLaout";
+import DefaultLayout from "@/components/Layouts/DefaultLayout";
 import Signin from "@/components/Auth/Signin";
 import ContactForm from "@/components/ContactForm";
 
@@ -17,7 +17,6 @@ const Form: React.FC = () => {
     <DefaultLayout>
       {/* <Breadcrumb pageName="Sign In" /> */}
 
-
       {/* <div className="rounded-[10px] bg-white shadow-md dark:bg-gray-dark dark:shadow-card p-8">
         <div className="flex justify-center items-center">
           <div className="w-full max-w-4xl">
@@ -26,18 +25,15 @@ const Form: React.FC = () => {
         </div>
       </div> */}
 
-
       {/* <div className="rounded-[10px] bg-white shadow-md dark:bg-gray-dark dark:shadow-card p-8">
         <div className="w-full">
           <ContactForm />
         </div>
       </div> */}
 
-
       <div className="w-full">
         <ContactForm />
       </div>
-
 
       {/* <div className="rounded-[10px] bg-white shadow-1 dark:bg-gray-dark dark:shadow-card">
         <div className="flex flex-wrap items-center">

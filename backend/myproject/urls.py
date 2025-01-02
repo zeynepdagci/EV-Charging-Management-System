@@ -27,6 +27,7 @@ from myapp.views.charging_station_views import (
 from myapp.views.cognito_auth_views import (
     CognitoSignupView,
     CognitoLoginView,
+    ValidateTokenView,
 )
 from myapp.views.reservation_views import (
     CreateReservationView,
@@ -42,6 +43,7 @@ from myapp.views.stripe_views import (
 urlpatterns = [
     path("signup/", CognitoSignupView.as_view(), name="signup"),
     path("login/", CognitoLoginView.as_view(), name="login"),
+    path("validate-token/", ValidateTokenView.as_view(), name="validate-token"),
     path(
         "charging-stations/add/",
         AddChargingStationView.as_view(),

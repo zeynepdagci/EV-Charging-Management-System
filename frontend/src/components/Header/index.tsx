@@ -3,11 +3,12 @@ import DarkModeSwitcher from "./DarkModeSwitcher";
 import DropdownNotification from "./DropdownNotification";
 import DropdownUser from "./DropdownUser";
 import Image from "next/image";
-import SearchForm from "@/components/Header/SearchForm";
+import { useEffect, useState } from "react";
 
 const Header = (props: {
   sidebarOpen: string | boolean | undefined;
   setSidebarOpen: (arg0: boolean) => void;
+  isAuthenticated: boolean;
 }) => {
   return (
     <header className="sticky top-0 z-999 flex w-full border-b border-stroke bg-white dark:border-stroke-dark dark:bg-gray-dark">
@@ -69,29 +70,24 @@ const Header = (props: {
         <div className="hidden xl:block">
           <div>
             <h1 className="mb-0.5 text-heading-5 font-bold text-dark dark:text-white">
-              Dashboard
+              EV Charging Stations
             </h1>
-            <p className="font-medium">Next.js Admin Dashboard Solution</p>
           </div>
         </div>
 
         <div className="flex items-center justify-normal gap-2 2xsm:gap-4 lg:w-full lg:justify-between xl:w-auto xl:justify-normal">
           <ul className="flex items-center gap-2 2xsm:gap-4">
-            {/* <!-- Search Form --> */}
-            <SearchForm />
-            {/* <!-- Search Form --> */}
-
             {/* <!-- Dark Mode Toggle --> */}
             <DarkModeSwitcher />
             {/* <!-- Dark Mode Toggle --> */}
 
             {/* <!-- Notification Menu Area --> */}
-            <DropdownNotification />
+            {props.isAuthenticated && <DropdownNotification />}
             {/* <!-- Notification Menu Area --> */}
           </ul>
 
           {/* <!-- User Area --> */}
-          <DropdownUser />
+          {props.isAuthenticated && <DropdownUser />}
           {/* <!-- User Area --> */}
         </div>
       </div>

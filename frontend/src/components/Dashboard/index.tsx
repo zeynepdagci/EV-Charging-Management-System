@@ -8,6 +8,7 @@ import { IconButton, Typography, Button } from "@mui/material"; // Import Button
 import MenuIcon from "@mui/icons-material/Menu";
 import { loadStripe } from "@stripe/stripe-js";
 import ReserveButton from "../Map/ReserveButton";
+import Cookies from "js-cookie";
 
 // Define the type for the charging station data
 interface ChargingStationData {
@@ -34,7 +35,10 @@ const customIcon = new L.Icon({
 
 // Fetch stations from backend
 const fetchStations = async () => {
-  const token = localStorage.getItem("accessToken");
+  const token = Cookies.get("accessToken");
+  if (token === undefined) {
+    throw new Error("No access token found");
+  }
 
   const response = await fetch("http://127.0.0.1:8000/charging-stations/all/", {
     method: "GET",

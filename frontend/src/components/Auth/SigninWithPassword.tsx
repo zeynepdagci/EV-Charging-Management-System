@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Link from "next/link";
+import Cookies from "js-cookie";
 
 interface SignInData {
   email: string;
@@ -41,8 +42,8 @@ const SigninWithPassword: React.FC = () => {
 
       if (response.ok) {
         const tokens = await response.json();
-        localStorage.setItem("accessToken", tokens.access);
-        localStorage.setItem("refreshToken", tokens.refresh);
+
+        Cookies.set("accessToken", tokens.access);
         localStorage.setItem("role", tokens.role);
 
         console.log("Sign in successful");
@@ -62,7 +63,10 @@ const SigninWithPassword: React.FC = () => {
   return (
     <form onSubmit={handleSubmit}>
       <div className="mb-4">
-        <label htmlFor="email" className="mb-2.5 block font-medium text-dark dark:text-white">
+        <label
+          htmlFor="email"
+          className="mb-2.5 block font-medium text-dark dark:text-white"
+        >
           Email
         </label>
         <input
@@ -75,7 +79,10 @@ const SigninWithPassword: React.FC = () => {
         />
       </div>
       <div className="mb-5">
-        <label htmlFor="password" className="mb-2.5 block font-medium text-dark dark:text-white">
+        <label
+          htmlFor="password"
+          className="mb-2.5 block font-medium text-dark dark:text-white"
+        >
           Password
         </label>
         <input
@@ -88,14 +95,13 @@ const SigninWithPassword: React.FC = () => {
         />
       </div>
 
-      {error && (
-        <div className="mb-4 text-red-500 font-medium">
-          {error}
-        </div>
-      )}
+      {error && <div className="mb-4 font-medium text-red-500">{error}</div>}
 
       <div className="mb-4.5">
-        <button type="submit" className="w-full rounded-lg bg-primary p-4 font-medium text-white hover:bg-opacity-90">
+        <button
+          type="submit"
+          className="w-full rounded-lg bg-primary p-4 font-medium text-white hover:bg-opacity-90"
+        >
           Sign In
         </button>
       </div>
@@ -113,4 +119,3 @@ const SigninWithPassword: React.FC = () => {
 };
 
 export default SigninWithPassword;
-

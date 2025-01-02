@@ -1,7 +1,6 @@
-
 import Breadcrumb from "@/components/Breadcrumbs/Breadcrumb";
 import { Metadata } from "next";
-import DefaultLayout from "@/components/Layouts/DefaultLaout";
+import DefaultLayout from "@/components/Layouts/DefaultLayout";
 import ManageStations from "@/components/ManageChargingStations";
 
 export const metadata: Metadata = {
@@ -12,14 +11,13 @@ export const metadata: Metadata = {
 const ManageChargingStations = () => {
   return (
     <DefaultLayout>
-    <div className="w-full max-w-[970px]">
-      <Breadcrumb pageName="Manage Charging Stations" />
+      <div className="w-full max-w-[970px]">
+        <Breadcrumb pageName="Manage Charging Stations" />
 
-      <ManageStations />
-    </div>
+        <ManageStations />
+      </div>
     </DefaultLayout>
   );
 };
 
 export default ManageChargingStations;
-

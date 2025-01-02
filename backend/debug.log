@@ -430,3 +430,1858 @@ INFO 2025-01-01 15:43:30,947 basehttp "OPTIONS /create-checkout-session/ HTTP/1.
 INFO 2025-01-01 15:43:31,462 stripe_views Created reservation: 27
 ERROR 2025-01-01 15:43:37,609 stripe_views Failed to schedule cleanup task: Error 61 connecting to localhost:6379. Connection refused.
 INFO 2025-01-01 15:43:38,274 basehttp "POST /create-checkout-session/ HTTP/1.1" 200 373
+INFO 2025-01-01 23:56:29,567 autoreload Watching for file changes with StatReloader
+INFO 2025-01-01 23:56:33,519 basehttp "OPTIONS /login/ HTTP/1.1" 200 0
+INFO 2025-01-01 23:56:34,535 basehttp "POST /login/ HTTP/1.1" 200 1679
+INFO 2025-01-01 23:56:41,265 basehttp "OPTIONS /charging-stations/all/ HTTP/1.1" 200 0
+INFO 2025-01-01 23:56:41,267 basehttp "OPTIONS /charging-stations/all/ HTTP/1.1" 200 0
+INFO 2025-01-01 23:56:41,694 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-01 23:56:42,090 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-01 23:56:58,742 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-01 23:56:59,175 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-01 23:57:35,020 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-01 23:57:35,421 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+WARNING 2025-01-01 23:58:49,862 log Forbidden: /charging-stations/all/
+WARNING 2025-01-01 23:58:49,863 basehttp "GET /charging-stations/all/ HTTP/1.1" 403 27
+WARNING 2025-01-01 23:58:49,869 log Forbidden: /charging-stations/all/
+WARNING 2025-01-01 23:58:49,870 basehttp "GET /charging-stations/all/ HTTP/1.1" 403 27
+INFO 2025-01-02 00:06:36,248 basehttp "POST /login/ HTTP/1.1" 200 1679
+INFO 2025-01-02 00:06:37,676 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 00:06:38,095 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 00:08:33,116 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 00:08:33,539 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 00:08:37,728 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 00:08:38,146 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 00:08:39,658 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 00:08:40,066 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 00:08:48,069 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 00:08:48,462 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 00:12:26,200 autoreload /Users/catalin/Coding/EV-Charging-Management-System/backend/myapp/views/cognito_auth_views.py changed, reloading.
+INFO 2025-01-02 00:12:27,073 autoreload Watching for file changes with StatReloader
+INFO 2025-01-02 00:12:56,703 autoreload /Users/catalin/Coding/EV-Charging-Management-System/backend/myapp/views/cognito_auth_views.py changed, reloading.
+INFO 2025-01-02 00:12:57,472 autoreload Watching for file changes with StatReloader
+INFO 2025-01-02 00:13:03,978 autoreload /Users/catalin/Coding/EV-Charging-Management-System/backend/myapp/views/cognito_auth_views.py changed, reloading.
+INFO 2025-01-02 00:13:04,436 autoreload Watching for file changes with StatReloader
+INFO 2025-01-02 00:13:08,314 autoreload /Users/catalin/Coding/EV-Charging-Management-System/backend/myapp/views/cognito_auth_views.py changed, reloading.
+INFO 2025-01-02 00:13:08,947 autoreload Watching for file changes with StatReloader
+INFO 2025-01-02 00:13:39,515 autoreload /Users/catalin/Coding/EV-Charging-Management-System/backend/myproject/urls.py changed, reloading.
+INFO 2025-01-02 00:13:40,325 autoreload Watching for file changes with StatReloader
+INFO 2025-01-02 00:13:48,307 autoreload /Users/catalin/Coding/EV-Charging-Management-System/backend/myproject/urls.py changed, reloading.
+INFO 2025-01-02 00:13:48,917 autoreload Watching for file changes with StatReloader
+INFO 2025-01-02 00:20:11,991 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 00:20:12,400 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 00:20:15,777 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 00:20:16,183 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 00:20:18,789 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 00:20:19,181 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 00:20:26,802 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 00:20:27,196 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 00:20:30,056 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 00:20:30,458 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 00:20:47,213 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 00:20:47,593 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 00:20:51,747 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 00:20:52,152 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 00:20:54,665 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 00:20:55,062 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 00:21:08,742 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 00:21:09,147 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 00:22:21,127 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 00:22:21,548 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 00:22:29,616 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 00:22:30,013 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 00:24:03,725 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 00:24:04,129 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+WARNING 2025-01-02 00:36:55,679 log Forbidden: /charging-stations/all/
+WARNING 2025-01-02 00:36:55,680 basehttp "GET /charging-stations/all/ HTTP/1.1" 403 27
+WARNING 2025-01-02 00:36:55,686 log Forbidden: /charging-stations/all/
+WARNING 2025-01-02 00:36:55,686 basehttp "GET /charging-stations/all/ HTTP/1.1" 403 27
+WARNING 2025-01-02 00:37:06,123 log Forbidden: /charging-stations/all/
+WARNING 2025-01-02 00:37:06,124 basehttp "GET /charging-stations/all/ HTTP/1.1" 403 27
+WARNING 2025-01-02 00:37:06,125 log Forbidden: /charging-stations/all/
+WARNING 2025-01-02 00:37:06,125 basehttp "GET /charging-stations/all/ HTTP/1.1" 403 27
+WARNING 2025-01-02 01:01:46,291 log Forbidden: /charging-stations/all/
+WARNING 2025-01-02 01:01:46,292 basehttp "GET /charging-stations/all/ HTTP/1.1" 403 27
+WARNING 2025-01-02 01:01:46,294 log Forbidden: /charging-stations/all/
+WARNING 2025-01-02 01:01:46,294 basehttp "GET /charging-stations/all/ HTTP/1.1" 403 27
+WARNING 2025-01-02 01:03:19,308 log Forbidden: /charging-stations/all/
+WARNING 2025-01-02 01:03:19,308 basehttp "GET /charging-stations/all/ HTTP/1.1" 403 27
+WARNING 2025-01-02 01:03:19,310 log Forbidden: /charging-stations/all/
+WARNING 2025-01-02 01:03:19,310 basehttp "GET /charging-stations/all/ HTTP/1.1" 403 27
+WARNING 2025-01-02 01:06:16,527 log Forbidden: /charging-stations/all/
+WARNING 2025-01-02 01:06:16,527 basehttp "GET /charging-stations/all/ HTTP/1.1" 403 27
+WARNING 2025-01-02 01:06:16,529 log Forbidden: /charging-stations/all/
+WARNING 2025-01-02 01:06:16,529 basehttp "GET /charging-stations/all/ HTTP/1.1" 403 27
+WARNING 2025-01-02 01:07:03,625 log Forbidden: /charging-stations/all/
+WARNING 2025-01-02 01:07:03,626 basehttp "GET /charging-stations/all/ HTTP/1.1" 403 27
+WARNING 2025-01-02 01:07:03,628 log Forbidden: /charging-stations/all/
+WARNING 2025-01-02 01:07:03,628 basehttp "GET /charging-stations/all/ HTTP/1.1" 403 27
+WARNING 2025-01-02 01:07:09,849 log Forbidden: /charging-stations/all/
+WARNING 2025-01-02 01:07:09,849 basehttp "GET /charging-stations/all/ HTTP/1.1" 403 27
+WARNING 2025-01-02 01:07:09,851 log Forbidden: /charging-stations/all/
+WARNING 2025-01-02 01:07:09,851 basehttp "GET /charging-stations/all/ HTTP/1.1" 403 27
+INFO 2025-01-02 01:33:37,889 basehttp "POST /login/ HTTP/1.1" 200 1679
+WARNING 2025-01-02 01:33:37,925 log Not Found: /validate-token/
+WARNING 2025-01-02 01:33:37,926 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:33:37,943 log Not Found: /validate-token/
+WARNING 2025-01-02 01:33:37,944 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:33:38,009 log Not Found: /validate-token/
+WARNING 2025-01-02 01:33:38,009 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:33:38,017 log Not Found: /validate-token/
+WARNING 2025-01-02 01:33:38,021 log Not Found: /validate-token/
+WARNING 2025-01-02 01:33:38,026 log Not Found: /validate-token/
+WARNING 2025-01-02 01:33:38,029 log Not Found: /validate-token/
+WARNING 2025-01-02 01:33:38,029 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:33:38,032 log Not Found: /validate-token/
+WARNING 2025-01-02 01:33:38,033 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:33:38,033 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:33:38,034 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:33:38,034 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:33:38,050 log Not Found: /validate-token/
+WARNING 2025-01-02 01:33:38,050 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:33:38,414 log Not Found: /validate-token/
+WARNING 2025-01-02 01:33:38,414 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:33:47,371 log Not Found: /validate-token/
+WARNING 2025-01-02 01:33:47,371 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:33:47,387 log Not Found: /validate-token/
+WARNING 2025-01-02 01:33:47,387 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:37:59,144 log Not Found: /validate-token/
+WARNING 2025-01-02 01:37:59,145 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:37:59,165 log Not Found: /validate-token/
+WARNING 2025-01-02 01:37:59,165 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:37:59,225 log Not Found: /validate-token/
+WARNING 2025-01-02 01:37:59,229 log Not Found: /validate-token/
+WARNING 2025-01-02 01:37:59,229 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:37:59,229 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:37:59,246 log Not Found: /validate-token/
+WARNING 2025-01-02 01:37:59,247 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:37:59,255 log Not Found: /validate-token/
+WARNING 2025-01-02 01:37:59,256 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:37:59,259 log Not Found: /validate-token/
+WARNING 2025-01-02 01:37:59,259 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:37:59,283 log Not Found: /validate-token/
+WARNING 2025-01-02 01:37:59,283 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:37:59,317 log Not Found: /validate-token/
+WARNING 2025-01-02 01:37:59,318 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:37:59,322 log Not Found: /validate-token/
+WARNING 2025-01-02 01:37:59,323 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:37:59,676 log Not Found: /validate-token/
+WARNING 2025-01-02 01:37:59,676 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:38:02,040 log Not Found: /validate-token/
+WARNING 2025-01-02 01:38:02,040 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:38:02,056 log Not Found: /validate-token/
+WARNING 2025-01-02 01:38:02,056 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:38:02,105 log Not Found: /validate-token/
+WARNING 2025-01-02 01:38:02,107 log Not Found: /validate-token/
+WARNING 2025-01-02 01:38:02,108 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:38:02,108 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:38:02,123 log Not Found: /validate-token/
+WARNING 2025-01-02 01:38:02,123 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:38:02,131 log Not Found: /validate-token/
+WARNING 2025-01-02 01:38:02,134 log Not Found: /validate-token/
+WARNING 2025-01-02 01:38:02,134 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:38:02,134 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:38:02,158 log Not Found: /validate-token/
+WARNING 2025-01-02 01:38:02,158 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:38:02,190 log Not Found: /validate-token/
+WARNING 2025-01-02 01:38:02,191 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:38:02,201 log Not Found: /validate-token/
+WARNING 2025-01-02 01:38:02,201 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:38:02,525 log Not Found: /validate-token/
+WARNING 2025-01-02 01:38:02,525 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:39:15,509 log Not Found: /validate-token/
+WARNING 2025-01-02 01:39:15,510 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:39:15,628 log Not Found: /validate-token/
+WARNING 2025-01-02 01:39:15,629 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:39:15,636 log Not Found: /validate-token/
+WARNING 2025-01-02 01:39:15,636 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:39:16,156 log Not Found: /validate-token/
+WARNING 2025-01-02 01:39:16,156 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:39:16,245 log Not Found: /validate-token/
+WARNING 2025-01-02 01:39:16,245 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:39:18,924 log Not Found: /validate-token/
+WARNING 2025-01-02 01:39:18,924 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:39:18,962 log Not Found: /validate-token/
+WARNING 2025-01-02 01:39:18,962 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:39:19,047 log Not Found: /validate-token/
+WARNING 2025-01-02 01:39:19,049 log Not Found: /validate-token/
+WARNING 2025-01-02 01:39:19,049 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:39:19,049 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:39:19,066 log Not Found: /validate-token/
+WARNING 2025-01-02 01:39:19,066 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:39:19,072 log Not Found: /validate-token/
+WARNING 2025-01-02 01:39:19,075 log Not Found: /validate-token/
+WARNING 2025-01-02 01:39:19,075 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:39:19,076 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:39:19,100 log Not Found: /validate-token/
+WARNING 2025-01-02 01:39:19,100 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:39:19,144 log Not Found: /validate-token/
+WARNING 2025-01-02 01:39:19,147 log Not Found: /validate-token/
+WARNING 2025-01-02 01:39:19,147 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:39:19,147 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:39:19,470 log Not Found: /validate-token/
+WARNING 2025-01-02 01:39:19,470 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:39:22,252 log Not Found: /validate-token/
+WARNING 2025-01-02 01:39:22,252 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:39:22,272 log Not Found: /validate-token/
+WARNING 2025-01-02 01:39:22,273 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:39:22,317 log Not Found: /validate-token/
+WARNING 2025-01-02 01:39:22,319 log Not Found: /validate-token/
+WARNING 2025-01-02 01:39:22,320 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:39:22,320 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:39:22,336 log Not Found: /validate-token/
+WARNING 2025-01-02 01:39:22,336 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:39:22,342 log Not Found: /validate-token/
+WARNING 2025-01-02 01:39:22,345 log Not Found: /validate-token/
+WARNING 2025-01-02 01:39:22,346 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:39:22,346 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:39:22,368 log Not Found: /validate-token/
+WARNING 2025-01-02 01:39:22,369 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:39:22,399 log Not Found: /validate-token/
+WARNING 2025-01-02 01:39:22,399 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:39:22,409 log Not Found: /validate-token/
+WARNING 2025-01-02 01:39:22,409 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:39:22,724 log Not Found: /validate-token/
+WARNING 2025-01-02 01:39:22,724 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:39:27,594 log Not Found: /validate-token/
+WARNING 2025-01-02 01:39:27,595 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:40:17,944 log Not Found: /validate-token/
+WARNING 2025-01-02 01:40:17,944 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:40:17,961 log Not Found: /validate-token/
+WARNING 2025-01-02 01:40:17,961 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:40:18,045 log Not Found: /validate-token/
+WARNING 2025-01-02 01:40:18,046 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:40:18,048 log Not Found: /validate-token/
+WARNING 2025-01-02 01:40:18,049 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:40:18,052 log Not Found: /validate-token/
+WARNING 2025-01-02 01:40:18,053 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:40:18,075 log Not Found: /validate-token/
+WARNING 2025-01-02 01:40:18,076 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:40:18,079 log Not Found: /validate-token/
+WARNING 2025-01-02 01:40:18,079 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:40:18,107 log Not Found: /validate-token/
+WARNING 2025-01-02 01:40:18,108 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:40:18,142 log Not Found: /validate-token/
+WARNING 2025-01-02 01:40:18,142 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:40:18,147 log Not Found: /validate-token/
+WARNING 2025-01-02 01:40:18,147 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:40:18,482 log Not Found: /validate-token/
+WARNING 2025-01-02 01:40:18,483 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:40:21,234 log Not Found: /validate-token/
+WARNING 2025-01-02 01:40:21,234 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:40:38,078 log Not Found: /validate-token/
+WARNING 2025-01-02 01:40:38,079 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:40:38,111 log Not Found: /validate-token/
+WARNING 2025-01-02 01:40:38,111 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:40:38,206 log Not Found: /validate-token/
+WARNING 2025-01-02 01:40:38,206 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:40:38,219 log Not Found: /validate-token/
+WARNING 2025-01-02 01:40:38,220 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:40:38,228 log Not Found: /validate-token/
+WARNING 2025-01-02 01:40:38,240 log Not Found: /validate-token/
+WARNING 2025-01-02 01:40:38,254 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:40:38,257 log Not Found: /validate-token/
+WARNING 2025-01-02 01:40:38,265 log Not Found: /validate-token/
+WARNING 2025-01-02 01:40:38,266 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:40:38,266 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:40:38,267 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:40:38,294 log Not Found: /validate-token/
+WARNING 2025-01-02 01:40:38,294 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:40:38,970 log Not Found: /validate-token/
+WARNING 2025-01-02 01:40:38,974 log Not Found: /validate-token/
+WARNING 2025-01-02 01:40:38,974 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:40:38,974 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:41:40,162 log Not Found: /validate-token/
+WARNING 2025-01-02 01:41:40,163 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:41:40,194 log Not Found: /validate-token/
+WARNING 2025-01-02 01:41:40,194 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:41:40,243 log Not Found: /validate-token/
+WARNING 2025-01-02 01:41:40,244 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:41:40,247 log Not Found: /validate-token/
+WARNING 2025-01-02 01:41:40,247 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:41:40,262 log Not Found: /validate-token/
+WARNING 2025-01-02 01:41:40,263 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:41:40,277 log Not Found: /validate-token/
+WARNING 2025-01-02 01:41:40,279 log Not Found: /validate-token/
+WARNING 2025-01-02 01:41:40,280 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:41:40,280 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:41:40,314 log Not Found: /validate-token/
+WARNING 2025-01-02 01:41:40,314 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:41:40,332 log Not Found: /validate-token/
+WARNING 2025-01-02 01:41:40,333 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:41:40,346 log Not Found: /validate-token/
+WARNING 2025-01-02 01:41:40,347 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:41:40,693 log Not Found: /validate-token/
+WARNING 2025-01-02 01:41:40,694 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:41:44,226 log Not Found: /validate-token/
+WARNING 2025-01-02 01:41:44,226 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:41:45,077 log Not Found: /validate-token/
+WARNING 2025-01-02 01:41:45,077 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:41:45,093 log Not Found: /validate-token/
+WARNING 2025-01-02 01:41:45,093 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:41:45,105 log Not Found: /validate-token/
+WARNING 2025-01-02 01:41:45,105 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:41:45,134 log Not Found: /validate-token/
+WARNING 2025-01-02 01:41:45,134 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:41:45,912 log Not Found: /validate-token/
+WARNING 2025-01-02 01:41:45,913 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:41:46,170 log Not Found: /validate-token/
+WARNING 2025-01-02 01:41:46,170 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:41:46,181 log Not Found: /validate-token/
+WARNING 2025-01-02 01:41:46,186 log Not Found: /validate-token/
+WARNING 2025-01-02 01:41:46,193 log Not Found: /validate-token/
+WARNING 2025-01-02 01:41:46,199 log Not Found: /validate-token/
+WARNING 2025-01-02 01:41:46,200 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:41:46,200 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:41:46,201 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:41:46,201 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:41:46,207 log Not Found: /validate-token/
+WARNING 2025-01-02 01:41:46,208 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:41:46,257 log Not Found: /validate-token/
+WARNING 2025-01-02 01:41:46,257 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+INFO 2025-01-02 01:41:53,928 basehttp "POST /login/ HTTP/1.1" 200 1679
+WARNING 2025-01-02 01:41:53,951 log Not Found: /validate-token/
+WARNING 2025-01-02 01:41:53,951 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:41:53,965 log Not Found: /validate-token/
+WARNING 2025-01-02 01:41:53,965 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:41:54,034 log Not Found: /validate-token/
+WARNING 2025-01-02 01:41:54,038 log Not Found: /validate-token/
+WARNING 2025-01-02 01:41:54,042 log Not Found: /validate-token/
+WARNING 2025-01-02 01:41:54,042 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:41:54,047 log Not Found: /validate-token/
+WARNING 2025-01-02 01:41:54,047 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:41:54,052 log Not Found: /validate-token/
+WARNING 2025-01-02 01:41:54,053 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:41:54,059 log Not Found: /validate-token/
+WARNING 2025-01-02 01:41:54,059 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:41:54,059 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:41:54,060 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:41:54,081 log Not Found: /validate-token/
+WARNING 2025-01-02 01:41:54,081 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:41:54,426 log Not Found: /validate-token/
+WARNING 2025-01-02 01:41:54,426 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:41:57,398 log Not Found: /validate-token/
+WARNING 2025-01-02 01:41:57,398 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:41:57,423 log Not Found: /validate-token/
+WARNING 2025-01-02 01:41:57,424 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:41:57,479 log Not Found: /validate-token/
+WARNING 2025-01-02 01:41:57,482 log Not Found: /validate-token/
+WARNING 2025-01-02 01:41:57,483 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:41:57,483 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:41:57,501 log Not Found: /validate-token/
+WARNING 2025-01-02 01:41:57,501 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:41:57,512 log Not Found: /validate-token/
+WARNING 2025-01-02 01:41:57,515 log Not Found: /validate-token/
+WARNING 2025-01-02 01:41:57,516 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:41:57,516 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:41:57,543 log Not Found: /validate-token/
+WARNING 2025-01-02 01:41:57,544 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:41:57,577 log Not Found: /validate-token/
+WARNING 2025-01-02 01:41:57,577 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:41:57,588 log Not Found: /validate-token/
+WARNING 2025-01-02 01:41:57,588 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:41:57,922 log Not Found: /validate-token/
+WARNING 2025-01-02 01:41:57,923 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:42:37,083 log Not Found: /validate-token/
+WARNING 2025-01-02 01:42:37,084 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:42:37,093 log Not Found: /validate-token/
+WARNING 2025-01-02 01:42:37,093 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:42:37,104 log Not Found: /validate-token/
+WARNING 2025-01-02 01:42:37,104 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:42:37,155 log Not Found: /validate-token/
+WARNING 2025-01-02 01:42:37,159 log Not Found: /validate-token/
+WARNING 2025-01-02 01:42:37,159 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:42:37,159 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:42:37,174 log Not Found: /validate-token/
+WARNING 2025-01-02 01:42:37,175 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:42:37,190 log Not Found: /validate-token/
+WARNING 2025-01-02 01:42:37,190 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:42:37,193 log Not Found: /validate-token/
+WARNING 2025-01-02 01:42:37,193 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:42:37,221 log Not Found: /validate-token/
+WARNING 2025-01-02 01:42:37,222 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:42:37,240 log Not Found: /validate-token/
+WARNING 2025-01-02 01:42:37,240 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:42:37,265 log Not Found: /validate-token/
+WARNING 2025-01-02 01:42:37,265 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:42:37,629 log Not Found: /validate-token/
+WARNING 2025-01-02 01:42:37,629 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:43:02,778 log Not Found: /validate-token/
+WARNING 2025-01-02 01:43:02,781 log Not Found: /validate-token/
+WARNING 2025-01-02 01:43:02,781 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:43:02,781 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:43:02,859 log Not Found: /validate-token/
+WARNING 2025-01-02 01:43:02,862 log Not Found: /validate-token/
+WARNING 2025-01-02 01:43:02,862 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:43:02,863 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:43:02,866 log Not Found: /validate-token/
+WARNING 2025-01-02 01:43:02,869 log Not Found: /validate-token/
+WARNING 2025-01-02 01:43:02,870 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:43:02,873 log Not Found: /validate-token/
+WARNING 2025-01-02 01:43:02,873 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:43:02,874 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:43:02,885 log Not Found: /validate-token/
+WARNING 2025-01-02 01:43:02,889 log Not Found: /validate-token/
+WARNING 2025-01-02 01:43:02,894 log Not Found: /validate-token/
+WARNING 2025-01-02 01:43:02,900 log Not Found: /validate-token/
+WARNING 2025-01-02 01:43:02,902 log Not Found: /validate-token/
+WARNING 2025-01-02 01:43:02,905 log Not Found: /validate-token/
+WARNING 2025-01-02 01:43:02,912 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:43:02,913 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:43:02,913 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:43:02,913 log Not Found: /validate-token/
+WARNING 2025-01-02 01:43:02,914 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:43:02,915 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:43:02,915 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:43:02,915 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:43:03,345 log Not Found: /validate-token/
+WARNING 2025-01-02 01:43:03,346 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:43:03,348 log Not Found: /validate-token/
+WARNING 2025-01-02 01:43:03,348 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:43:04,646 log Not Found: /validate-token/
+WARNING 2025-01-02 01:43:04,649 log Not Found: /validate-token/
+WARNING 2025-01-02 01:43:04,650 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:43:04,650 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:43:04,762 log Not Found: /validate-token/
+WARNING 2025-01-02 01:43:04,772 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:43:04,770 log Not Found: /validate-token/
+WARNING 2025-01-02 01:43:04,772 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:43:04,850 log Not Found: /validate-token/
+WARNING 2025-01-02 01:43:04,854 log Not Found: /validate-token/
+WARNING 2025-01-02 01:43:04,857 log Not Found: /validate-token/
+WARNING 2025-01-02 01:43:04,859 log Not Found: /validate-token/
+WARNING 2025-01-02 01:43:04,860 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:43:04,860 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:43:04,860 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:43:04,860 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:43:04,866 log Not Found: /validate-token/
+WARNING 2025-01-02 01:43:04,871 log Not Found: /validate-token/
+WARNING 2025-01-02 01:43:04,872 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:43:04,872 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:43:04,900 log Not Found: /validate-token/
+WARNING 2025-01-02 01:43:04,904 log Not Found: /validate-token/
+WARNING 2025-01-02 01:43:04,908 log Not Found: /validate-token/
+WARNING 2025-01-02 01:43:04,911 log Not Found: /validate-token/
+WARNING 2025-01-02 01:43:04,912 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:43:04,912 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:43:04,912 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:43:04,913 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:43:04,950 log Not Found: /validate-token/
+WARNING 2025-01-02 01:43:04,955 log Not Found: /validate-token/
+WARNING 2025-01-02 01:43:04,955 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:43:04,956 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:43:05,001 log Not Found: /validate-token/
+WARNING 2025-01-02 01:43:05,004 log Not Found: /validate-token/
+WARNING 2025-01-02 01:43:05,008 log Not Found: /validate-token/
+WARNING 2025-01-02 01:43:05,011 log Not Found: /validate-token/
+WARNING 2025-01-02 01:43:05,011 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:43:05,011 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:43:05,011 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:43:05,012 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:43:05,346 log Not Found: /validate-token/
+WARNING 2025-01-02 01:43:05,349 log Not Found: /validate-token/
+WARNING 2025-01-02 01:43:05,349 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:43:05,349 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:43:23,095 log Not Found: /validate-token/
+WARNING 2025-01-02 01:43:23,096 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:43:23,102 log Not Found: /validate-token/
+WARNING 2025-01-02 01:43:23,102 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:43:23,117 log Not Found: /validate-token/
+WARNING 2025-01-02 01:43:23,117 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:43:23,121 log Not Found: /validate-token/
+WARNING 2025-01-02 01:43:23,121 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:43:23,173 log Not Found: /validate-token/
+WARNING 2025-01-02 01:43:23,176 log Not Found: /validate-token/
+WARNING 2025-01-02 01:43:23,176 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:43:23,176 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:43:23,185 log Not Found: /validate-token/
+WARNING 2025-01-02 01:43:23,188 log Not Found: /validate-token/
+WARNING 2025-01-02 01:43:23,188 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:43:23,191 log Not Found: /validate-token/
+WARNING 2025-01-02 01:43:23,191 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:43:23,191 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:43:23,197 log Not Found: /validate-token/
+WARNING 2025-01-02 01:43:23,198 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:43:23,215 log Not Found: /validate-token/
+WARNING 2025-01-02 01:43:23,218 log Not Found: /validate-token/
+WARNING 2025-01-02 01:43:23,219 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:43:23,219 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:43:23,223 log Not Found: /validate-token/
+WARNING 2025-01-02 01:43:23,224 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:43:23,226 log Not Found: /validate-token/
+WARNING 2025-01-02 01:43:23,227 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:43:23,254 log Not Found: /validate-token/
+WARNING 2025-01-02 01:43:23,254 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:43:23,259 log Not Found: /validate-token/
+WARNING 2025-01-02 01:43:23,259 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:43:23,282 log Not Found: /validate-token/
+WARNING 2025-01-02 01:43:23,283 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:43:23,290 log Not Found: /validate-token/
+WARNING 2025-01-02 01:43:23,290 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:43:23,314 log Not Found: /validate-token/
+WARNING 2025-01-02 01:43:23,314 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:43:23,319 log Not Found: /validate-token/
+WARNING 2025-01-02 01:43:23,320 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:43:23,659 log Not Found: /validate-token/
+WARNING 2025-01-02 01:43:23,660 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:43:23,665 log Not Found: /validate-token/
+WARNING 2025-01-02 01:43:23,665 basehttp "GET /validate-token/ HTTP/1.1" 404 4639
+WARNING 2025-01-02 01:44:25,696 log Not Found: /validate-token/
+WARNING 2025-01-02 01:44:25,707 basehttp "POST /validate-token/ HTTP/1.1" 404 4640
+WARNING 2025-01-02 01:44:25,732 log Not Found: /validate-token/
+WARNING 2025-01-02 01:44:25,732 basehttp "POST /validate-token/ HTTP/1.1" 404 4640
+WARNING 2025-01-02 01:44:25,906 log Not Found: /validate-token/
+WARNING 2025-01-02 01:44:25,906 basehttp "POST /validate-token/ HTTP/1.1" 404 4640
+WARNING 2025-01-02 01:44:25,938 log Not Found: /validate-token/
+WARNING 2025-01-02 01:44:25,939 basehttp "POST /validate-token/ HTTP/1.1" 404 4640
+WARNING 2025-01-02 01:44:26,008 log Not Found: /validate-token/
+WARNING 2025-01-02 01:44:26,011 basehttp "POST /validate-token/ HTTP/1.1" 404 4640
+WARNING 2025-01-02 01:44:26,031 log Not Found: /validate-token/
+WARNING 2025-01-02 01:44:26,034 basehttp "POST /validate-token/ HTTP/1.1" 404 4640
+WARNING 2025-01-02 01:44:26,064 log Not Found: /validate-token/
+WARNING 2025-01-02 01:44:26,072 log Not Found: /validate-token/
+WARNING 2025-01-02 01:44:26,073 basehttp "POST /validate-token/ HTTP/1.1" 404 4640
+WARNING 2025-01-02 01:44:26,074 basehttp "POST /validate-token/ HTTP/1.1" 404 4640
+WARNING 2025-01-02 01:44:26,093 log Not Found: /validate-token/
+WARNING 2025-01-02 01:44:26,094 basehttp "POST /validate-token/ HTTP/1.1" 404 4640
+WARNING 2025-01-02 01:44:26,101 log Not Found: /validate-token/
+WARNING 2025-01-02 01:44:26,101 basehttp "POST /validate-token/ HTTP/1.1" 404 4640
+WARNING 2025-01-02 01:44:26,740 log Not Found: /validate-token/
+WARNING 2025-01-02 01:44:26,740 basehttp "POST /validate-token/ HTTP/1.1" 404 4640
+INFO 2025-01-02 01:45:15,876 autoreload /Users/catalin/Coding/EV-Charging-Management-System/backend/myapp/views/cognito_auth_views.py changed, reloading.
+INFO 2025-01-02 01:45:16,745 autoreload Watching for file changes with StatReloader
+INFO 2025-01-02 01:45:24,199 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:45:24,596 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:45:24,596 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:45:24,618 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:45:24,619 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:45:24,619 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:45:24,642 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:45:24,981 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:45:25,331 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:45:25,357 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:45:26,652 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:45:27,157 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:45:27,577 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:45:27,577 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:45:27,589 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:45:28,269 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:45:28,273 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:45:28,293 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:45:28,937 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:45:28,949 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:45:28,958 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 01:45:29,278 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:45:29,309 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:45:29,314 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:45:30,372 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 01:45:46,198 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:45:46,919 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:45:47,268 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:45:48,025 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:45:48,505 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:45:48,522 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:45:48,523 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:45:48,539 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:45:48,541 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:45:48,902 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:45:49,531 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:45:52,311 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:45:52,724 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:45:53,129 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:45:53,129 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:45:53,129 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:45:53,712 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:45:53,714 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:45:53,718 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+WARNING 2025-01-02 01:45:53,998 log Forbidden: /charging-stations/all/
+WARNING 2025-01-02 01:45:53,999 basehttp "GET /charging-stations/all/ HTTP/1.1" 403 27
+WARNING 2025-01-02 01:45:54,000 log Forbidden: /charging-stations/all/
+WARNING 2025-01-02 01:45:54,000 basehttp "GET /charging-stations/all/ HTTP/1.1" 403 27
+INFO 2025-01-02 01:45:54,357 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:45:55,724 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:46:34,988 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:46:35,180 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:46:35,182 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:46:35,387 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:46:35,420 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:46:35,750 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:46:35,755 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:46:35,768 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:46:35,775 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:46:36,384 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:46:36,405 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:46:36,414 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:46:36,737 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+WARNING 2025-01-02 01:46:36,806 log Forbidden: /charging-stations/all/
+WARNING 2025-01-02 01:46:36,806 basehttp "GET /charging-stations/all/ HTTP/1.1" 403 27
+WARNING 2025-01-02 01:46:36,807 log Forbidden: /charging-stations/all/
+WARNING 2025-01-02 01:46:36,808 basehttp "GET /charging-stations/all/ HTTP/1.1" 403 27
+INFO 2025-01-02 01:46:37,077 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:46:37,169 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:46:37,526 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:46:37,536 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:46:37,910 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:46:38,275 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:46:38,556 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:46:38,669 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:46:38,872 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:46:39,511 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:46:40,229 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:47:01,561 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:47:01,898 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:47:01,937 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:47:01,938 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:47:02,308 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:47:02,559 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:47:02,654 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:47:02,671 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:47:02,943 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:47:24,540 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:47:25,001 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:47:25,035 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:47:25,046 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:47:25,049 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:47:25,059 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:47:26,051 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:47:35,252 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:47:35,269 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:47:35,615 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:47:35,631 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:47:38,618 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:47:38,668 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:47:39,027 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:47:39,952 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:47:40,302 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:47:40,311 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:47:42,562 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:47:42,886 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:47:42,938 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:47:43,557 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:47:43,920 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:47:44,586 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:47:44,587 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:47:44,949 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:47:44,950 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:47:44,986 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:47:46,737 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:47:46,737 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:47:47,082 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:47:47,084 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:47:47,092 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:48:52,247 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:48:52,262 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:48:52,607 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:48:52,614 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:48:52,649 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:48:55,056 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:48:55,082 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:48:55,420 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:48:55,420 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:48:55,427 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:48:58,002 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:48:58,015 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:48:58,347 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:48:58,376 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:48:59,353 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:49:12,222 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:49:12,232 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:49:12,562 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:49:12,562 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:49:12,650 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:49:15,625 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:49:15,625 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:49:15,976 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:49:15,976 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:49:17,006 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:49:36,553 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:49:36,575 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:49:36,897 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:49:36,950 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:49:36,980 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:49:37,962 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:49:37,984 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:49:38,306 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:49:38,306 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:49:38,315 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:49:40,295 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:49:40,641 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:49:40,642 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:49:41,268 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:49:41,914 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:49:41,919 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:49:41,929 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:49:42,274 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:49:42,283 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:49:42,292 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:49:45,384 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:49:45,405 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:49:45,792 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:49:45,792 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:49:45,792 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:49:46,136 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:49:46,144 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:49:46,493 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:49:46,497 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:49:58,363 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:49:58,368 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:49:58,716 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:49:58,735 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:49:58,759 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:50:20,099 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:50:20,114 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:50:20,454 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:50:20,456 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:50:20,514 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:50:23,859 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:50:23,859 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:50:24,200 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:50:24,201 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:50:25,212 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:50:36,930 basehttp "POST /login/ HTTP/1.1" 200 1679
+INFO 2025-01-02 01:50:37,332 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:50:38,708 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:50:38,771 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:50:38,771 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:50:38,790 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:50:39,451 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:50:39,452 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:50:39,460 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:50:39,481 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+WARNING 2025-01-02 01:50:39,767 log Forbidden: /charging-stations/all/
+WARNING 2025-01-02 01:50:39,767 basehttp "GET /charging-stations/all/ HTTP/1.1" 403 27
+WARNING 2025-01-02 01:50:39,770 log Forbidden: /charging-stations/all/
+WARNING 2025-01-02 01:50:39,770 basehttp "GET /charging-stations/all/ HTTP/1.1" 403 27
+INFO 2025-01-02 01:50:40,150 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:50:40,558 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:50:40,574 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:50:40,575 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:50:40,611 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:50:40,621 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:50:41,569 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:50:41,947 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:50:50,637 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:50:51,052 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:50:51,498 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:50:51,499 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:50:51,501 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:50:52,082 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:50:52,082 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:50:52,132 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:50:52,132 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+WARNING 2025-01-02 01:50:52,371 log Forbidden: /charging-stations/all/
+WARNING 2025-01-02 01:50:52,371 basehttp "GET /charging-stations/all/ HTTP/1.1" 403 27
+WARNING 2025-01-02 01:50:52,373 log Forbidden: /charging-stations/all/
+WARNING 2025-01-02 01:50:52,373 basehttp "GET /charging-stations/all/ HTTP/1.1" 403 27
+INFO 2025-01-02 01:50:52,757 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:50:53,155 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:50:53,165 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:50:53,166 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:50:53,176 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:50:53,195 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:50:53,527 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:50:54,222 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:50:59,791 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:50:59,816 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:54:01,385 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:54:01,396 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:54:01,726 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:54:01,727 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:54:01,789 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:54:13,629 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:54:13,639 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:54:13,975 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:54:13,976 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:54:14,024 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:54:26,167 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:54:26,167 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:54:26,510 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:54:26,515 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:54:26,584 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:54:41,234 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:54:41,240 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:54:41,590 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:54:41,590 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:54:41,632 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:55:06,977 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:55:06,977 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:55:07,300 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:55:07,336 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:55:07,369 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:56:31,504 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:56:31,895 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:56:31,926 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:56:31,937 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:56:31,937 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:56:31,938 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:56:32,517 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:56:32,518 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:56:47,223 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:56:47,237 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:56:47,950 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:56:54,005 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:56:54,024 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:56:54,026 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:56:54,651 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:56:54,654 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:56:54,654 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:56:55,699 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:56:55,774 basehttp "OPTIONS /charging-stations/all/ HTTP/1.1" 200 0
+INFO 2025-01-02 01:56:55,774 basehttp "OPTIONS /charging-stations/all/ HTTP/1.1" 200 0
+WARNING 2025-01-02 01:56:55,776 log Forbidden: /charging-stations/all/
+WARNING 2025-01-02 01:56:55,776 basehttp "GET /charging-stations/all/ HTTP/1.1" 403 27
+WARNING 2025-01-02 01:56:55,778 log Forbidden: /charging-stations/all/
+WARNING 2025-01-02 01:56:55,778 basehttp "GET /charging-stations/all/ HTTP/1.1" 403 27
+INFO 2025-01-02 01:56:56,158 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:56:56,528 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:56:56,556 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:56:56,562 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:56:56,568 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:56:56,569 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:56:56,590 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:56:56,926 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:56:57,232 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:57:01,356 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:57:01,808 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:57:02,196 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:57:02,229 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:57:02,234 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:57:02,846 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:57:02,864 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:57:02,881 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:57:02,907 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+WARNING 2025-01-02 01:57:03,163 log Forbidden: /charging-stations/all/
+WARNING 2025-01-02 01:57:03,163 basehttp "GET /charging-stations/all/ HTTP/1.1" 403 27
+WARNING 2025-01-02 01:57:03,164 log Forbidden: /charging-stations/all/
+WARNING 2025-01-02 01:57:03,165 basehttp "GET /charging-stations/all/ HTTP/1.1" 403 27
+INFO 2025-01-02 01:57:03,501 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:57:03,900 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:57:03,901 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:57:03,919 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:57:03,920 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:57:03,943 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:57:03,972 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:57:05,309 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:57:08,312 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:57:10,298 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:57:10,704 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:57:10,750 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:57:10,760 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:57:11,313 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:57:11,314 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:57:11,350 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+WARNING 2025-01-02 01:57:11,571 log Forbidden: /charging-stations/all/
+WARNING 2025-01-02 01:57:11,571 basehttp "GET /charging-stations/all/ HTTP/1.1" 403 27
+WARNING 2025-01-02 01:57:11,573 log Forbidden: /charging-stations/all/
+WARNING 2025-01-02 01:57:11,573 basehttp "GET /charging-stations/all/ HTTP/1.1" 403 27
+INFO 2025-01-02 01:57:11,938 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:57:12,298 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:57:12,331 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:57:12,332 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:57:12,365 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:57:12,367 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:57:12,713 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:57:13,317 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:57:13,350 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:58:25,673 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:58:25,684 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:58:26,019 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:58:26,054 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:58:26,078 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:58:34,181 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:58:34,577 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:58:34,965 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:58:35,008 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:58:35,009 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:58:35,576 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:58:35,588 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:58:35,588 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:58:35,609 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+WARNING 2025-01-02 01:58:35,808 log Forbidden: /charging-stations/all/
+WARNING 2025-01-02 01:58:35,808 basehttp "GET /charging-stations/all/ HTTP/1.1" 403 27
+WARNING 2025-01-02 01:58:35,809 log Forbidden: /charging-stations/all/
+WARNING 2025-01-02 01:58:35,810 basehttp "GET /charging-stations/all/ HTTP/1.1" 403 27
+INFO 2025-01-02 01:58:36,157 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:58:36,537 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:58:36,540 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:58:36,545 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:58:36,546 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:58:36,595 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:58:36,595 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:58:36,909 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:58:52,135 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:58:56,408 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:58:56,431 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:58:57,380 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:58:57,959 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:58:57,978 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:58:57,979 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:58:58,307 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+WARNING 2025-01-02 01:58:58,503 log Forbidden: /charging-stations/all/
+WARNING 2025-01-02 01:58:58,503 basehttp "GET /charging-stations/all/ HTTP/1.1" 403 27
+WARNING 2025-01-02 01:58:58,506 log Forbidden: /charging-stations/all/
+WARNING 2025-01-02 01:58:58,506 basehttp "GET /charging-stations/all/ HTTP/1.1" 403 27
+INFO 2025-01-02 01:58:58,877 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:58:58,952 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:59:00,581 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:59:00,591 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:59:00,623 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:59:00,948 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:59:01,350 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:59:01,363 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:59:01,545 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:59:01,940 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 01:59:02,700 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:01:30,369 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:01:40,105 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:01:40,579 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:01:40,587 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:01:40,614 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:01:41,428 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:01:41,435 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:01:41,437 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:01:41,479 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+WARNING 2025-01-02 02:01:41,913 log Forbidden: /charging-stations/all/
+WARNING 2025-01-02 02:01:41,914 basehttp "GET /charging-stations/all/ HTTP/1.1" 403 27
+WARNING 2025-01-02 02:01:41,916 log Forbidden: /charging-stations/all/
+WARNING 2025-01-02 02:01:41,916 basehttp "GET /charging-stations/all/ HTTP/1.1" 403 27
+INFO 2025-01-02 02:01:42,292 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:01:42,341 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:01:42,715 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:01:42,715 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:01:42,750 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:01:42,768 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:01:42,781 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:01:42,803 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:01:43,062 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:02:06,934 basehttp "OPTIONS /login/ HTTP/1.1" 200 0
+INFO 2025-01-02 02:02:07,759 basehttp "POST /login/ HTTP/1.1" 200 1679
+INFO 2025-01-02 02:02:08,152 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:02:09,443 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:02:09,551 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:02:09,551 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:02:09,551 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:02:10,179 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:02:10,196 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:02:10,198 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+WARNING 2025-01-02 02:02:10,473 log Forbidden: /charging-stations/all/
+WARNING 2025-01-02 02:02:10,473 basehttp "GET /charging-stations/all/ HTTP/1.1" 403 27
+WARNING 2025-01-02 02:02:10,475 log Forbidden: /charging-stations/all/
+WARNING 2025-01-02 02:02:10,475 basehttp "GET /charging-stations/all/ HTTP/1.1" 403 27
+INFO 2025-01-02 02:02:10,841 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:02:11,198 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:02:11,243 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:02:11,244 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:02:11,250 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:02:11,275 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:02:11,276 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:02:11,605 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:02:12,271 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:03:25,116 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:03:25,186 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:04:07,800 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:04:08,182 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:04:08,769 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:04:08,855 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:04:08,885 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:04:09,172 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:04:09,189 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:04:09,223 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:04:10,551 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:04:10,559 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:04:10,569 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:04:10,589 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:04:10,896 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:04:10,897 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:04:10,910 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+WARNING 2025-01-02 02:04:11,403 log Forbidden: /charging-stations/all/
+WARNING 2025-01-02 02:04:11,406 basehttp "GET /charging-stations/all/ HTTP/1.1" 403 27
+WARNING 2025-01-02 02:04:11,418 log Forbidden: /charging-stations/all/
+WARNING 2025-01-02 02:04:11,419 basehttp "GET /charging-stations/all/ HTTP/1.1" 403 27
+INFO 2025-01-02 02:04:11,756 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:04:11,804 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:04:11,906 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:04:12,088 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:04:12,120 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:04:12,480 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:04:12,513 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:04:12,527 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:04:12,528 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:04:12,571 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:04:12,823 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:04:12,830 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:04:12,849 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:04:12,865 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:04:12,907 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:04:13,227 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:04:13,538 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:04:13,573 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:04:13,878 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:05:35,511 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:05:35,563 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:05:35,936 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:05:35,939 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:05:35,975 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:05:37,863 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:05:37,863 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:05:38,184 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:05:38,193 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:05:38,194 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:05:44,391 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:05:44,400 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:05:44,753 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:05:44,763 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:05:44,787 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:05:49,247 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:05:49,278 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:05:49,593 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:05:49,617 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:05:50,605 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:06:24,657 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:06:24,657 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:06:25,028 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:06:25,034 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:06:25,116 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:06:46,174 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:06:46,520 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:06:46,537 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:06:47,151 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:06:48,518 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:07:24,858 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:07:24,861 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:07:25,190 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:07:25,205 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:07:25,238 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:07:57,083 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:07:57,083 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:07:57,447 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:07:57,454 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:07:57,487 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:08:15,474 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:08:15,482 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:08:16,147 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:08:16,148 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:08:16,180 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:08:16,182 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:08:16,498 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:08:16,515 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:08:16,821 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:08:16,871 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:08:19,948 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:08:20,302 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:08:20,963 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:08:21,280 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:08:21,295 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:08:34,060 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:08:36,942 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:08:37,689 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:08:38,113 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:08:38,115 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:08:39,093 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:08:39,527 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:08:39,539 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:08:39,560 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:08:40,225 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 02:08:40,535 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:08:40,592 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:08:40,627 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:08:41,614 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 02:17:15,444 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:17:15,468 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:17:15,477 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:17:15,797 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:17:15,813 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:17:15,831 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:17:16,154 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:17:16,166 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:17:16,187 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:17:16,951 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:17:16,969 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:17:16,972 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:17:17,275 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:17:17,894 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:17:17,913 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:17:18,305 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:17:18,305 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:17:18,306 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:17:18,653 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:17:18,689 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:17:19,043 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:17:19,044 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:17:19,190 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:17:19,542 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:17:23,718 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:17:24,125 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:17:24,164 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:17:24,510 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:17:25,079 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:17:25,429 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:17:25,832 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:18:15,933 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:18:16,097 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:18:16,287 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:18:16,469 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:18:17,244 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:19:23,171 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:19:23,640 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:19:23,670 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:19:23,708 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:19:24,254 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:19:24,257 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:19:24,268 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:19:24,289 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:19:24,938 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 02:19:25,298 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:19:25,299 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:19:25,360 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 02:20:06,413 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:20:06,805 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:20:06,836 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:20:06,850 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:20:06,852 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:20:06,855 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:20:06,877 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:20:07,137 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:20:07,397 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:20:07,405 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:20:07,425 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:20:07,446 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:20:07,446 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:20:07,506 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:20:08,239 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:20:08,250 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:20:08,251 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:20:08,591 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:20:09,277 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 02:20:09,624 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:20:09,640 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:20:10,240 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:20:10,705 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:20:10,710 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 02:20:17,823 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:20:17,855 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:20:17,858 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:20:18,215 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:20:18,300 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:20:18,359 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:20:18,404 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:20:18,423 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:20:18,683 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:20:18,722 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:20:19,202 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:20:19,221 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:20:19,243 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:20:19,363 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:20:19,571 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:20:19,601 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:20:19,671 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:20:19,833 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:20:20,229 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:20:20,373 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 02:20:20,586 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:20:20,719 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:20:20,743 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:20:20,785 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 02:20:21,233 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:20:21,354 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:20:21,362 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:20:21,552 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:20:21,553 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:20:21,573 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:20:21,701 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:20:21,774 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:20:21,774 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:20:21,784 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:20:21,875 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:20:22,368 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:20:22,377 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:20:22,379 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:20:22,734 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:20:24,476 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:20:24,559 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:20:24,813 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:20:25,138 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:20:25,370 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:20:25,587 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:20:25,807 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:20:26,009 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:20:26,026 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:20:26,805 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:20:26,924 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:20:26,925 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:20:27,004 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:20:27,261 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:20:27,296 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:20:27,784 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:20:28,173 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:20:28,875 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:20:28,907 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:20:28,922 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:20:28,935 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:20:28,983 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 02:20:29,093 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:20:29,145 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:20:29,197 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:20:29,373 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 02:20:29,374 basehttp - Broken pipe from ('127.0.0.1', 59743)
+INFO 2025-01-02 02:20:29,456 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:20:29,458 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:20:29,569 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:20:29,629 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:20:29,636 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:20:30,246 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:20:30,263 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:20:30,326 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:20:31,323 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:20:31,342 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:20:31,614 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:20:31,720 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:20:32,046 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:20:32,052 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:20:32,063 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:20:32,160 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:20:32,164 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 02:20:32,346 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:20:32,538 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:20:32,580 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 02:20:33,548 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:20:33,927 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:20:41,500 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:20:41,501 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:20:41,501 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:20:41,823 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:20:41,864 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:20:41,869 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:20:41,897 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:20:41,948 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:20:41,948 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:20:42,177 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:20:42,193 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:20:42,504 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:20:42,538 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:20:42,545 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:20:42,874 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:20:42,876 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:20:42,956 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:20:43,271 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:20:43,883 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:20:44,226 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:20:44,611 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:20:45,354 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 02:20:45,685 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:20:45,715 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:20:45,764 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 02:22:17,981 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:22:17,982 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:22:17,985 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:22:18,022 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:22:18,324 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:22:18,372 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:22:18,413 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:22:18,498 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:22:18,554 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:22:18,560 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:22:18,588 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:22:18,612 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:22:18,666 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:22:18,667 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:22:18,873 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:22:19,211 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:22:19,225 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:22:19,226 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:22:19,543 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:22:20,125 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:22:20,160 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 02:22:20,490 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:22:20,490 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:22:20,528 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:22:20,564 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 02:22:24,591 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:22:24,593 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:22:24,623 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:22:24,639 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:22:24,980 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:22:25,040 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:22:25,053 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:22:25,086 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:22:25,103 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:22:25,107 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:22:25,112 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:22:25,120 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:22:25,720 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:22:25,723 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:22:26,053 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:22:26,382 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:22:26,759 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:22:26,975 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:22:26,980 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:22:26,992 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:22:27,316 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:22:27,469 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:22:27,482 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:22:27,487 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:22:27,634 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:22:28,068 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:22:28,072 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:22:28,342 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:22:28,356 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:22:28,403 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:22:28,408 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:22:28,699 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:22:28,825 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:22:29,208 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 02:22:29,361 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:22:29,576 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:22:29,916 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:22:30,610 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 02:22:33,378 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:22:33,417 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:22:33,877 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:22:33,887 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:22:33,922 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:22:33,953 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:22:34,226 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:22:34,240 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:22:34,246 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:22:34,373 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:22:34,527 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:22:34,542 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:22:34,852 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:22:34,893 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:22:34,919 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:22:35,427 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:22:35,429 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:22:35,440 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:22:35,791 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:22:35,812 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:22:35,820 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:22:35,880 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:22:36,181 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:22:36,856 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:22:36,858 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:22:37,450 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:22:37,450 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:22:37,459 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:22:37,459 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:22:38,140 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 02:22:38,242 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:22:38,485 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:22:38,495 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:22:38,544 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 02:22:45,638 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:22:45,727 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:22:45,727 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:23:15,384 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:23:15,807 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:23:15,840 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:23:15,855 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:23:16,496 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:23:16,512 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:23:16,512 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:23:16,535 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:23:16,768 basehttp "OPTIONS /charging-stations/all/ HTTP/1.1" 200 0
+INFO 2025-01-02 02:23:16,768 basehttp "OPTIONS /charging-stations/all/ HTTP/1.1" 200 0
+INFO 2025-01-02 02:23:17,123 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:23:17,126 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:23:17,139 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:23:17,165 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 02:23:17,176 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 02:23:17,477 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:23:17,511 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:23:17,519 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:23:56,919 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:23:56,927 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:23:56,938 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:23:57,266 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:23:57,283 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:23:57,376 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:23:57,386 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:23:57,407 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:23:57,425 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:23:57,899 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:23:58,184 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:23:58,194 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:23:58,250 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:23:58,251 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:23:58,402 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:23:58,522 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:23:58,533 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:23:59,494 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 02:23:59,523 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:23:59,871 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:23:59,896 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:23:59,897 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 02:24:00,498 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:24:07,314 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:24:07,325 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:24:07,328 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:24:07,333 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:24:07,671 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:24:07,682 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:24:07,682 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:24:07,691 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:24:07,739 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:24:07,741 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:24:07,756 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:24:07,767 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:24:07,767 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:24:08,744 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:24:08,891 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:24:08,891 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:24:08,902 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:24:09,094 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:24:09,095 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:24:10,261 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:24:10,694 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:24:10,756 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:24:11,026 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:24:11,077 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:24:11,724 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 02:24:12,011 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:24:12,019 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:24:12,130 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 02:24:12,322 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:24:12,356 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:24:13,058 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:24:13,071 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:24:13,393 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:24:13,398 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:24:13,648 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:24:13,681 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:24:14,078 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:24:14,123 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:24:14,286 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:24:14,306 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:24:14,316 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:24:14,445 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:24:14,662 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:24:14,679 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:24:14,708 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:24:14,725 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:24:15,048 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:24:15,395 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:24:15,675 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:24:16,321 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:24:16,322 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:24:16,758 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:24:16,827 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:24:16,840 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:24:16,852 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:24:16,861 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:24:17,174 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:24:17,213 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:24:17,236 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:24:17,245 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:24:17,252 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:24:17,270 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:24:17,798 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:24:17,802 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:24:18,144 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:24:18,495 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:24:18,607 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 02:24:18,817 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:24:18,955 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:24:18,986 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:24:19,343 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:24:19,975 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 02:24:20,177 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:24:22,983 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:24:24,061 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:24:24,089 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:24:24,413 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:24:24,432 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:24:24,905 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:24:26,433 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:24:32,602 basehttp "POST /login/ HTTP/1.1" 200 1679
+INFO 2025-01-02 02:24:32,989 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:24:33,734 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:24:33,768 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:24:34,754 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:24:35,142 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:24:35,142 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:24:35,166 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:24:37,787 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 02:24:38,194 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:24:38,196 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:24:38,208 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:24:38,251 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 02:25:59,134 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:25:59,544 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:25:59,607 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:25:59,633 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:25:59,747 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:25:59,754 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:25:59,879 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:26:00,348 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:26:00,348 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:26:00,418 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:26:00,537 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:26:00,571 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:26:00,572 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:26:00,603 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:26:00,951 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:26:00,952 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:26:00,964 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:26:01,219 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:26:01,227 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:26:01,231 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:26:01,563 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:26:02,320 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 02:26:02,752 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:26:03,312 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:26:03,679 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:26:03,719 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 02:26:04,024 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:26:14,428 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:26:14,529 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:26:14,558 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:26:14,573 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:26:14,772 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:26:14,775 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:26:14,817 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:26:15,077 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:26:15,077 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:26:15,080 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:26:15,113 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:26:15,707 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:26:15,710 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:26:16,157 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:26:16,297 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:26:16,303 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:26:16,452 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:26:16,645 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:26:16,650 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:26:16,658 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:26:16,697 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:26:16,972 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:26:17,467 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:26:17,915 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:26:17,915 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:26:17,920 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:26:18,521 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:26:18,522 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:26:18,529 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:26:18,860 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:26:19,335 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:26:19,422 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:26:19,432 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:26:19,780 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:26:20,470 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 02:26:20,680 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:26:20,841 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 02:26:20,946 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:26:20,957 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:26:20,958 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:26:20,969 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:26:20,981 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:26:21,026 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:26:21,286 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:26:21,440 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:26:21,453 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:26:21,497 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:26:21,597 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:26:21,629 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:26:22,551 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:26:23,588 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:26:24,164 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:26:24,164 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:26:24,164 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:26:24,306 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:26:24,536 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:26:24,878 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:26:24,990 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:26:25,012 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:26:25,013 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 02:26:25,214 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:26:25,350 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:26:25,356 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:26:25,421 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 02:26:26,374 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:26:26,577 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:26:26,605 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:26:26,708 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:26:26,724 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:26:26,776 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:26:26,938 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:26:26,966 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:26:27,040 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:26:27,083 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:26:27,125 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:26:27,286 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:26:27,474 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:26:27,668 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:26:28,280 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:26:28,291 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:26:28,309 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:26:29,109 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:26:29,122 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:26:29,748 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:26:29,762 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:26:29,762 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:26:29,796 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 02:26:30,130 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:26:30,132 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:26:30,165 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:26:30,167 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:26:30,234 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 02:26:33,726 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:26:34,567 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:26:34,895 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:26:34,903 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:26:35,228 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:26:36,313 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:26:37,021 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:26:37,402 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:26:39,029 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:26:39,383 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:26:40,379 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:26:40,724 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:26:40,969 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 02:26:41,324 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:26:41,324 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:26:41,366 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 02:26:42,015 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:26:42,723 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:26:42,731 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:26:43,075 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:26:43,075 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:26:43,475 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:26:43,508 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:26:43,509 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:26:43,847 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:26:43,855 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:26:44,141 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:26:44,463 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:26:44,479 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:26:44,830 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:26:44,880 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:26:45,534 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:26:46,437 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 02:26:46,858 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 02:26:49,060 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:26:50,446 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:26:50,891 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:26:50,894 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:26:52,391 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 02:26:53,812 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 02:26:57,965 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 02:26:58,330 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 02:26:59,719 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 02:26:59,822 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:27:00,273 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 02:27:00,389 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:27:00,775 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 02:27:01,120 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:27:01,140 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 02:27:01,155 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:27:03,193 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 02:27:03,602 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 02:27:06,793 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:27:08,619 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 02:27:11,002 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 02:27:17,851 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:27:18,037 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:27:18,498 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:27:18,753 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:27:18,793 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:27:18,801 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:27:18,825 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:27:18,831 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:27:18,840 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:27:20,109 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:27:21,492 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:27:21,896 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:27:21,912 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:27:21,912 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:27:21,912 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:27:21,921 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:27:22,957 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:27:23,315 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:27:23,375 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:32:32,302 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:32:32,657 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:32:33,204 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:32:33,234 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:32:33,239 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:32:33,908 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:32:33,923 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:32:33,925 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:32:33,941 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:32:34,584 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 02:32:34,594 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:32:34,595 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:32:34,928 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:32:34,936 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:32:34,971 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 02:32:35,284 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:32:43,264 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:32:43,691 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:32:43,694 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:32:43,710 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:32:43,715 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:32:43,732 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:32:47,612 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:32:48,959 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:32:49,324 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:32:49,704 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:32:49,745 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:32:49,745 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:32:50,313 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:32:50,344 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:32:51,318 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:32:51,349 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:32:51,939 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:32:51,946 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:32:53,024 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 02:32:53,377 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:32:53,378 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:32:54,412 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 02:33:04,655 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:33:05,002 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:33:05,420 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:33:05,461 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:33:05,478 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:33:06,033 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:33:06,043 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:33:06,076 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:33:06,621 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:33:06,627 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:33:06,630 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:33:06,647 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 02:33:06,993 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:33:07,063 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:33:07,064 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 02:33:08,006 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:33:48,271 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:33:48,649 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:33:49,087 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:33:49,119 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:33:49,733 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:33:49,746 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:33:49,767 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:33:49,774 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:33:50,109 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:33:50,494 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:33:50,515 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:33:50,552 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 02:33:50,899 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:33:50,899 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:33:50,908 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 02:33:59,095 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:33:59,966 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:34:00,423 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:48:46,648 basehttp "POST /login/ HTTP/1.1" 200 1679
+INFO 2025-01-02 02:48:48,175 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 02:48:48,592 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 02:48:51,441 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 02:48:51,831 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 02:49:13,416 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 02:49:13,817 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 02:58:30,010 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 02:58:43,229 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 02:58:43,632 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 02:59:40,232 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 02:59:40,636 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 03:00:41,458 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 03:00:41,855 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 03:01:12,608 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 03:01:13,559 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 03:01:14,820 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 03:01:15,230 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 03:03:56,122 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 03:03:56,527 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 03:04:09,265 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 03:04:17,623 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 03:04:18,034 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 03:04:23,059 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 03:04:23,435 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 03:04:34,069 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 03:04:34,490 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 03:06:47,335 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 03:06:48,189 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 03:07:09,587 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 03:07:09,616 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 03:07:09,616 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 03:07:09,979 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 03:07:09,979 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 03:07:09,986 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 03:07:10,347 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 03:07:11,320 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 03:07:11,691 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 03:07:12,290 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 03:07:12,674 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 03:07:14,251 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 03:07:14,907 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 03:07:15,331 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 03:07:15,375 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 03:07:16,735 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 03:07:17,627 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 03:07:18,854 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 03:07:19,611 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 03:07:19,629 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 03:07:21,630 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 03:07:22,481 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 03:07:22,917 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 03:07:22,954 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 03:07:22,957 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 03:07:22,960 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 03:07:22,969 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 03:07:22,970 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 03:07:22,970 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 03:07:22,973 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 03:07:23,437 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 03:07:23,814 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 03:07:23,918 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 03:07:24,517 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 03:07:24,877 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 03:07:24,948 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 03:07:25,862 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 03:07:28,411 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 03:07:29,230 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 03:07:30,156 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 03:07:30,208 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 03:07:30,563 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 03:07:30,597 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 03:07:30,606 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 03:07:31,145 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 03:07:35,386 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 03:07:37,029 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 03:07:37,924 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 03:07:37,961 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 03:07:37,966 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 03:07:38,278 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 03:07:38,372 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 03:07:39,307 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 03:07:42,680 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 03:07:44,957 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 03:07:55,050 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 03:07:55,945 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 03:07:55,972 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 03:07:55,978 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 03:07:56,323 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 03:07:56,323 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 03:07:57,364 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 03:08:06,655 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 03:08:07,353 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 03:17:03,623 basehttp "POST /login/ HTTP/1.1" 200 1679
+INFO 2025-01-02 03:17:04,015 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 03:17:05,200 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 03:17:05,661 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 03:17:12,978 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 03:17:13,307 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 03:17:14,032 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 03:17:14,439 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 03:17:15,209 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 03:17:15,576 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 03:17:48,468 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 03:17:48,814 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 03:17:49,206 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 03:17:49,560 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 03:17:50,589 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 03:17:51,014 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 03:17:52,663 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 03:17:53,031 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 03:17:55,335 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 03:17:55,684 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 03:17:56,678 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 03:17:57,078 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
