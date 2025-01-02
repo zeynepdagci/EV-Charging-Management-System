@@ -99,7 +99,12 @@ class CognitoLoginView(APIView):
             return Response(
                 {
                     "access": id_token,
-                    "role": user.role,
+                    "userProfile": {
+                        "email": user.email,
+                        "firstName": user.first_name,
+                        "lastName": user.last_name,
+                        "role": user.role,
+                    },
                 }
             )
         except ClientError as e:
