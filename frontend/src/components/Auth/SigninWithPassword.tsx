@@ -44,7 +44,7 @@ const SigninWithPassword: React.FC = () => {
         const tokens = await response.json();
 
         Cookies.set("accessToken", tokens.access);
-        localStorage.setItem("role", tokens.role);
+        localStorage.setItem("role", tokens.userProfile.role);
 
         console.log("Sign in successful");
 
