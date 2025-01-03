@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { loadStripe } from "@stripe/stripe-js";
 import { Button } from "@mui/material";
+import Cookies from "js-cookie";
 
 interface ReserveButtonProps {
   chargingStationId: number;
@@ -20,7 +21,7 @@ const ReserveButton = ({
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          Authorization: `Bearer ${localStorage.getItem("accessToken")}`,
+          Authorization: `Bearer ${Cookies.get("accessToken")}`,
         },
         body: JSON.stringify({
           charging_station_id: chargingStationId,

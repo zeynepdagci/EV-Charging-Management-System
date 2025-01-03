@@ -8,7 +8,7 @@ const routes = [
   "/auth/signup",
   "/",
   "/dashboard",
-  "manage-charging-stations",
+  "/manage-charging-stations",
 ];
 
 export default async function middleware(req: NextRequest) {
