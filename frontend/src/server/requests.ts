@@ -134,6 +134,16 @@ async function getMostVisitedStation(token: string) {
   });
 }
 
+async function updateChargingStation(token: string, stationId: number) {
+  return fetch(`http://127.0.0.1:8000/charging-stations/${stationId}/update/`, {
+    method: "PUT",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${token}`,
+    },
+  });
+}
+
 const Server = {
   validateToken,
   login,
@@ -144,6 +154,7 @@ const Server = {
   deleteChargingStation,
   createCheckoutSession,
   getMostVisitedStation,
+  updateChargingStation
 };
 
 export { Server };

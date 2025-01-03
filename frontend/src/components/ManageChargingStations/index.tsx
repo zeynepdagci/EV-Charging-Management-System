@@ -4,7 +4,7 @@ import Cookies from "js-cookie";
 import { Server } from "@/server/requests";
 
 interface ChargingStationData {
-  station_id: number; // Add station_id to track each station
+  station_id: number;
   location: string;
   availability_status: string;
   charging_speed: string;
@@ -27,9 +27,10 @@ const ManageStations: React.FC = () => {
   const [error, setError] = useState<string>("");
   const [open, setOpen] = useState(false);
   const [stations, setStations] = useState<ChargingStationData[]>([]);
+  const [isEditMode, setIsEditMode] = useState(false);
 
-  const token: string = Cookies.get("accessToken") ?? ""; // replace with your actual token retrieval logic
-
+  const token: string = Cookies.get("accessToken") ?? "";
+  
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
 
@@ -41,9 +42,8 @@ const ManageStations: React.FC = () => {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setError(""); // Reset error message
-
-    // Ensure all required fields are filled in
+    setError("");
+  
     if (
       !data.location ||
       !data.availability_status ||
@@ -55,24 +55,50 @@ const ManageStations: React.FC = () => {
       setError("Please fill in all fields.");
       return;
     }
-
+  
     if (!token) {
       setError("Authorization token is missing.");
       return;
     }
-
+  
     try {
-      const response = await Server.addChargingStation(token, data);
+      const url = isEditMode
+        ? `http://127.0.0.1:8000/charging-stations/${data.station_id}/update/`
+        : "http://127.0.0.1:8000/charging-stations/add/";
+      const method = isEditMode ? "PUT" : "POST";
+  
+      const response = await fetch(url, {
+        method,
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`,
+        },
+        body: JSON.stringify(data),
+      });
 
       if (response.ok) {
-        console.log("Charging station added successfully");
+        console.log(
+          isEditMode ? "Charging station updated successfully" : "Charging station added successfully"
+        );
         setOpen(false);
-        fetchChargingStations(); // Refresh the list after adding a new station
+        fetchChargingStations();
+        setIsEditMode(false);
+        setData({
+          station_id: 0,
+          location: "",
+          availability_status: "",
+          charging_speed: "",
+          power_capacity: 0,
+          price_per_kwh: 0,
+          connector_types: "",
+        });
       } else {
         const errorData = await response.json();
         setError(
           errorData.message ||
-            "Failed to add charging station. Please try again.",
+            (isEditMode
+              ? "Failed to update charging station. Please try again."
+              : "Failed to add charging station. Please try again.")
         );
       }
     } catch (error) {
@@ -80,7 +106,12 @@ const ManageStations: React.FC = () => {
       console.error("Network error:", error);
     }
   };
-
+  const handleEdit = (station: ChargingStationData) => {
+    setIsEditMode(true);
+    setOpen(true);
+    setData(station);
+  };
+    
   const handleOpen = () => {
     setOpen(true);
   };
@@ -88,8 +119,13 @@ const ManageStations: React.FC = () => {
   const handleClose = () => {
     setOpen(false);
   };
-
+  
   const fetchChargingStations = async () => {
+    if (!token) {
+      setError("Authorization token is missing.");
+      return;
+    }
+
     try {
       const response = await Server.getChargingStationsForUser(token);
       if (!response.ok) {
@@ -102,10 +138,13 @@ const ManageStations: React.FC = () => {
       setError("Error fetching charging stations.");
     }
   };
+  useEffect(() => {
+    fetchChargingStations();
+  }, []);
 
   const handleDelete = async (stationId: number) => {
     const confirmDelete = window.confirm(
-      "Are you sure you want to delete this station?",
+      "Are you sure you want to delete this station?"
     );
     if (!confirmDelete) return;
 
@@ -118,16 +157,14 @@ const ManageStations: React.FC = () => {
       const response = await Server.deleteChargingStation(token, stationId);
 
       if (response.ok) {
-        // Remove the deleted station from the state
         setStations((prevStations) =>
-          prevStations.filter((station) => station.station_id !== stationId),
+          prevStations.filter((station) => station.station_id !== stationId)
         );
         alert("Charging station deleted successfully.");
       } else {
         const errorData = await response.json();
         setError(
-          errorData.message ||
-            "Failed to delete charging station. Please try again.",
+          errorData.message || "Failed to delete charging station. Please try again."
         );
       }
     } catch (error) {
@@ -142,9 +179,7 @@ const ManageStations: React.FC = () => {
 
   return (
     <>
-      <div
-        style={{ display: "flex", justifyContent: "flex-start", width: "auto" }}
-      >
+      <div style={{ display: "flex", justifyContent: "flex-start", width: "auto" }}>
         <button
           className="flex w-auto justify-center rounded-lg bg-primary p-4 font-medium text-white hover:bg-opacity-90"
           onClick={handleOpen}
@@ -152,17 +187,14 @@ const ManageStations: React.FC = () => {
           Add Charging Station
         </button>
       </div>
-      <br />
+        <br />
       {open && (
         <form
           onSubmit={handleSubmit}
           className="mt-6 rounded-lg bg-white p-6 shadow-lg dark:bg-dark-2"
         >
           <div className="mb-4">
-            <label
-              htmlFor="location"
-              className="mb-2.5 block font-medium text-dark dark:text-white"
-            >
+            <label htmlFor="location" className="mb-2.5 block font-medium text-dark dark:text-white">
               Location
             </label>
             <input
@@ -176,10 +208,7 @@ const ManageStations: React.FC = () => {
           </div>
 
           <div className="mb-4">
-            <label
-              htmlFor="availabilityStatus"
-              className="mb-2.5 block font-medium text-dark dark:text-white"
-            >
+            <label htmlFor="availabilityStatus" className="mb-2.5 block font-medium text-dark dark:text-white">
               Availability Status
             </label>
             <input
@@ -193,10 +222,7 @@ const ManageStations: React.FC = () => {
           </div>
 
           <div className="mb-4">
-            <label
-              htmlFor="chargingSpeed"
-              className="mb-2.5 block font-medium text-dark dark:text-white"
-            >
+            <label htmlFor="chargingSpeed" className="mb-2.5 block font-medium text-dark dark:text-white">
               Charging Speed
             </label>
             <input
@@ -210,10 +236,7 @@ const ManageStations: React.FC = () => {
           </div>
 
           <div className="mb-4">
-            <label
-              htmlFor="power_capacity"
-              className="mb-2.5 block font-medium text-dark dark:text-white"
-            >
+            <label htmlFor="power_capacity" className="mb-2.5 block font-medium text-dark dark:text-white">
               Power Capacity
             </label>
             <input
@@ -227,10 +250,7 @@ const ManageStations: React.FC = () => {
           </div>
 
           <div className="mb-4">
-            <label
-              htmlFor="price_per_kwh"
-              className="mb-2.5 block font-medium text-dark dark:text-white"
-            >
+            <label htmlFor="price_per_kwh" className="mb-2.5 block font-medium text-dark dark:text-white">
               Price Per KWh
             </label>
             <input
@@ -244,10 +264,7 @@ const ManageStations: React.FC = () => {
           </div>
 
           <div className="mb-4">
-            <label
-              htmlFor="connectorTypes"
-              className="mb-2.5 block font-medium text-dark dark:text-white"
-            >
+            <label htmlFor="connectorTypes" className="mb-2.5 block font-medium text-dark dark:text-white">
               Connector Types
             </label>
             <input
@@ -259,17 +276,17 @@ const ManageStations: React.FC = () => {
               className="w-full rounded-lg border border-stroke bg-transparent py-[15px] pl-6 pr-11 font-medium text-dark outline-none focus:border-primary focus-visible:shadow-none dark:border-dark-3 dark:bg-dark-2 dark:text-white dark:focus:border-primary"
             />
           </div>
-
+          
           <button
             type="submit"
             className="w-full rounded-lg bg-primary p-4 text-center font-medium text-white hover:bg-opacity-90"
           >
-            Add Charging Station
+            {isEditMode ? "Update Charging Station" : "Add Charging Station"}
           </button>
           <button
             type="button"
             onClick={handleClose}
-            className="mt-2 w-full rounded-lg bg-gray-500 p-4 text-center font-medium text-white hover:bg-opacity-90"
+            className="w-full mt-2 rounded-lg bg-gray-500 p-4 text-center font-medium text-white hover:bg-opacity-90"
           >
             Close
           </button>
@@ -315,6 +332,14 @@ const ManageStations: React.FC = () => {
                     >
                       Delete
                     </button>
+                    <td>
+                    <button
+                      onClick={() => handleEdit(station)}
+                      className="rounded-lg bg-blue-500 p-2 font-medium text-white hover:bg-blue-600"
+                    >
+                      Update
+                    </button>
+                    </td>
                   </td>
                 </tr>
               ))

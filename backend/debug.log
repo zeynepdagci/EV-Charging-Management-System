@@ -6730,3 +6730,202 @@ INFO 2025-01-03 19:35:41,418 autoreload C:\Users\zeyne\OneDrive\Belgeler\GitHub\
 INFO 2025-01-03 19:35:43,657 autoreload Watching for file changes with StatReloader
 INFO 2025-01-03 19:36:08,643 autoreload C:\Users\zeyne\OneDrive\Belgeler\GitHub\EV-Charging-Management-System\backend\myapp\views\reservation_views.py changed, reloading.
 INFO 2025-01-03 19:36:10,611 autoreload Watching for file changes with StatReloader
+INFO 2025-01-03 19:37:56,817 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 19:37:58,175 basehttp "GET /reservations/most-visited/ HTTP/1.1" 200 148
+INFO 2025-01-03 19:37:58,645 basehttp "GET /reservations/most-visited/ HTTP/1.1" 200 148
+INFO 2025-01-03 19:40:38,541 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 19:40:39,041 basehttp "GET /charging-stations/user/ HTTP/1.1" 200 6335
+INFO 2025-01-03 19:40:39,522 basehttp "GET /charging-stations/user/ HTTP/1.1" 200 6335
+INFO 2025-01-03 19:43:15,458 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 19:44:47,398 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 19:45:31,467 basehttp "GET /charging-stations/user/ HTTP/1.1" 200 6335
+INFO 2025-01-03 19:45:31,594 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 19:45:31,940 basehttp "GET /charging-stations/user/ HTTP/1.1" 200 6335
+INFO 2025-01-03 19:45:51,893 basehttp "OPTIONS /charging-stations/12/delete/ HTTP/1.1" 200 0
+INFO 2025-01-03 19:45:52,536 charging_station_views Charging station 12 deleted by user sellerTest1@example.com
+INFO 2025-01-03 19:45:52,536 basehttp "DELETE /charging-stations/12/delete/ HTTP/1.1" 204 52
+INFO 2025-01-03 19:46:29,316 basehttp "OPTIONS /charging-stations/32/delete/ HTTP/1.1" 200 0
+INFO 2025-01-03 19:46:29,966 charging_station_views Charging station 32 deleted by user sellerTest1@example.com
+INFO 2025-01-03 19:46:29,966 basehttp "DELETE /charging-stations/32/delete/ HTTP/1.1" 204 52
+INFO 2025-01-03 19:47:50,178 basehttp "OPTIONS /charging-stations/31/delete/ HTTP/1.1" 200 0
+INFO 2025-01-03 19:47:50,916 charging_station_views Charging station 31 deleted by user sellerTest1@example.com
+INFO 2025-01-03 19:47:50,916 basehttp "DELETE /charging-stations/31/delete/ HTTP/1.1" 204 52
+WARNING 2025-01-03 19:48:49,460 charging_station_views coordinates
+INFO 2025-01-03 19:48:49,507 charging_station_views Charging station created: {'station_id': 35, 'location': 'MFG Newington - MFG EV Power', 'latitude': '47.715790', 'longitude': '-111.686930', 'availability_status': 'available', 'charging_speed': 'fast', 'power_capacity': '50.00', 'price_per_kwh': '0.25', 'connector_types': 'ccs'}
+INFO 2025-01-03 19:48:49,511 basehttp "POST /charging-stations/add/ HTTP/1.1" 201 238
+INFO 2025-01-03 19:48:49,530 basehttp "OPTIONS /charging-stations/user/ HTTP/1.1" 200 0
+INFO 2025-01-03 19:48:50,066 basehttp "GET /charging-stations/user/ HTTP/1.1" 200 5872
+INFO 2025-01-03 19:49:30,787 basehttp "OPTIONS /charging-stations/17/delete/ HTTP/1.1" 200 0
+INFO 2025-01-03 19:49:31,474 charging_station_views Charging station 17 deleted by user sellerTest1@example.com
+INFO 2025-01-03 19:49:31,474 basehttp "DELETE /charging-stations/17/delete/ HTTP/1.1" 204 52
+INFO 2025-01-03 19:49:33,904 basehttp "OPTIONS /charging-stations/16/delete/ HTTP/1.1" 200 0
+INFO 2025-01-03 19:49:34,574 charging_station_views Charging station 16 deleted by user sellerTest1@example.com
+INFO 2025-01-03 19:49:34,580 basehttp "DELETE /charging-stations/16/delete/ HTTP/1.1" 204 52
+INFO 2025-01-03 19:49:36,518 basehttp "OPTIONS /charging-stations/15/delete/ HTTP/1.1" 200 0
+INFO 2025-01-03 19:49:37,237 charging_station_views Charging station 15 deleted by user sellerTest1@example.com
+INFO 2025-01-03 19:49:37,237 basehttp "DELETE /charging-stations/15/delete/ HTTP/1.1" 204 52
+INFO 2025-01-03 19:49:39,514 basehttp "OPTIONS /charging-stations/14/delete/ HTTP/1.1" 200 0
+INFO 2025-01-03 19:49:40,230 charging_station_views Charging station 14 deleted by user sellerTest1@example.com
+INFO 2025-01-03 19:49:40,236 basehttp "DELETE /charging-stations/14/delete/ HTTP/1.1" 204 52
+INFO 2025-01-03 19:49:42,674 basehttp "OPTIONS /charging-stations/18/delete/ HTTP/1.1" 200 0
+INFO 2025-01-03 19:49:43,403 charging_station_views Charging station 18 deleted by user sellerTest1@example.com
+INFO 2025-01-03 19:49:43,403 basehttp "DELETE /charging-stations/18/delete/ HTTP/1.1" 204 52
+INFO 2025-01-03 19:49:45,913 basehttp "OPTIONS /charging-stations/19/delete/ HTTP/1.1" 200 0
+INFO 2025-01-03 19:49:46,603 charging_station_views Charging station 19 deleted by user sellerTest1@example.com
+INFO 2025-01-03 19:49:46,603 basehttp "DELETE /charging-stations/19/delete/ HTTP/1.1" 204 52
+INFO 2025-01-03 19:49:48,750 basehttp "OPTIONS /charging-stations/20/delete/ HTTP/1.1" 200 0
+INFO 2025-01-03 19:49:49,352 charging_station_views Charging station 20 deleted by user sellerTest1@example.com
+INFO 2025-01-03 19:49:49,352 basehttp "DELETE /charging-stations/20/delete/ HTTP/1.1" 204 52
+INFO 2025-01-03 19:49:51,410 basehttp "OPTIONS /charging-stations/22/delete/ HTTP/1.1" 200 0
+INFO 2025-01-03 19:49:52,055 charging_station_views Charging station 22 deleted by user sellerTest1@example.com
+INFO 2025-01-03 19:49:52,061 basehttp "DELETE /charging-stations/22/delete/ HTTP/1.1" 204 52
+INFO 2025-01-03 19:49:54,052 basehttp "OPTIONS /charging-stations/23/delete/ HTTP/1.1" 200 0
+INFO 2025-01-03 19:49:54,761 charging_station_views Charging station 23 deleted by user sellerTest1@example.com
+INFO 2025-01-03 19:49:54,768 basehttp "DELETE /charging-stations/23/delete/ HTTP/1.1" 204 52
+INFO 2025-01-03 19:49:57,818 basehttp "OPTIONS /charging-stations/24/delete/ HTTP/1.1" 200 0
+INFO 2025-01-03 19:49:58,513 charging_station_views Charging station 24 deleted by user sellerTest1@example.com
+INFO 2025-01-03 19:49:58,529 basehttp "DELETE /charging-stations/24/delete/ HTTP/1.1" 204 52
+INFO 2025-01-03 19:50:00,417 basehttp "OPTIONS /charging-stations/25/delete/ HTTP/1.1" 200 0
+INFO 2025-01-03 19:50:01,080 charging_station_views Charging station 25 deleted by user sellerTest1@example.com
+INFO 2025-01-03 19:50:01,088 basehttp "DELETE /charging-stations/25/delete/ HTTP/1.1" 204 52
+INFO 2025-01-03 19:50:03,038 basehttp "OPTIONS /charging-stations/26/delete/ HTTP/1.1" 200 0
+INFO 2025-01-03 19:50:03,662 charging_station_views Charging station 26 deleted by user sellerTest1@example.com
+INFO 2025-01-03 19:50:03,662 basehttp "DELETE /charging-stations/26/delete/ HTTP/1.1" 204 52
+INFO 2025-01-03 19:50:05,492 basehttp "OPTIONS /charging-stations/27/delete/ HTTP/1.1" 200 0
+INFO 2025-01-03 19:50:06,128 charging_station_views Charging station 27 deleted by user sellerTest1@example.com
+INFO 2025-01-03 19:50:06,135 basehttp "DELETE /charging-stations/27/delete/ HTTP/1.1" 204 52
+INFO 2025-01-03 19:50:07,941 basehttp "OPTIONS /charging-stations/28/delete/ HTTP/1.1" 200 0
+INFO 2025-01-03 19:50:08,591 charging_station_views Charging station 28 deleted by user sellerTest1@example.com
+INFO 2025-01-03 19:50:08,591 basehttp "DELETE /charging-stations/28/delete/ HTTP/1.1" 204 52
+INFO 2025-01-03 19:50:10,404 basehttp "OPTIONS /charging-stations/29/delete/ HTTP/1.1" 200 0
+INFO 2025-01-03 19:50:11,098 charging_station_views Charging station 29 deleted by user sellerTest1@example.com
+INFO 2025-01-03 19:50:11,098 basehttp "DELETE /charging-stations/29/delete/ HTTP/1.1" 204 52
+INFO 2025-01-03 19:50:13,745 basehttp "OPTIONS /charging-stations/30/delete/ HTTP/1.1" 200 0
+INFO 2025-01-03 19:50:14,363 charging_station_views Charging station 30 deleted by user sellerTest1@example.com
+INFO 2025-01-03 19:50:14,379 basehttp "DELETE /charging-stations/30/delete/ HTTP/1.1" 204 52
+INFO 2025-01-03 19:50:18,879 basehttp "OPTIONS /charging-stations/9/delete/ HTTP/1.1" 200 0
+INFO 2025-01-03 19:50:19,544 charging_station_views Charging station 9 deleted by user sellerTest1@example.com
+INFO 2025-01-03 19:50:19,544 basehttp "DELETE /charging-stations/9/delete/ HTTP/1.1" 204 52
+INFO 2025-01-03 19:50:21,524 basehttp "OPTIONS /charging-stations/10/delete/ HTTP/1.1" 200 0
+INFO 2025-01-03 19:50:22,243 charging_station_views Charging station 10 deleted by user sellerTest1@example.com
+INFO 2025-01-03 19:50:22,251 basehttp "DELETE /charging-stations/10/delete/ HTTP/1.1" 204 52
+INFO 2025-01-03 19:50:24,191 basehttp "OPTIONS /charging-stations/11/delete/ HTTP/1.1" 200 0
+INFO 2025-01-03 19:50:24,897 charging_station_views Charging station 11 deleted by user sellerTest1@example.com
+INFO 2025-01-03 19:50:24,901 basehttp "DELETE /charging-stations/11/delete/ HTTP/1.1" 204 52
+INFO 2025-01-03 19:50:28,911 basehttp "OPTIONS /charging-stations/21/delete/ HTTP/1.1" 200 0
+INFO 2025-01-03 19:50:29,592 charging_station_views Charging station 21 deleted by user sellerTest1@example.com
+INFO 2025-01-03 19:50:29,592 basehttp "DELETE /charging-stations/21/delete/ HTTP/1.1" 204 52
+INFO 2025-01-03 19:52:03,397 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 19:52:10,167 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 19:52:19,705 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 19:52:20,185 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 19:52:20,856 basehttp "OPTIONS /charging-stations/all/ HTTP/1.1" 200 0
+INFO 2025-01-03 19:52:20,856 basehttp "OPTIONS /charging-stations/all/ HTTP/1.1" 200 0
+INFO 2025-01-03 19:52:21,313 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 2600
+INFO 2025-01-03 19:52:21,832 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 2600
+INFO 2025-01-03 19:52:35,617 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 19:52:36,277 basehttp "GET /charging-stations/user/ HTTP/1.1" 200 1253
+INFO 2025-01-03 19:52:36,795 basehttp "GET /charging-stations/user/ HTTP/1.1" 200 1253
+INFO 2025-01-03 19:52:46,110 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 2600
+INFO 2025-01-03 19:52:46,555 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 2600
+WARNING 2025-01-03 22:29:43,400 log Unauthorized: /validate-token/
+WARNING 2025-01-03 22:29:43,400 basehttp "POST /validate-token/ HTTP/1.1" 401 50
+WARNING 2025-01-03 22:29:43,646 log Unauthorized: /validate-token/
+WARNING 2025-01-03 22:29:43,646 basehttp "POST /validate-token/ HTTP/1.1" 401 50
+WARNING 2025-01-03 22:29:43,913 log Unauthorized: /validate-token/
+WARNING 2025-01-03 22:29:43,914 basehttp "POST /validate-token/ HTTP/1.1" 401 50
+INFO 2025-01-03 22:29:45,145 basehttp "OPTIONS /login/ HTTP/1.1" 200 0
+INFO 2025-01-03 22:29:46,446 basehttp "POST /login/ HTTP/1.1" 200 1214
+WARNING 2025-01-03 22:29:46,639 log Unauthorized: /validate-token/
+WARNING 2025-01-03 22:29:46,639 basehttp "POST /validate-token/ HTTP/1.1" 401 50
+WARNING 2025-01-03 22:29:46,845 log Unauthorized: /validate-token/
+WARNING 2025-01-03 22:29:46,855 basehttp "POST /validate-token/ HTTP/1.1" 401 50
+INFO 2025-01-03 22:29:57,433 basehttp "POST /login/ HTTP/1.1" 200 1214
+WARNING 2025-01-03 22:29:57,622 log Unauthorized: /validate-token/
+WARNING 2025-01-03 22:29:57,622 basehttp "POST /validate-token/ HTTP/1.1" 401 50
+WARNING 2025-01-03 22:29:57,795 log Unauthorized: /validate-token/
+WARNING 2025-01-03 22:29:57,795 basehttp "POST /validate-token/ HTTP/1.1" 401 50
+INFO 2025-01-03 22:30:01,427 basehttp "POST /login/ HTTP/1.1" 200 1214
+INFO 2025-01-03 22:30:01,897 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 22:30:02,632 basehttp "OPTIONS /charging-stations/all/ HTTP/1.1" 200 0
+INFO 2025-01-03 22:30:03,046 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 2600
+INFO 2025-01-03 22:30:03,511 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 2600
+INFO 2025-01-03 22:30:04,710 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 22:30:05,243 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 22:30:05,552 basehttp "OPTIONS /charging-stations/user/ HTTP/1.1" 200 0
+INFO 2025-01-03 22:30:05,554 basehttp "OPTIONS /charging-stations/user/ HTTP/1.1" 200 0
+INFO 2025-01-03 22:30:06,019 basehttp "GET /charging-stations/user/ HTTP/1.1" 200 1253
+INFO 2025-01-03 22:30:06,498 basehttp "GET /charging-stations/user/ HTTP/1.1" 200 1253
+INFO 2025-01-03 22:30:18,302 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 22:30:18,302 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 22:30:18,355 basehttp "GET /charging-stations/user/ HTTP/1.1" 200 1253
+INFO 2025-01-03 22:30:18,882 basehttp - Broken pipe from ('127.0.0.1', 55226)
+INFO 2025-01-03 22:30:20,089 basehttp "GET /charging-stations/user/ HTTP/1.1" 200 1253
+INFO 2025-01-03 22:30:20,594 basehttp "GET /charging-stations/user/ HTTP/1.1" 200 1253
+INFO 2025-01-03 22:33:56,522 autoreload C:\Users\zeyne\OneDrive\Belgeler\GitHub\EV-Charging-Management-System\backend\myproject\urls.py changed, reloading.
+INFO 2025-01-03 22:33:58,481 autoreload Watching for file changes with StatReloader
+INFO 2025-01-03 22:34:03,365 basehttp "GET /charging-stations/user/ HTTP/1.1" 200 1253
+INFO 2025-01-03 22:34:03,812 basehttp "GET /charging-stations/user/ HTTP/1.1" 200 1253
+INFO 2025-01-03 22:34:24,100 basehttp "POST /login/ HTTP/1.1" 200 1214
+INFO 2025-01-03 22:34:24,608 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 22:34:26,542 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 2600
+INFO 2025-01-03 22:34:27,030 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 2600
+INFO 2025-01-03 22:36:04,845 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 22:36:05,339 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 22:36:05,949 basehttp "GET /charging-stations/user/ HTTP/1.1" 200 1253
+INFO 2025-01-03 22:36:06,435 basehttp "GET /charging-stations/user/ HTTP/1.1" 200 1253
+INFO 2025-01-03 22:37:05,117 basehttp "GET /charging-stations/user/ HTTP/1.1" 200 1253
+INFO 2025-01-03 22:37:05,282 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 22:37:05,297 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 22:37:05,593 basehttp - Broken pipe from ('127.0.0.1', 64864)
+INFO 2025-01-03 22:37:07,288 basehttp "GET /charging-stations/user/ HTTP/1.1" 200 1253
+INFO 2025-01-03 22:37:07,753 basehttp "GET /charging-stations/user/ HTTP/1.1" 200 1253
+INFO 2025-01-03 22:37:11,267 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 22:43:31,769 basehttp "GET /charging-stations/user/ HTTP/1.1" 200 1253
+INFO 2025-01-03 22:43:31,848 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 22:43:32,285 basehttp "GET /charging-stations/user/ HTTP/1.1" 200 1253
+INFO 2025-01-03 22:44:42,995 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 22:44:48,248 basehttp "GET /charging-stations/user/ HTTP/1.1" 200 1253
+INFO 2025-01-03 22:44:48,374 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 22:44:48,643 basehttp "GET /charging-stations/user/ HTTP/1.1" 200 1253
+INFO 2025-01-03 22:51:04,964 basehttp "GET /charging-stations/user/ HTTP/1.1" 200 1253
+INFO 2025-01-03 22:51:05,141 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 22:51:05,411 basehttp "GET /charging-stations/user/ HTTP/1.1" 200 1253
+INFO 2025-01-03 22:51:07,056 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 22:51:08,530 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 22:51:16,112 basehttp "GET /charging-stations/user/ HTTP/1.1" 200 1253
+INFO 2025-01-03 22:51:16,167 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 22:51:16,567 basehttp "GET /charging-stations/user/ HTTP/1.1" 200 1253
+INFO 2025-01-03 22:53:42,684 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 22:53:54,367 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 22:54:25,525 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 22:55:11,778 basehttp "GET /charging-stations/user/ HTTP/1.1" 200 1253
+INFO 2025-01-03 22:55:11,850 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 22:55:12,280 basehttp "GET /charging-stations/user/ HTTP/1.1" 200 1253
+INFO 2025-01-03 22:55:45,313 basehttp "OPTIONS /charging-stations/13/update/ HTTP/1.1" 200 0
+INFO 2025-01-03 22:55:45,865 charging_station_views Charging station 13 updated by user sellerTest1@example.com
+INFO 2025-01-03 22:55:45,875 basehttp "PUT /charging-stations/13/update/ HTTP/1.1" 200 233
+INFO 2025-01-03 22:55:46,379 basehttp "GET /charging-stations/user/ HTTP/1.1" 200 1253
+INFO 2025-01-03 22:56:17,906 charging_station_views Charging station 13 updated by user sellerTest1@example.com
+INFO 2025-01-03 22:56:17,916 basehttp "PUT /charging-stations/13/update/ HTTP/1.1" 200 238
+INFO 2025-01-03 22:56:18,422 basehttp "GET /charging-stations/user/ HTTP/1.1" 200 1258
+INFO 2025-01-03 22:56:40,851 basehttp "OPTIONS /charging-stations/13/delete/ HTTP/1.1" 200 0
+INFO 2025-01-03 22:56:41,634 charging_station_views Charging station 13 deleted by user sellerTest1@example.com
+INFO 2025-01-03 22:56:41,634 basehttp "DELETE /charging-stations/13/delete/ HTTP/1.1" 204 52
+INFO 2025-01-03 22:57:52,970 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 23:02:12,895 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 23:02:17,531 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 23:03:07,543 basehttp "OPTIONS /charging-stations/add/ HTTP/1.1" 200 0
+WARNING 2025-01-03 23:03:08,446 charging_station_views coordinates
+WARNING 2025-01-03 23:03:08,446 log Bad Request: /charging-stations/add/
+WARNING 2025-01-03 23:03:08,446 basehttp "POST /charging-stations/add/ HTTP/1.1" 400 62
+WARNING 2025-01-03 23:03:40,097 charging_station_views coordinates
+INFO 2025-01-03 23:03:40,153 charging_station_views Charging station created: {'station_id': 36, 'location': 'Battersea Power Station - Phase 3A - Pod Point', 'latitude': '32.931510', 'longitude': '-95.871350', 'availability_status': 'available', 'charging_speed': 'fast', 'power_capacity': '60.00', 'price_per_kwh': '0.20', 'connector_types': 'ccs'}
+INFO 2025-01-03 23:03:40,156 basehttp "POST /charging-stations/add/ HTTP/1.1" 201 255
+INFO 2025-01-03 23:03:40,642 basehttp "GET /charging-stations/user/ HTTP/1.1" 200 1275
+INFO 2025-01-03 23:04:30,356 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 23:04:30,502 basehttp "GET /charging-stations/user/ HTTP/1.1" 200 1275
+INFO 2025-01-03 23:04:30,921 basehttp "GET /charging-stations/user/ HTTP/1.1" 200 1275
+INFO 2025-01-03 23:04:31,255 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 23:05:02,192 autoreload C:\Users\zeyne\OneDrive\Belgeler\GitHub\EV-Charging-Management-System\backend\myproject\settings.py changed, reloading.
+INFO 2025-01-03 23:05:04,641 autoreload Watching for file changes with StatReloader
