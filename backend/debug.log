@@ -5214,3 +5214,1519 @@ INFO 2025-01-02 15:19:33,862 basehttp "POST /validate-token/ HTTP/1.1" 200 14
 INFO 2025-01-02 15:19:34,336 basehttp "POST /validate-token/ HTTP/1.1" 200 14
 INFO 2025-01-02 15:19:35,112 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
 INFO 2025-01-02 15:19:35,651 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 19:11:48,745 autoreload Watching for file changes with StatReloader
+INFO 2025-01-02 19:13:08,201 autoreload Watching for file changes with StatReloader
+ERROR 2025-01-02 19:13:35,410 log Internal Server Error: /validate-token/
+Traceback (most recent call last):
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\rest_framework\views.py", line 497, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\rest_framework\views.py", line 414, in initial
+    self.perform_authentication(request)
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\rest_framework\views.py", line 324, in perform_authentication
+    request.user
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\rest_framework\request.py", line 231, in user
+    self._authenticate()
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\rest_framework\request.py", line 384, in _authenticate
+    user_auth_tuple = authenticator.authenticate(self)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\django_cognito_jwt\backend.py", line 27, in authenticate
+    jwt_payload = token_validator.validate(jwt_token)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\django_cognito_jwt\validator.py", line 56, in validate
+    public_key = self._get_public_key(token)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\django_cognito_jwt\validator.py", line 50, in _get_public_key
+    jwk_data = self._json_web_keys.get(headers["kid"])
+                                       ~~~~~~~^^^^^^^
+KeyError: 'kid'
+ERROR 2025-01-02 19:13:35,426 basehttp "POST /validate-token/ HTTP/1.1" 500 122253
+ERROR 2025-01-02 19:13:35,656 log Internal Server Error: /validate-token/
+Traceback (most recent call last):
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\rest_framework\views.py", line 497, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\rest_framework\views.py", line 414, in initial
+    self.perform_authentication(request)
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\rest_framework\views.py", line 324, in perform_authentication
+    request.user
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\rest_framework\request.py", line 231, in user
+    self._authenticate()
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\rest_framework\request.py", line 384, in _authenticate
+    user_auth_tuple = authenticator.authenticate(self)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\django_cognito_jwt\backend.py", line 27, in authenticate
+    jwt_payload = token_validator.validate(jwt_token)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\django_cognito_jwt\validator.py", line 56, in validate
+    public_key = self._get_public_key(token)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\django_cognito_jwt\validator.py", line 50, in _get_public_key
+    jwk_data = self._json_web_keys.get(headers["kid"])
+                                       ~~~~~~~^^^^^^^
+KeyError: 'kid'
+ERROR 2025-01-02 19:13:35,673 basehttp "POST /validate-token/ HTTP/1.1" 500 122253
+INFO 2025-01-02 19:13:51,387 basehttp "OPTIONS /login/ HTTP/1.1" 200 0
+INFO 2025-01-02 19:13:53,757 basehttp "POST /login/ HTTP/1.1" 200 1124
+INFO 2025-01-02 19:13:54,526 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 19:14:11,097 basehttp "OPTIONS /charging-stations/all/ HTTP/1.1" 200 0
+INFO 2025-01-02 19:14:11,112 basehttp "OPTIONS /charging-stations/all/ HTTP/1.1" 200 0
+INFO 2025-01-02 19:14:11,604 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 19:14:12,103 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 19:14:27,878 basehttp "OPTIONS /charging-stations/user/ HTTP/1.1" 200 0
+WARNING 2025-01-02 19:14:27,881 log Unauthorized: /charging-stations/user/
+INFO 2025-01-02 19:14:27,882 basehttp "OPTIONS /charging-stations/user/ HTTP/1.1" 200 0
+WARNING 2025-01-02 19:14:27,882 basehttp "GET /charging-stations/user/ HTTP/1.1" 401 50
+WARNING 2025-01-02 19:14:27,883 log Unauthorized: /charging-stations/user/
+WARNING 2025-01-02 19:14:27,884 basehttp "GET /charging-stations/user/ HTTP/1.1" 401 50
+INFO 2025-01-02 19:21:03,607 basehttp "OPTIONS /charging-stations/user/ HTTP/1.1" 200 0
+INFO 2025-01-02 19:21:03,609 basehttp "OPTIONS /charging-stations/user/ HTTP/1.1" 200 0
+WARNING 2025-01-02 19:21:03,613 log Unauthorized: /charging-stations/user/
+WARNING 2025-01-02 19:21:03,614 log Unauthorized: /charging-stations/user/
+WARNING 2025-01-02 19:21:03,614 basehttp "GET /charging-stations/user/ HTTP/1.1" 401 50
+WARNING 2025-01-02 19:21:03,614 basehttp "GET /charging-stations/user/ HTTP/1.1" 401 50
+INFO 2025-01-02 19:23:25,834 basehttp "OPTIONS /charging-stations/all/ HTTP/1.1" 200 0
+WARNING 2025-01-02 19:23:25,849 log Unauthorized: /charging-stations/all/
+WARNING 2025-01-02 19:23:25,849 basehttp "GET /charging-stations/all/ HTTP/1.1" 401 50
+WARNING 2025-01-02 19:23:25,854 log Unauthorized: /charging-stations/all/
+WARNING 2025-01-02 19:23:25,855 basehttp "GET /charging-stations/all/ HTTP/1.1" 401 50
+WARNING 2025-01-02 19:23:29,602 log Unauthorized: /charging-stations/all/
+WARNING 2025-01-02 19:23:29,602 basehttp "GET /charging-stations/all/ HTTP/1.1" 401 50
+WARNING 2025-01-02 19:23:29,607 log Unauthorized: /charging-stations/all/
+WARNING 2025-01-02 19:23:29,608 basehttp "GET /charging-stations/all/ HTTP/1.1" 401 50
+WARNING 2025-01-02 19:23:47,843 log Unauthorized: /charging-stations/user/
+WARNING 2025-01-02 19:23:47,846 basehttp "GET /charging-stations/user/ HTTP/1.1" 401 50
+WARNING 2025-01-02 19:23:47,858 log Unauthorized: /charging-stations/user/
+WARNING 2025-01-02 19:23:47,858 basehttp "GET /charging-stations/user/ HTTP/1.1" 401 50
+INFO 2025-01-02 19:26:27,498 basehttp "OPTIONS /login/ HTTP/1.1" 200 0
+INFO 2025-01-02 19:26:28,754 basehttp "POST /login/ HTTP/1.1" 200 1124
+INFO 2025-01-02 19:26:29,257 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-02 19:26:30,443 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 19:26:30,959 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-02 19:26:39,970 basehttp "OPTIONS /create-checkout-session/ HTTP/1.1" 200 0
+WARNING 2025-01-02 19:26:39,986 log Unauthorized: /create-checkout-session/
+WARNING 2025-01-02 19:26:39,986 basehttp "POST /create-checkout-session/ HTTP/1.1" 401 50
+INFO 2025-01-02 19:26:43,958 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+WARNING 2025-01-02 19:26:49,840 log Unauthorized: /create-checkout-session/
+WARNING 2025-01-02 19:26:49,840 basehttp "POST /create-checkout-session/ HTTP/1.1" 401 50
+INFO 2025-01-02 19:26:55,535 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+WARNING 2025-01-02 19:28:02,200 log Unauthorized: /create-checkout-session/
+WARNING 2025-01-02 19:28:02,200 basehttp "POST /create-checkout-session/ HTTP/1.1" 401 50
+INFO 2025-01-03 14:26:27,951 autoreload C:\Users\zeyne\OneDrive\Belgeler\GitHub\EV-Charging-Management-System\backend\myapp\views\cognito_auth_views.py changed, reloading.
+INFO 2025-01-03 14:26:29,610 autoreload Watching for file changes with StatReloader
+INFO 2025-01-03 16:32:33,667 autoreload Watching for file changes with StatReloader
+INFO 2025-01-03 16:37:37,436 basehttp "OPTIONS /charging-stations/user/ HTTP/1.1" 200 0
+WARNING 2025-01-03 16:37:37,446 log Unauthorized: /charging-stations/user/
+WARNING 2025-01-03 16:37:37,446 basehttp "GET /charging-stations/user/ HTTP/1.1" 401 50
+WARNING 2025-01-03 16:37:37,456 log Unauthorized: /charging-stations/user/
+WARNING 2025-01-03 16:37:37,456 basehttp "GET /charging-stations/user/ HTTP/1.1" 401 50
+WARNING 2025-01-03 16:38:09,160 log Unauthorized: /charging-stations/user/
+WARNING 2025-01-03 16:38:09,160 basehttp "GET /charging-stations/user/ HTTP/1.1" 401 50
+WARNING 2025-01-03 16:38:09,167 log Unauthorized: /charging-stations/user/
+WARNING 2025-01-03 16:38:09,167 basehttp "GET /charging-stations/user/ HTTP/1.1" 401 50
+INFO 2025-01-03 16:50:22,023 autoreload C:\Users\zeyne\OneDrive\Belgeler\GitHub\EV-Charging-Management-System\backend\myapp\views\charging_station_views.py changed, reloading.
+INFO 2025-01-03 16:50:24,500 autoreload Watching for file changes with StatReloader
+INFO 2025-01-03 16:50:58,760 autoreload C:\Users\zeyne\OneDrive\Belgeler\GitHub\EV-Charging-Management-System\backend\myapp\views\charging_station_views.py changed, reloading.
+INFO 2025-01-03 16:51:00,189 autoreload Watching for file changes with StatReloader
+INFO 2025-01-03 16:51:13,649 autoreload C:\Users\zeyne\OneDrive\Belgeler\GitHub\EV-Charging-Management-System\backend\myapp\views\reservation_views.py changed, reloading.
+INFO 2025-01-03 16:51:15,212 autoreload Watching for file changes with StatReloader
+INFO 2025-01-03 16:51:20,766 autoreload C:\Users\zeyne\OneDrive\Belgeler\GitHub\EV-Charging-Management-System\backend\myapp\views\reservation_views.py changed, reloading.
+INFO 2025-01-03 16:51:22,134 autoreload Watching for file changes with StatReloader
+INFO 2025-01-03 16:52:51,148 autoreload C:\Users\zeyne\OneDrive\Belgeler\GitHub\EV-Charging-Management-System\backend\myproject\urls.py changed, reloading.
+INFO 2025-01-03 16:52:52,757 autoreload Watching for file changes with StatReloader
+INFO 2025-01-03 16:53:12,616 autoreload C:\Users\zeyne\OneDrive\Belgeler\GitHub\EV-Charging-Management-System\backend\myproject\urls.py changed, reloading.
+INFO 2025-01-03 16:53:13,975 autoreload Watching for file changes with StatReloader
+INFO 2025-01-03 16:53:24,244 autoreload C:\Users\zeyne\OneDrive\Belgeler\GitHub\EV-Charging-Management-System\backend\myproject\urls.py changed, reloading.
+INFO 2025-01-03 16:53:25,583 autoreload Watching for file changes with StatReloader
+INFO 2025-01-03 16:53:41,288 autoreload C:\Users\zeyne\OneDrive\Belgeler\GitHub\EV-Charging-Management-System\backend\myproject\urls.py changed, reloading.
+INFO 2025-01-03 16:53:42,779 autoreload Watching for file changes with StatReloader
+INFO 2025-01-03 16:53:54,095 autoreload C:\Users\zeyne\OneDrive\Belgeler\GitHub\EV-Charging-Management-System\backend\myapp\views\reservation_views.py changed, reloading.
+INFO 2025-01-03 16:53:55,405 autoreload Watching for file changes with StatReloader
+WARNING 2025-01-03 16:57:05,357 log Unauthorized: /charging-stations/user/
+WARNING 2025-01-03 16:57:05,357 basehttp "GET /charging-stations/user/ HTTP/1.1" 401 50
+WARNING 2025-01-03 16:57:05,357 log Unauthorized: /charging-stations/user/
+WARNING 2025-01-03 16:57:05,357 basehttp "GET /charging-stations/user/ HTTP/1.1" 401 50
+INFO 2025-01-03 16:57:47,611 basehttp "OPTIONS /reservations/most-visited/ HTTP/1.1" 200 0
+WARNING 2025-01-03 16:57:47,611 log Unauthorized: /reservations/most-visited/
+WARNING 2025-01-03 16:57:47,611 basehttp "GET /reservations/most-visited/ HTTP/1.1" 401 50
+WARNING 2025-01-03 16:57:47,620 log Unauthorized: /reservations/most-visited/
+WARNING 2025-01-03 16:57:47,621 basehttp "GET /reservations/most-visited/ HTTP/1.1" 401 50
+INFO 2025-01-03 16:57:53,584 autoreload C:\Users\zeyne\OneDrive\Belgeler\GitHub\EV-Charging-Management-System\backend\myproject\urls.py changed, reloading.
+INFO 2025-01-03 16:57:55,084 autoreload Watching for file changes with StatReloader
+INFO 2025-01-03 16:58:23,855 autoreload C:\Users\zeyne\OneDrive\Belgeler\GitHub\EV-Charging-Management-System\backend\myapp\views\reservation_views.py changed, reloading.
+INFO 2025-01-03 16:58:25,311 autoreload Watching for file changes with StatReloader
+INFO 2025-01-03 16:58:45,831 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 16:58:46,295 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 16:58:46,632 basehttp "OPTIONS /charging-stations/all/ HTTP/1.1" 200 0
+INFO 2025-01-03 16:58:46,633 basehttp "OPTIONS /charging-stations/all/ HTTP/1.1" 200 0
+INFO 2025-01-03 16:58:47,115 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-03 16:58:47,572 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-03 16:59:10,489 basehttp "OPTIONS /login/ HTTP/1.1" 200 0
+INFO 2025-01-03 16:59:13,015 basehttp "POST /login/ HTTP/1.1" 200 1214
+INFO 2025-01-03 16:59:13,502 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 16:59:13,706 basehttp - Broken pipe from ('127.0.0.1', 60896)
+INFO 2025-01-03 16:59:15,590 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-03 16:59:16,070 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-03 16:59:17,027 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 16:59:17,581 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 16:59:18,290 basehttp "GET /charging-stations/user/ HTTP/1.1" 200 5359
+INFO 2025-01-03 16:59:18,720 basehttp "GET /charging-stations/user/ HTTP/1.1" 200 5359
+INFO 2025-01-03 17:00:40,212 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 17:00:40,240 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 17:00:40,576 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 17:00:40,696 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 17:00:41,666 basehttp "GET /charging-stations/user/ HTTP/1.1" 200 5359
+INFO 2025-01-03 17:00:42,108 basehttp "GET /charging-stations/user/ HTTP/1.1" 200 5359
+INFO 2025-01-03 17:01:29,288 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 17:01:29,754 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 17:01:37,353 autoreload C:\Users\zeyne\OneDrive\Belgeler\GitHub\EV-Charging-Management-System\backend\myproject\urls.py changed, reloading.
+INFO 2025-01-03 17:01:38,659 autoreload Watching for file changes with StatReloader
+INFO 2025-01-03 17:01:52,273 autoreload C:\Users\zeyne\OneDrive\Belgeler\GitHub\EV-Charging-Management-System\backend\myapp\views\reservation_views.py changed, reloading.
+INFO 2025-01-03 17:01:53,405 autoreload Watching for file changes with StatReloader
+INFO 2025-01-03 17:02:22,934 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 17:02:41,479 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-03 17:02:41,981 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-03 17:02:45,271 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 17:02:47,209 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 17:02:51,104 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 17:02:52,055 basehttp "GET /charging-stations/user/ HTTP/1.1" 200 5359
+INFO 2025-01-03 17:02:52,807 basehttp "GET /charging-stations/user/ HTTP/1.1" 200 5359
+INFO 2025-01-03 17:02:55,832 basehttp "OPTIONS /reservations/user/ HTTP/1.1" 200 0
+INFO 2025-01-03 17:02:55,833 basehttp "OPTIONS /reservations/user/ HTTP/1.1" 200 0
+WARNING 2025-01-03 17:02:55,851 log Not Found: /reservations/user/
+WARNING 2025-01-03 17:02:55,852 basehttp "GET /reservations/user/ HTTP/1.1" 404 5027
+WARNING 2025-01-03 17:02:55,862 log Not Found: /reservations/user/
+WARNING 2025-01-03 17:02:55,862 basehttp "GET /reservations/user/ HTTP/1.1" 404 5027
+WARNING 2025-01-03 17:03:04,307 log Not Found: /reservations/user/
+WARNING 2025-01-03 17:03:04,309 basehttp "GET /reservations/user/ HTTP/1.1" 404 5027
+WARNING 2025-01-03 17:03:04,318 log Not Found: /reservations/user/
+WARNING 2025-01-03 17:03:04,320 basehttp "GET /reservations/user/ HTTP/1.1" 404 5027
+WARNING 2025-01-03 17:03:16,811 log Unauthorized: /reservations/most-visited/
+WARNING 2025-01-03 17:03:16,811 basehttp "GET /reservations/most-visited/ HTTP/1.1" 401 50
+WARNING 2025-01-03 17:03:16,811 log Unauthorized: /reservations/most-visited/
+WARNING 2025-01-03 17:03:16,811 basehttp "GET /reservations/most-visited/ HTTP/1.1" 401 50
+WARNING 2025-01-03 17:04:34,360 log Unauthorized: /reservations/most-visited/
+WARNING 2025-01-03 17:04:34,360 basehttp "GET /reservations/most-visited/ HTTP/1.1" 401 50
+WARNING 2025-01-03 17:04:34,374 log Unauthorized: /reservations/most-visited/
+WARNING 2025-01-03 17:04:34,375 basehttp "GET /reservations/most-visited/ HTTP/1.1" 401 50
+WARNING 2025-01-03 17:05:27,997 log Unauthorized: /reservations/most-visited/
+WARNING 2025-01-03 17:05:27,997 basehttp "GET /reservations/most-visited/ HTTP/1.1" 401 50
+WARNING 2025-01-03 17:05:28,004 log Unauthorized: /reservations/most-visited/
+WARNING 2025-01-03 17:05:28,004 basehttp "GET /reservations/most-visited/ HTTP/1.1" 401 50
+ERROR 2025-01-03 17:06:10,984 log Internal Server Error: /reservations/most-visited/
+Traceback (most recent call last):
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\OneDrive\Belgeler\GitHub\EV-Charging-Management-System\backend\myapp\views\reservation_views.py", line 95, in get
+    ChargingStation.objects.values("id", "name")
+    ^^^^^^^^^^^^^^^
+NameError: name 'ChargingStation' is not defined
+ERROR 2025-01-03 17:06:10,999 basehttp "GET /reservations/most-visited/ HTTP/1.1" 500 99020
+ERROR 2025-01-03 17:06:11,481 log Internal Server Error: /reservations/most-visited/
+Traceback (most recent call last):
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\OneDrive\Belgeler\GitHub\EV-Charging-Management-System\backend\myapp\views\reservation_views.py", line 95, in get
+    ChargingStation.objects.values("id", "name")
+    ^^^^^^^^^^^^^^^
+NameError: name 'ChargingStation' is not defined
+ERROR 2025-01-03 17:06:11,495 basehttp "GET /reservations/most-visited/ HTTP/1.1" 500 99020
+INFO 2025-01-03 17:09:01,638 autoreload C:\Users\zeyne\OneDrive\Belgeler\GitHub\EV-Charging-Management-System\backend\myapp\views\reservation_views.py changed, reloading.
+INFO 2025-01-03 17:09:03,203 autoreload Watching for file changes with StatReloader
+INFO 2025-01-03 17:09:08,523 autoreload C:\Users\zeyne\OneDrive\Belgeler\GitHub\EV-Charging-Management-System\backend\myapp\views\reservation_views.py changed, reloading.
+INFO 2025-01-03 17:09:09,672 autoreload Watching for file changes with StatReloader
+INFO 2025-01-03 17:09:14,506 basehttp "GET /reservations/most-visited/ HTTP/1.1" 200 458
+INFO 2025-01-03 17:09:15,022 basehttp "GET /reservations/most-visited/ HTTP/1.1" 200 458
+INFO 2025-01-03 17:10:12,513 autoreload C:\Users\zeyne\OneDrive\Belgeler\GitHub\EV-Charging-Management-System\backend\myapp\views\reservation_views.py changed, reloading.
+INFO 2025-01-03 17:10:13,788 autoreload Watching for file changes with StatReloader
+INFO 2025-01-03 17:10:36,745 basehttp "OPTIONS /charging-stations/most-visited/ HTTP/1.1" 200 0
+WARNING 2025-01-03 17:10:36,758 log Not Found: /charging-stations/most-visited/
+WARNING 2025-01-03 17:10:36,759 basehttp "GET /charging-stations/most-visited/ HTTP/1.1" 404 5066
+WARNING 2025-01-03 17:10:36,764 log Not Found: /charging-stations/most-visited/
+WARNING 2025-01-03 17:10:36,765 basehttp "GET /charging-stations/most-visited/ HTTP/1.1" 404 5066
+ERROR 2025-01-03 17:10:55,614 log Internal Server Error: /reservations/most-visited/
+Traceback (most recent call last):
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\OneDrive\Belgeler\GitHub\EV-Charging-Management-System\backend\myapp\views\reservation_views.py", line 120, in get
+    .annotate(total_visits=Count("id"))
+                           ^^^^^
+NameError: name 'Count' is not defined. Did you mean: 'round'?
+ERROR 2025-01-03 17:10:55,620 basehttp "GET /reservations/most-visited/ HTTP/1.1" 500 99060
+ERROR 2025-01-03 17:10:56,113 log Internal Server Error: /reservations/most-visited/
+Traceback (most recent call last):
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\OneDrive\Belgeler\GitHub\EV-Charging-Management-System\backend\myapp\views\reservation_views.py", line 120, in get
+    .annotate(total_visits=Count("id"))
+                           ^^^^^
+NameError: name 'Count' is not defined. Did you mean: 'round'?
+ERROR 2025-01-03 17:10:56,121 basehttp "GET /reservations/most-visited/ HTTP/1.1" 500 99060
+INFO 2025-01-03 17:11:32,988 autoreload C:\Users\zeyne\OneDrive\Belgeler\GitHub\EV-Charging-Management-System\backend\myproject\urls.py changed, reloading.
+INFO 2025-01-03 17:11:34,308 autoreload Watching for file changes with StatReloader
+INFO 2025-01-03 17:11:53,631 autoreload C:\Users\zeyne\OneDrive\Belgeler\GitHub\EV-Charging-Management-System\backend\myapp\views\reservation_views.py changed, reloading.
+INFO 2025-01-03 17:11:55,082 autoreload Watching for file changes with StatReloader
+INFO 2025-01-03 17:13:29,293 basehttp "GET /reservations/most-visited/ HTTP/1.1" 200 458
+INFO 2025-01-03 17:13:29,783 basehttp "GET /reservations/most-visited/ HTTP/1.1" 200 458
+INFO 2025-01-03 17:13:35,282 basehttp "GET /reservations/most-visited/ HTTP/1.1" 200 458
+INFO 2025-01-03 17:13:35,787 basehttp "GET /reservations/most-visited/ HTTP/1.1" 200 458
+INFO 2025-01-03 17:13:46,317 autoreload C:\Users\zeyne\OneDrive\Belgeler\GitHub\EV-Charging-Management-System\backend\myapp\views\reservation_views.py changed, reloading.
+INFO 2025-01-03 17:13:47,780 autoreload Watching for file changes with StatReloader
+ERROR 2025-01-03 17:13:52,232 log Internal Server Error: /reservations/most-visited/
+Traceback (most recent call last):
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\OneDrive\Belgeler\GitHub\EV-Charging-Management-System\backend\myapp\views\reservation_views.py", line 120, in get
+    .annotate(total_visits=Count("id"))
+                           ^^^^^
+NameError: name 'Count' is not defined. Did you mean: 'round'?
+ERROR 2025-01-03 17:13:52,239 basehttp "GET /reservations/most-visited/ HTTP/1.1" 500 99060
+ERROR 2025-01-03 17:13:52,711 log Internal Server Error: /reservations/most-visited/
+Traceback (most recent call last):
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\OneDrive\Belgeler\GitHub\EV-Charging-Management-System\backend\myapp\views\reservation_views.py", line 120, in get
+    .annotate(total_visits=Count("id"))
+                           ^^^^^
+NameError: name 'Count' is not defined. Did you mean: 'round'?
+ERROR 2025-01-03 17:13:52,719 basehttp "GET /reservations/most-visited/ HTTP/1.1" 500 99060
+WARNING 2025-01-03 17:17:57,860 log Unauthorized: /reservations/most-visited/
+WARNING 2025-01-03 17:17:57,860 basehttp "GET /reservations/most-visited/ HTTP/1.1" 401 5174
+INFO 2025-01-03 17:17:58,173 basehttp "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 200 121457
+INFO 2025-01-03 17:17:58,174 basehttp "GET /static/rest_framework/js/csrf.js HTTP/1.1" 200 1793
+INFO 2025-01-03 17:17:58,180 basehttp "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 200 39680
+INFO 2025-01-03 17:17:58,182 basehttp "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 200 13632
+INFO 2025-01-03 17:17:58,184 basehttp "GET /static/rest_framework/js/default.js HTTP/1.1" 200 1268
+INFO 2025-01-03 17:17:58,185 basehttp "GET /static/rest_framework/js/load-ajax-form.js HTTP/1.1" 200 59
+INFO 2025-01-03 17:17:58,242 basehttp "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 200 3796
+INFO 2025-01-03 17:17:58,247 basehttp "GET /static/rest_framework/js/jquery-3.7.1.min.js HTTP/1.1" 200 87533
+INFO 2025-01-03 17:17:58,248 basehttp "GET /static/rest_framework/css/prettify.css HTTP/1.1" 200 817
+INFO 2025-01-03 17:17:58,249 basehttp "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 200 3426
+INFO 2025-01-03 17:17:58,249 basehttp "GET /static/rest_framework/css/default.css HTTP/1.1" 200 1152
+INFO 2025-01-03 17:17:58,264 basehttp "GET /static/rest_framework/img/grid.png HTTP/1.1" 200 1458
+WARNING 2025-01-03 17:17:58,317 log Not Found: /favicon.ico
+WARNING 2025-01-03 17:17:58,318 basehttp "GET /favicon.ico HTTP/1.1" 404 5006
+INFO 2025-01-03 17:18:44,295 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 17:18:45,791 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 17:18:46,304 basehttp "GET /charging-stations/user/ HTTP/1.1" 200 5359
+INFO 2025-01-03 17:18:46,748 basehttp "GET /charging-stations/user/ HTTP/1.1" 200 5359
+INFO 2025-01-03 17:18:58,432 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 17:19:14,296 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 17:19:19,626 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+ERROR 2025-01-03 17:19:20,088 log Internal Server Error: /reservations/most-visited/
+Traceback (most recent call last):
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\OneDrive\Belgeler\GitHub\EV-Charging-Management-System\backend\myapp\views\reservation_views.py", line 120, in get
+    .annotate(total_visits=Count("id"))
+                           ^^^^^
+NameError: name 'Count' is not defined. Did you mean: 'round'?
+ERROR 2025-01-03 17:19:20,105 basehttp "GET /reservations/most-visited/ HTTP/1.1" 500 99060
+ERROR 2025-01-03 17:19:20,518 log Internal Server Error: /reservations/most-visited/
+Traceback (most recent call last):
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\OneDrive\Belgeler\GitHub\EV-Charging-Management-System\backend\myapp\views\reservation_views.py", line 120, in get
+    .annotate(total_visits=Count("id"))
+                           ^^^^^
+NameError: name 'Count' is not defined. Did you mean: 'round'?
+ERROR 2025-01-03 17:19:20,535 basehttp "GET /reservations/most-visited/ HTTP/1.1" 500 99060
+WARNING 2025-01-03 17:19:24,092 log Unauthorized: /reservations/most-visited/
+WARNING 2025-01-03 17:19:24,092 basehttp "GET /reservations/most-visited/ HTTP/1.1" 401 5174
+WARNING 2025-01-03 17:19:25,837 log Unauthorized: /reservations/most-visited/
+WARNING 2025-01-03 17:19:25,837 basehttp "GET /reservations/most-visited/ HTTP/1.1" 401 5174
+ERROR 2025-01-03 17:19:34,119 log Internal Server Error: /reservations/most-visited/
+Traceback (most recent call last):
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\OneDrive\Belgeler\GitHub\EV-Charging-Management-System\backend\myapp\views\reservation_views.py", line 120, in get
+    .annotate(total_visits=Count("id"))
+                           ^^^^^
+NameError: name 'Count' is not defined. Did you mean: 'round'?
+ERROR 2025-01-03 17:19:34,126 basehttp "GET /reservations/most-visited/ HTTP/1.1" 500 99060
+ERROR 2025-01-03 17:19:34,555 log Internal Server Error: /reservations/most-visited/
+Traceback (most recent call last):
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\OneDrive\Belgeler\GitHub\EV-Charging-Management-System\backend\myapp\views\reservation_views.py", line 120, in get
+    .annotate(total_visits=Count("id"))
+                           ^^^^^
+NameError: name 'Count' is not defined. Did you mean: 'round'?
+ERROR 2025-01-03 17:19:34,571 basehttp "GET /reservations/most-visited/ HTTP/1.1" 500 99060
+ERROR 2025-01-03 17:20:47,437 log Internal Server Error: /reservations/most-visited/
+Traceback (most recent call last):
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\OneDrive\Belgeler\GitHub\EV-Charging-Management-System\backend\myapp\views\reservation_views.py", line 120, in get
+    .annotate(total_visits=Count("id"))
+                           ^^^^^
+NameError: name 'Count' is not defined. Did you mean: 'round'?
+ERROR 2025-01-03 17:20:47,445 basehttp "GET /reservations/most-visited/ HTTP/1.1" 500 99060
+ERROR 2025-01-03 17:20:47,907 log Internal Server Error: /reservations/most-visited/
+Traceback (most recent call last):
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\OneDrive\Belgeler\GitHub\EV-Charging-Management-System\backend\myapp\views\reservation_views.py", line 120, in get
+    .annotate(total_visits=Count("id"))
+                           ^^^^^
+NameError: name 'Count' is not defined. Did you mean: 'round'?
+ERROR 2025-01-03 17:20:47,914 basehttp "GET /reservations/most-visited/ HTTP/1.1" 500 99060
+ERROR 2025-01-03 17:21:08,392 log Internal Server Error: /reservations/most-visited/
+Traceback (most recent call last):
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\OneDrive\Belgeler\GitHub\EV-Charging-Management-System\backend\myapp\views\reservation_views.py", line 120, in get
+    .annotate(total_visits=Count("id"))
+                           ^^^^^
+NameError: name 'Count' is not defined. Did you mean: 'round'?
+ERROR 2025-01-03 17:21:08,398 basehttp "GET /reservations/most-visited/ HTTP/1.1" 500 99060
+ERROR 2025-01-03 17:21:08,852 log Internal Server Error: /reservations/most-visited/
+Traceback (most recent call last):
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\OneDrive\Belgeler\GitHub\EV-Charging-Management-System\backend\myapp\views\reservation_views.py", line 120, in get
+    .annotate(total_visits=Count("id"))
+                           ^^^^^
+NameError: name 'Count' is not defined. Did you mean: 'round'?
+ERROR 2025-01-03 17:21:08,870 basehttp "GET /reservations/most-visited/ HTTP/1.1" 500 99060
+ERROR 2025-01-03 17:21:43,746 log Internal Server Error: /reservations/most-visited/
+Traceback (most recent call last):
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\OneDrive\Belgeler\GitHub\EV-Charging-Management-System\backend\myapp\views\reservation_views.py", line 120, in get
+    .annotate(total_visits=Count("id"))
+                           ^^^^^
+NameError: name 'Count' is not defined. Did you mean: 'round'?
+ERROR 2025-01-03 17:21:43,746 basehttp "GET /reservations/most-visited/ HTTP/1.1" 500 99060
+ERROR 2025-01-03 17:21:44,197 log Internal Server Error: /reservations/most-visited/
+Traceback (most recent call last):
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\OneDrive\Belgeler\GitHub\EV-Charging-Management-System\backend\myapp\views\reservation_views.py", line 120, in get
+    .annotate(total_visits=Count("id"))
+                           ^^^^^
+NameError: name 'Count' is not defined. Did you mean: 'round'?
+ERROR 2025-01-03 17:21:44,206 basehttp "GET /reservations/most-visited/ HTTP/1.1" 500 99060
+INFO 2025-01-03 17:21:49,794 autoreload C:\Users\zeyne\OneDrive\Belgeler\GitHub\EV-Charging-Management-System\backend\myapp\views\reservation_views.py changed, reloading.
+INFO 2025-01-03 17:21:51,190 autoreload Watching for file changes with StatReloader
+INFO 2025-01-03 17:22:12,151 autoreload C:\Users\zeyne\OneDrive\Belgeler\GitHub\EV-Charging-Management-System\backend\myapp\views\reservation_views.py changed, reloading.
+INFO 2025-01-03 17:22:13,296 autoreload Watching for file changes with StatReloader
+INFO 2025-01-03 17:22:37,406 autoreload C:\Users\zeyne\OneDrive\Belgeler\GitHub\EV-Charging-Management-System\backend\myapp\views\reservation_views.py changed, reloading.
+INFO 2025-01-03 17:22:38,682 autoreload Watching for file changes with StatReloader
+INFO 2025-01-03 17:23:38,460 autoreload C:\Users\zeyne\OneDrive\Belgeler\GitHub\EV-Charging-Management-System\backend\myapp\views\reservation_views.py changed, reloading.
+INFO 2025-01-03 17:23:40,043 autoreload Watching for file changes with StatReloader
+INFO 2025-01-03 17:24:13,071 autoreload C:\Users\zeyne\OneDrive\Belgeler\GitHub\EV-Charging-Management-System\backend\myapp\views\reservation_views.py changed, reloading.
+INFO 2025-01-03 17:24:14,620 autoreload Watching for file changes with StatReloader
+INFO 2025-01-03 17:24:19,355 basehttp "GET /reservations/most-visited/ HTTP/1.1" 200 458
+INFO 2025-01-03 17:24:19,877 basehttp "GET /reservations/most-visited/ HTTP/1.1" 200 458
+INFO 2025-01-03 17:26:14,787 basehttp "GET /reservations/most-visited/ HTTP/1.1" 200 458
+INFO 2025-01-03 17:26:15,202 basehttp "GET /reservations/most-visited/ HTTP/1.1" 200 458
+INFO 2025-01-03 17:26:46,537 autoreload C:\Users\zeyne\OneDrive\Belgeler\GitHub\EV-Charging-Management-System\backend\myapp\views\reservation_views.py changed, reloading.
+INFO 2025-01-03 17:26:47,939 autoreload Watching for file changes with StatReloader
+ERROR 2025-01-03 17:26:52,638 log Internal Server Error: /reservations/most-visited/
+Traceback (most recent call last):
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\OneDrive\Belgeler\GitHub\EV-Charging-Management-System\backend\myapp\views\reservation_views.py", line 121, in get
+    .annotate(total_visits=Count("id"))
+                           ^^^^^
+NameError: name 'Count' is not defined. Did you mean: 'round'?
+ERROR 2025-01-03 17:26:52,646 basehttp "GET /reservations/most-visited/ HTTP/1.1" 500 99060
+ERROR 2025-01-03 17:26:53,145 log Internal Server Error: /reservations/most-visited/
+Traceback (most recent call last):
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\OneDrive\Belgeler\GitHub\EV-Charging-Management-System\backend\myapp\views\reservation_views.py", line 121, in get
+    .annotate(total_visits=Count("id"))
+                           ^^^^^
+NameError: name 'Count' is not defined. Did you mean: 'round'?
+ERROR 2025-01-03 17:26:53,151 basehttp "GET /reservations/most-visited/ HTTP/1.1" 500 99060
+WARNING 2025-01-03 17:27:00,316 log Unauthorized: /reservations/most-visited/
+WARNING 2025-01-03 17:27:00,320 basehttp "GET /reservations/most-visited/ HTTP/1.1" 401 5174
+WARNING 2025-01-03 17:27:02,578 log Unauthorized: /reservations/most-visited/
+WARNING 2025-01-03 17:27:02,578 basehttp "GET /reservations/most-visited/ HTTP/1.1" 401 5174
+WARNING 2025-01-03 17:27:03,212 log Unauthorized: /reservations/most-visited/
+WARNING 2025-01-03 17:27:03,215 basehttp "GET /reservations/most-visited/ HTTP/1.1" 401 5174
+INFO 2025-01-03 17:27:25,515 autoreload C:\Users\zeyne\OneDrive\Belgeler\GitHub\EV-Charging-Management-System\backend\myapp\views\reservation_views.py changed, reloading.
+INFO 2025-01-03 17:27:27,023 autoreload Watching for file changes with StatReloader
+INFO 2025-01-03 17:27:35,293 basehttp "GET /reservations/most-visited/ HTTP/1.1" 200 36
+INFO 2025-01-03 17:27:35,777 basehttp "GET /reservations/most-visited/ HTTP/1.1" 200 36
+INFO 2025-01-03 17:30:18,534 basehttp "GET /reservations/most-visited/ HTTP/1.1" 200 36
+INFO 2025-01-03 17:30:18,961 basehttp "GET /reservations/most-visited/ HTTP/1.1" 200 36
+INFO 2025-01-03 17:31:16,804 basehttp "GET /reservations/most-visited/ HTTP/1.1" 200 36
+INFO 2025-01-03 17:31:17,266 basehttp "GET /reservations/most-visited/ HTTP/1.1" 200 36
+INFO 2025-01-03 17:31:20,558 basehttp - Broken pipe from ('127.0.0.1', 60937)
+INFO 2025-01-03 17:31:21,696 basehttp "GET /reservations/most-visited/ HTTP/1.1" 200 36
+INFO 2025-01-03 17:31:22,173 basehttp "GET /reservations/most-visited/ HTTP/1.1" 200 36
+INFO 2025-01-03 17:31:34,112 basehttp "GET /reservations/most-visited/ HTTP/1.1" 200 36
+INFO 2025-01-03 17:31:34,567 basehttp "GET /reservations/most-visited/ HTTP/1.1" 200 36
+INFO 2025-01-03 17:31:37,427 basehttp "GET /reservations/most-visited/ HTTP/1.1" 200 36
+INFO 2025-01-03 17:31:37,881 basehttp "GET /reservations/most-visited/ HTTP/1.1" 200 36
+INFO 2025-01-03 17:32:30,243 basehttp "GET /reservations/most-visited/ HTTP/1.1" 200 36
+INFO 2025-01-03 17:32:30,721 basehttp "GET /reservations/most-visited/ HTTP/1.1" 200 36
+INFO 2025-01-03 17:33:03,638 autoreload C:\Users\zeyne\OneDrive\Belgeler\GitHub\EV-Charging-Management-System\backend\myapp\views\charging_station_views.py changed, reloading.
+INFO 2025-01-03 17:33:04,982 autoreload Watching for file changes with StatReloader
+INFO 2025-01-03 17:33:22,018 autoreload C:\Users\zeyne\OneDrive\Belgeler\GitHub\EV-Charging-Management-System\backend\myapp\views\reservation_views.py changed, reloading.
+INFO 2025-01-03 17:33:23,385 autoreload Watching for file changes with StatReloader
+INFO 2025-01-03 17:33:44,923 autoreload C:\Users\zeyne\OneDrive\Belgeler\GitHub\EV-Charging-Management-System\backend\myapp\views\reservation_views.py changed, reloading.
+INFO 2025-01-03 17:33:46,389 autoreload Watching for file changes with StatReloader
+INFO 2025-01-03 17:35:28,287 autoreload C:\Users\zeyne\OneDrive\Belgeler\GitHub\EV-Charging-Management-System\backend\myapp\views\reservation_views.py changed, reloading.
+INFO 2025-01-03 17:35:29,622 autoreload Watching for file changes with StatReloader
+ERROR 2025-01-03 17:36:53,034 log Internal Server Error: /reservations/most-visited/
+Traceback (most recent call last):
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\OneDrive\Belgeler\GitHub\EV-Charging-Management-System\backend\myapp\views\reservation_views.py", line 122, in get
+    station_details = ChargingStation.objects.filter(station_id=station_id).values(
+                      ^^^^^^^^^^^^^^^
+NameError: name 'ChargingStation' is not defined
+ERROR 2025-01-03 17:36:53,050 basehttp "GET /reservations/most-visited/ HTTP/1.1" 500 99598
+ERROR 2025-01-03 17:36:53,702 log Internal Server Error: /reservations/most-visited/
+Traceback (most recent call last):
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\OneDrive\Belgeler\GitHub\EV-Charging-Management-System\backend\myapp\views\reservation_views.py", line 122, in get
+    station_details = ChargingStation.objects.filter(station_id=station_id).values(
+                      ^^^^^^^^^^^^^^^
+NameError: name 'ChargingStation' is not defined
+ERROR 2025-01-03 17:36:53,718 basehttp "GET /reservations/most-visited/ HTTP/1.1" 500 99598
+ERROR 2025-01-03 17:36:58,389 log Internal Server Error: /reservations/most-visited/
+Traceback (most recent call last):
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\OneDrive\Belgeler\GitHub\EV-Charging-Management-System\backend\myapp\views\reservation_views.py", line 122, in get
+    station_details = ChargingStation.objects.filter(station_id=station_id).values(
+                      ^^^^^^^^^^^^^^^
+NameError: name 'ChargingStation' is not defined
+ERROR 2025-01-03 17:36:58,417 basehttp "GET /reservations/most-visited/ HTTP/1.1" 500 99598
+ERROR 2025-01-03 17:36:58,934 log Internal Server Error: /reservations/most-visited/
+Traceback (most recent call last):
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\zeyne\AppData\Roaming\Python\Python312\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeyne\OneDrive\Belgeler\GitHub\EV-Charging-Management-System\backend\myapp\views\reservation_views.py", line 122, in get
+    station_details = ChargingStation.objects.filter(station_id=station_id).values(
+                      ^^^^^^^^^^^^^^^
+NameError: name 'ChargingStation' is not defined
+ERROR 2025-01-03 17:36:58,948 basehttp "GET /reservations/most-visited/ HTTP/1.1" 500 99598
+INFO 2025-01-03 17:37:19,273 autoreload C:\Users\zeyne\OneDrive\Belgeler\GitHub\EV-Charging-Management-System\backend\myapp\views\reservation_views.py changed, reloading.
+INFO 2025-01-03 17:37:20,642 autoreload Watching for file changes with StatReloader
+INFO 2025-01-03 17:37:26,258 autoreload C:\Users\zeyne\OneDrive\Belgeler\GitHub\EV-Charging-Management-System\backend\myapp\views\reservation_views.py changed, reloading.
+INFO 2025-01-03 17:37:28,507 autoreload Watching for file changes with StatReloader
+INFO 2025-01-03 17:37:36,513 basehttp "GET /reservations/most-visited/ HTTP/1.1" 200 243
+INFO 2025-01-03 17:37:37,077 basehttp "GET /reservations/most-visited/ HTTP/1.1" 200 243
+INFO 2025-01-03 17:37:58,286 autoreload C:\Users\zeyne\OneDrive\Belgeler\GitHub\EV-Charging-Management-System\backend\myapp\views\reservation_views.py changed, reloading.
+INFO 2025-01-03 17:37:59,738 autoreload Watching for file changes with StatReloader
+INFO 2025-01-03 17:38:45,722 basehttp "GET /reservations/most-visited/ HTTP/1.1" 200 148
+INFO 2025-01-03 17:38:46,299 basehttp "GET /reservations/most-visited/ HTTP/1.1" 200 148
+INFO 2025-01-03 17:40:14,340 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 17:40:14,865 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 17:40:15,605 basehttp "GET /charging-stations/user/ HTTP/1.1" 200 5359
+INFO 2025-01-03 17:40:16,055 basehttp "GET /charging-stations/user/ HTTP/1.1" 200 5359
+INFO 2025-01-03 17:40:56,286 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 17:40:57,315 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 17:40:58,214 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-03 17:40:58,627 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-03 17:42:09,257 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 17:42:09,317 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-03 17:42:09,780 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-03 17:42:37,262 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 17:42:37,807 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 17:42:38,475 basehttp "GET /charging-stations/user/ HTTP/1.1" 200 5359
+INFO 2025-01-03 17:42:38,957 basehttp "GET /charging-stations/user/ HTTP/1.1" 200 5359
+INFO 2025-01-03 17:42:39,718 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 17:42:40,317 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-03 17:42:40,760 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6718
+INFO 2025-01-03 17:44:00,706 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 17:44:07,280 basehttp "OPTIONS /create-checkout-session/ HTTP/1.1" 200 0
+INFO 2025-01-03 17:44:07,821 stripe_views Created reservation: 39
+ERROR 2025-01-03 17:44:07,979 stripe_views Failed to schedule cleanup task: 'NoneType' object has no attribute 'Redis'
+INFO 2025-01-03 17:44:09,194 basehttp "POST /create-checkout-session/ HTTP/1.1" 200 373
+INFO 2025-01-03 17:44:24,141 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 17:44:25,490 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6720
+INFO 2025-01-03 17:44:25,929 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6720
+INFO 2025-01-03 17:44:46,224 stripe_views Created reservation: 40
+ERROR 2025-01-03 17:44:46,265 stripe_views Failed to schedule cleanup task: 'NoneType' object has no attribute 'Redis'
+WARNING 2025-01-03 17:44:46,876 log Bad Request: /create-checkout-session/
+WARNING 2025-01-03 17:44:46,879 basehttp "POST /create-checkout-session/ HTTP/1.1" 400 68
+INFO 2025-01-03 17:44:49,660 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+WARNING 2025-01-03 17:44:56,590 log Bad Request: /create-checkout-session/
+WARNING 2025-01-03 17:44:56,594 basehttp "POST /create-checkout-session/ HTTP/1.1" 400 65
+INFO 2025-01-03 17:44:58,527 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 17:45:03,275 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 17:45:03,796 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 17:45:04,762 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6722
+INFO 2025-01-03 17:45:05,177 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6722
+WARNING 2025-01-03 17:45:13,718 log Bad Request: /create-checkout-session/
+WARNING 2025-01-03 17:45:13,718 basehttp "POST /create-checkout-session/ HTTP/1.1" 400 65
+INFO 2025-01-03 17:45:15,958 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+WARNING 2025-01-03 17:45:22,250 log Bad Request: /create-checkout-session/
+WARNING 2025-01-03 17:45:22,250 basehttp "POST /create-checkout-session/ HTTP/1.1" 400 65
+INFO 2025-01-03 17:45:24,243 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 17:45:43,973 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 17:45:45,496 basehttp "OPTIONS /charging-stations/all/ HTTP/1.1" 200 0
+INFO 2025-01-03 17:45:45,505 basehttp "OPTIONS /charging-stations/all/ HTTP/1.1" 200 0
+INFO 2025-01-03 17:45:45,961 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6722
+INFO 2025-01-03 17:45:45,972 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6722
+INFO 2025-01-03 17:45:59,438 basehttp "OPTIONS /create-checkout-session/ HTTP/1.1" 200 0
+WARNING 2025-01-03 17:46:00,350 log Bad Request: /create-checkout-session/
+WARNING 2025-01-03 17:46:00,366 basehttp "POST /create-checkout-session/ HTTP/1.1" 400 65
+INFO 2025-01-03 17:46:04,768 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 17:46:08,277 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 17:46:08,349 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 17:46:08,431 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6722
+INFO 2025-01-03 17:46:08,906 basehttp - Broken pipe from ('127.0.0.1', 61516)
+INFO 2025-01-03 17:46:10,346 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6722
+INFO 2025-01-03 17:46:10,847 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6722
+WARNING 2025-01-03 17:46:16,060 log Bad Request: /create-checkout-session/
+WARNING 2025-01-03 17:46:16,061 basehttp "POST /create-checkout-session/ HTTP/1.1" 400 65
+INFO 2025-01-03 17:46:19,023 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 17:46:26,713 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6722
+INFO 2025-01-03 17:46:27,130 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 17:46:27,173 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6722
+INFO 2025-01-03 17:46:27,174 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 17:46:29,693 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6722
+INFO 2025-01-03 17:46:30,199 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6722
+WARNING 2025-01-03 17:46:39,869 log Bad Request: /create-checkout-session/
+WARNING 2025-01-03 17:46:39,869 basehttp "POST /create-checkout-session/ HTTP/1.1" 400 65
+INFO 2025-01-03 17:46:42,366 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+WARNING 2025-01-03 17:47:07,956 log Bad Request: /create-checkout-session/
+WARNING 2025-01-03 17:47:07,958 basehttp "POST /create-checkout-session/ HTTP/1.1" 400 65
+INFO 2025-01-03 17:47:10,125 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 17:48:18,615 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 17:48:31,106 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 17:48:31,640 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 17:48:31,772 basehttp "OPTIONS /charging-stations/user/ HTTP/1.1" 200 0
+INFO 2025-01-03 17:48:31,775 basehttp "OPTIONS /charging-stations/user/ HTTP/1.1" 200 0
+INFO 2025-01-03 17:48:32,175 basehttp "GET /charging-stations/user/ HTTP/1.1" 200 5363
+INFO 2025-01-03 17:48:32,599 basehttp "GET /charging-stations/user/ HTTP/1.1" 200 5363
+INFO 2025-01-03 17:49:55,361 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 17:49:55,384 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 17:49:55,385 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 17:49:55,401 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 17:49:56,657 basehttp "GET /charging-stations/user/ HTTP/1.1" 200 5363
+INFO 2025-01-03 17:49:56,792 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6722
+INFO 2025-01-03 17:49:57,120 basehttp "GET /charging-stations/user/ HTTP/1.1" 200 5363
+INFO 2025-01-03 17:49:57,200 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6722
+INFO 2025-01-03 17:49:59,188 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 17:49:59,207 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 17:49:59,207 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 17:50:00,424 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6722
+INFO 2025-01-03 17:50:00,831 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6722
+INFO 2025-01-03 17:50:06,059 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 17:50:06,069 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 17:50:06,086 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 17:50:07,276 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6722
+INFO 2025-01-03 17:50:07,737 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6722
+INFO 2025-01-03 17:50:07,950 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 17:50:07,966 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 17:50:07,966 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 17:50:09,465 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6722
+INFO 2025-01-03 17:50:09,909 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6722
+INFO 2025-01-03 17:50:13,962 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 17:50:14,535 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 17:50:15,390 basehttp "GET /charging-stations/user/ HTTP/1.1" 200 5363
+INFO 2025-01-03 17:50:15,866 basehttp "GET /charging-stations/user/ HTTP/1.1" 200 5363
+INFO 2025-01-03 17:50:17,030 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 17:50:17,551 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 17:50:18,649 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6722
+INFO 2025-01-03 17:50:19,159 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6722
+INFO 2025-01-03 17:51:09,770 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 17:51:09,770 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 17:51:09,770 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6722
+INFO 2025-01-03 17:51:09,778 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 17:51:10,220 basehttp - Broken pipe from ('127.0.0.1', 61567)
+INFO 2025-01-03 17:51:10,953 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6722
+INFO 2025-01-03 17:51:11,406 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6722
+INFO 2025-01-03 17:51:24,613 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6722
+INFO 2025-01-03 17:51:24,637 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 17:51:24,638 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 17:51:24,645 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 17:51:25,018 basehttp - Broken pipe from ('127.0.0.1', 59864)
+INFO 2025-01-03 17:51:25,942 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6722
+INFO 2025-01-03 17:51:26,388 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6722
+INFO 2025-01-03 17:51:32,661 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 17:51:32,674 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 17:51:32,674 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 17:51:34,139 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 17:51:34,147 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 17:51:34,573 basehttp - Broken pipe from ('127.0.0.1', 60032)
+INFO 2025-01-03 17:51:35,378 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6722
+INFO 2025-01-03 17:51:35,832 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6722
+INFO 2025-01-03 17:51:49,762 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 17:51:49,762 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 17:51:49,818 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 17:51:50,944 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6722
+INFO 2025-01-03 17:51:51,352 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6722
+INFO 2025-01-03 17:52:10,578 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 17:52:10,578 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 17:52:10,583 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 17:52:11,905 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6722
+INFO 2025-01-03 17:52:12,320 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6722
+INFO 2025-01-03 17:53:45,295 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 17:53:45,351 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 17:53:45,370 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 17:53:46,829 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6722
+INFO 2025-01-03 17:53:47,238 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6722
+INFO 2025-01-03 17:54:07,251 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 17:54:07,265 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 17:54:07,278 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 17:54:08,677 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6722
+INFO 2025-01-03 17:54:09,158 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6722
+INFO 2025-01-03 17:54:17,480 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 17:54:17,568 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 17:54:17,568 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 17:54:18,804 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6722
+INFO 2025-01-03 17:54:19,212 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6722
+INFO 2025-01-03 17:54:27,711 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 17:54:27,736 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 17:54:27,752 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 17:54:29,018 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6722
+INFO 2025-01-03 17:54:29,482 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6722
+INFO 2025-01-03 17:54:35,382 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 17:54:35,397 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 17:54:35,407 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 17:54:36,742 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6722
+INFO 2025-01-03 17:54:37,234 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6722
+INFO 2025-01-03 17:55:29,373 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 17:55:30,012 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 17:55:30,774 basehttp "GET /charging-stations/user/ HTTP/1.1" 200 5363
+INFO 2025-01-03 17:55:31,241 basehttp "GET /charging-stations/user/ HTTP/1.1" 200 5363
+INFO 2025-01-03 17:55:35,576 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 17:56:19,761 basehttp "OPTIONS /charging-stations/add/ HTTP/1.1" 200 0
+WARNING 2025-01-03 17:56:20,465 charging_station_views coordinates
+WARNING 2025-01-03 17:56:20,470 log Bad Request: /charging-stations/add/
+WARNING 2025-01-03 17:56:20,472 basehttp "POST /charging-stations/add/ HTTP/1.1" 400 62
+INFO 2025-01-03 17:58:06,264 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 17:58:06,264 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 17:58:06,835 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 17:58:07,715 basehttp "GET /charging-stations/user/ HTTP/1.1" 200 5363
+INFO 2025-01-03 17:58:08,166 basehttp "GET /charging-stations/user/ HTTP/1.1" 200 5363
+WARNING 2025-01-03 17:59:31,373 log Unauthorized: /validate-token/
+WARNING 2025-01-03 17:59:31,380 basehttp "POST /validate-token/ HTTP/1.1" 401 50
+WARNING 2025-01-03 17:59:31,519 log Unauthorized: /validate-token/
+WARNING 2025-01-03 17:59:31,527 basehttp "POST /validate-token/ HTTP/1.1" 401 50
+WARNING 2025-01-03 17:59:31,527 log Unauthorized: /validate-token/
+WARNING 2025-01-03 17:59:31,533 basehttp "POST /validate-token/ HTTP/1.1" 401 50
+WARNING 2025-01-03 17:59:32,618 log Unauthorized: /charging-stations/add/
+WARNING 2025-01-03 17:59:32,618 basehttp "POST /charging-stations/add/ HTTP/1.1" 401 50
+WARNING 2025-01-03 17:59:32,830 log Unauthorized: /validate-token/
+WARNING 2025-01-03 17:59:32,832 basehttp "POST /validate-token/ HTTP/1.1" 401 50
+WARNING 2025-01-03 17:59:32,838 log Unauthorized: /validate-token/
+WARNING 2025-01-03 17:59:32,838 basehttp "POST /validate-token/ HTTP/1.1" 401 50
+WARNING 2025-01-03 17:59:32,992 log Unauthorized: /validate-token/
+WARNING 2025-01-03 17:59:32,997 basehttp "POST /validate-token/ HTTP/1.1" 401 50
+WARNING 2025-01-03 17:59:33,006 log Unauthorized: /validate-token/
+WARNING 2025-01-03 17:59:33,012 basehttp "POST /validate-token/ HTTP/1.1" 401 50
+WARNING 2025-01-03 17:59:33,202 log Unauthorized: /validate-token/
+WARNING 2025-01-03 17:59:33,206 basehttp "POST /validate-token/ HTTP/1.1" 401 50
+INFO 2025-01-03 17:59:40,739 basehttp "OPTIONS /login/ HTTP/1.1" 200 0
+INFO 2025-01-03 17:59:42,505 basehttp "POST /login/ HTTP/1.1" 200 1214
+INFO 2025-01-03 17:59:43,023 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 17:59:44,677 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6722
+INFO 2025-01-03 17:59:45,224 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6722
+INFO 2025-01-03 17:59:46,157 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 17:59:46,689 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 17:59:47,301 basehttp "GET /charging-stations/user/ HTTP/1.1" 200 5363
+INFO 2025-01-03 17:59:47,774 basehttp "GET /charging-stations/user/ HTTP/1.1" 200 5363
+WARNING 2025-01-03 18:00:07,282 charging_station_views coordinates
+WARNING 2025-01-03 18:00:07,284 log Bad Request: /charging-stations/add/
+WARNING 2025-01-03 18:00:07,284 basehttp "POST /charging-stations/add/ HTTP/1.1" 400 62
+WARNING 2025-01-03 18:04:15,668 charging_station_views coordinates
+INFO 2025-01-03 18:04:15,716 charging_station_views Charging station created: {'station_id': 31, 'location': 'yilmazlar sitesi istanbul', 'latitude': '41.013840', 'longitude': '28.949660', 'availability_status': 'available', 'charging_speed': 'slow', 'power_capacity': '45.00', 'price_per_kwh': '1.00', 'connector_types': 'type2'}
+INFO 2025-01-03 18:04:15,716 basehttp "POST /charging-stations/add/ HTTP/1.1" 201 235
+INFO 2025-01-03 18:04:16,200 basehttp "GET /charging-stations/user/ HTTP/1.1" 200 5599
+INFO 2025-01-03 18:04:54,067 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 18:04:54,067 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 18:04:54,067 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+WARNING 2025-01-03 18:05:11,934 charging_station_views coordinates
+ERROR 2025-01-03 18:05:11,942 charging_station_views Serializer errors: {'connector_types': [ErrorDetail(string='"tesla" is not a valid choice.', code='invalid_choice')]}
+WARNING 2025-01-03 18:05:11,945 log Bad Request: /charging-stations/add/
+WARNING 2025-01-03 18:05:11,948 basehttp "POST /charging-stations/add/ HTTP/1.1" 400 56
+INFO 2025-01-03 18:05:19,248 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 18:05:19,800 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 18:06:05,746 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 18:06:06,246 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 18:06:08,600 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 18:06:09,025 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 18:06:09,799 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6958
+INFO 2025-01-03 18:06:10,235 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6958
+INFO 2025-01-03 18:06:35,907 basehttp "OPTIONS /login/ HTTP/1.1" 200 0
+INFO 2025-01-03 18:06:37,411 basehttp "POST /login/ HTTP/1.1" 200 1214
+INFO 2025-01-03 18:06:37,925 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 18:06:38,789 basehttp "OPTIONS /charging-stations/all/ HTTP/1.1" 200 0
+INFO 2025-01-03 18:06:38,792 basehttp "OPTIONS /charging-stations/all/ HTTP/1.1" 200 0
+INFO 2025-01-03 18:06:39,239 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6958
+INFO 2025-01-03 18:06:39,675 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6958
+INFO 2025-01-03 18:07:09,309 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 18:07:09,315 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 18:07:09,315 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 18:07:10,510 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6958
+INFO 2025-01-03 18:07:10,966 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6958
+INFO 2025-01-03 18:07:15,282 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 18:07:15,293 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 18:07:15,347 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 18:07:16,526 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6958
+INFO 2025-01-03 18:07:16,989 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6958
+INFO 2025-01-03 18:07:28,174 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 18:07:28,174 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 18:07:28,181 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 18:07:29,234 basehttp - Broken pipe from ('127.0.0.1', 61349)
+INFO 2025-01-03 18:07:29,518 basehttp - Broken pipe from ('127.0.0.1', 61362)
+INFO 2025-01-03 18:07:30,738 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 18:07:32,077 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 18:07:34,738 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6958
+INFO 2025-01-03 18:07:35,191 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6958
+INFO 2025-01-03 18:09:27,079 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 18:09:27,081 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 18:09:27,091 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 18:09:29,876 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6958
+INFO 2025-01-03 18:09:30,350 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6958
+INFO 2025-01-03 18:09:45,354 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 18:09:45,354 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 18:09:45,401 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 18:09:48,399 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6958
+INFO 2025-01-03 18:09:48,871 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6958
+INFO 2025-01-03 18:10:29,869 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 18:10:29,876 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 18:10:29,876 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 18:10:31,374 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6958
+INFO 2025-01-03 18:10:31,823 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6958
+INFO 2025-01-03 18:11:44,839 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 18:11:44,854 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 18:11:44,856 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 18:11:46,451 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6958
+INFO 2025-01-03 18:11:46,852 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6958
+INFO 2025-01-03 18:12:08,115 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 18:12:08,115 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 18:12:08,120 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 18:12:09,556 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6958
+INFO 2025-01-03 18:12:09,980 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6958
+INFO 2025-01-03 18:12:10,772 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 18:12:10,788 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 18:12:10,795 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 18:12:12,367 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 18:12:12,380 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 18:12:12,930 basehttp - Broken pipe from ('127.0.0.1', 61303)
+INFO 2025-01-03 18:12:13,933 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6958
+INFO 2025-01-03 18:12:14,424 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6958
+INFO 2025-01-03 18:12:21,787 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 18:12:21,803 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 18:12:21,803 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 18:12:23,850 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6958
+INFO 2025-01-03 18:12:24,282 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6958
+INFO 2025-01-03 18:12:29,580 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 18:12:30,656 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6958
+INFO 2025-01-03 18:12:31,094 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6958
+INFO 2025-01-03 18:12:37,581 stripe_views Created reservation: 43
+ERROR 2025-01-03 18:12:37,622 stripe_views Failed to schedule cleanup task: 'NoneType' object has no attribute 'Redis'
+INFO 2025-01-03 18:12:39,274 basehttp "POST /create-checkout-session/ HTTP/1.1" 200 373
+INFO 2025-01-03 18:12:47,254 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 18:12:48,722 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6958
+INFO 2025-01-03 18:12:49,154 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6958
+INFO 2025-01-03 18:12:55,931 stripe_views Created reservation: 44
+ERROR 2025-01-03 18:12:55,993 stripe_views Failed to schedule cleanup task: 'NoneType' object has no attribute 'Redis'
+WARNING 2025-01-03 18:12:57,565 log Bad Request: /create-checkout-session/
+WARNING 2025-01-03 18:12:57,567 basehttp "POST /create-checkout-session/ HTTP/1.1" 400 68
+INFO 2025-01-03 18:13:03,498 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 18:13:08,882 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 18:13:09,427 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 18:13:11,253 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6958
+INFO 2025-01-03 18:13:11,761 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6958
+WARNING 2025-01-03 18:13:19,313 log Bad Request: /create-checkout-session/
+WARNING 2025-01-03 18:13:19,313 basehttp "POST /create-checkout-session/ HTTP/1.1" 400 65
+INFO 2025-01-03 18:13:21,218 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+WARNING 2025-01-03 18:13:28,145 log Bad Request: /create-checkout-session/
+WARNING 2025-01-03 18:13:28,145 basehttp "POST /create-checkout-session/ HTTP/1.1" 400 65
+INFO 2025-01-03 18:13:29,903 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 18:13:35,887 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 18:13:35,888 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 18:13:35,891 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 18:13:37,601 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6958
+INFO 2025-01-03 18:13:38,061 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6958
+WARNING 2025-01-03 18:14:18,122 log Bad Request: /create-checkout-session/
+WARNING 2025-01-03 18:14:18,122 basehttp "POST /create-checkout-session/ HTTP/1.1" 400 65
+INFO 2025-01-03 18:14:19,763 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+WARNING 2025-01-03 18:14:27,318 log Bad Request: /create-checkout-session/
+WARNING 2025-01-03 18:14:27,318 basehttp "POST /create-checkout-session/ HTTP/1.1" 400 65
+INFO 2025-01-03 18:14:29,478 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 18:16:38,461 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 18:16:38,470 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 18:16:38,470 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 18:16:40,566 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6958
+INFO 2025-01-03 18:16:41,002 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6958
+INFO 2025-01-03 18:17:03,799 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 18:17:03,799 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 18:17:03,817 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 18:17:06,140 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6958
+INFO 2025-01-03 18:17:06,720 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6958
+WARNING 2025-01-03 18:17:11,538 log Bad Request: /create-checkout-session/
+WARNING 2025-01-03 18:17:11,540 basehttp "POST /create-checkout-session/ HTTP/1.1" 400 65
+INFO 2025-01-03 18:17:14,808 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 18:17:24,184 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 18:17:24,184 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 18:17:24,210 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 18:17:25,771 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6958
+INFO 2025-01-03 18:17:26,272 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6958
+INFO 2025-01-03 18:21:30,748 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 18:21:30,760 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 18:21:30,816 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 18:21:32,185 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6958
+INFO 2025-01-03 18:21:32,588 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6958
+INFO 2025-01-03 18:21:35,350 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 18:21:35,946 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 18:21:36,516 basehttp "GET /charging-stations/user/ HTTP/1.1" 200 5599
+INFO 2025-01-03 18:21:36,980 basehttp "GET /charging-stations/user/ HTTP/1.1" 200 5599
+WARNING 2025-01-03 18:48:30,072 charging_station_views coordinates
+ERROR 2025-01-03 18:48:30,080 charging_station_views Serializer errors: {'latitude': [ErrorDetail(string='Ensure that there are no more than 6 decimal places.', code='max_decimal_places')], 'longitude': [ErrorDetail(string='Ensure that there are no more than 6 decimal places.', code='max_decimal_places')]}
+WARNING 2025-01-03 18:48:30,086 log Bad Request: /charging-stations/add/
+WARNING 2025-01-03 18:48:30,091 basehttp "POST /charging-stations/add/ HTTP/1.1" 400 138
+INFO 2025-01-03 18:49:00,373 autoreload C:\Users\zeyne\OneDrive\Belgeler\GitHub\EV-Charging-Management-System\backend\myapp\models.py changed, reloading.
+INFO 2025-01-03 18:49:01,848 autoreload Watching for file changes with StatReloader
+WARNING 2025-01-03 18:49:20,506 charging_station_views coordinates
+ERROR 2025-01-03 18:49:20,506 charging_station_views Serializer errors: {'latitude': [ErrorDetail(string='Ensure that there are no more than 0 digits before the decimal point.', code='max_whole_digits')], 'longitude': [ErrorDetail(string='Ensure that there are no more than 0 digits before the decimal point.', code='max_whole_digits')]}
+WARNING 2025-01-03 18:49:20,522 log Bad Request: /charging-stations/add/
+WARNING 2025-01-03 18:49:20,529 basehttp "POST /charging-stations/add/ HTTP/1.1" 400 172
+WARNING 2025-01-03 18:49:30,469 charging_station_views coordinates
+ERROR 2025-01-03 18:49:30,474 charging_station_views Serializer errors: {'latitude': [ErrorDetail(string='Ensure that there are no more than 0 digits before the decimal point.', code='max_whole_digits')], 'longitude': [ErrorDetail(string='Ensure that there are no more than 0 digits before the decimal point.', code='max_whole_digits')]}
+WARNING 2025-01-03 18:49:30,478 log Bad Request: /charging-stations/add/
+WARNING 2025-01-03 18:49:30,483 basehttp "POST /charging-stations/add/ HTTP/1.1" 400 172
+INFO 2025-01-03 18:56:57,882 autoreload Watching for file changes with StatReloader
+WARNING 2025-01-03 18:57:08,442 charging_station_views coordinates
+WARNING 2025-01-03 18:57:08,442 log Bad Request: /charging-stations/add/
+WARNING 2025-01-03 18:57:08,442 basehttp "POST /charging-stations/add/ HTTP/1.1" 400 62
+WARNING 2025-01-03 19:01:09,001 log Unauthorized: /validate-token/
+WARNING 2025-01-03 19:01:09,002 basehttp "POST /validate-token/ HTTP/1.1" 401 50
+WARNING 2025-01-03 19:01:09,212 log Unauthorized: /validate-token/
+WARNING 2025-01-03 19:01:09,215 basehttp "POST /validate-token/ HTTP/1.1" 401 50
+WARNING 2025-01-03 19:01:19,315 log Unauthorized: /validate-token/
+WARNING 2025-01-03 19:01:19,316 basehttp "POST /validate-token/ HTTP/1.1" 401 50
+WARNING 2025-01-03 19:01:20,647 log Unauthorized: /validate-token/
+WARNING 2025-01-03 19:01:20,649 basehttp "POST /validate-token/ HTTP/1.1" 401 50
+WARNING 2025-01-03 19:01:21,451 log Unauthorized: /validate-token/
+WARNING 2025-01-03 19:01:21,452 basehttp "POST /validate-token/ HTTP/1.1" 401 50
+WARNING 2025-01-03 19:01:21,526 log Unauthorized: /validate-token/
+WARNING 2025-01-03 19:01:21,526 basehttp "POST /validate-token/ HTTP/1.1" 401 50
+WARNING 2025-01-03 19:01:21,709 log Unauthorized: /validate-token/
+WARNING 2025-01-03 19:01:21,714 basehttp "POST /validate-token/ HTTP/1.1" 401 50
+INFO 2025-01-03 19:01:26,755 basehttp "POST /login/ HTTP/1.1" 200 1214
+INFO 2025-01-03 19:01:27,230 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 19:01:38,539 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 7742
+INFO 2025-01-03 19:01:38,989 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 7742
+INFO 2025-01-03 19:01:51,320 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 19:01:52,653 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 19:01:53,208 basehttp "GET /charging-stations/user/ HTTP/1.1" 200 6227
+INFO 2025-01-03 19:01:53,613 basehttp "GET /charging-stations/user/ HTTP/1.1" 200 6227
+WARNING 2025-01-03 19:02:04,826 charging_station_views coordinates
+ERROR 2025-01-03 19:02:04,831 charging_station_views Serializer errors: {'latitude': [ErrorDetail(string='Ensure that there are no more than 0 digits before the decimal point.', code='max_whole_digits')], 'longitude': [ErrorDetail(string='Ensure that there are no more than 0 digits before the decimal point.', code='max_whole_digits')]}
+WARNING 2025-01-03 19:02:04,833 log Bad Request: /charging-stations/add/
+WARNING 2025-01-03 19:02:04,833 basehttp "POST /charging-stations/add/ HTTP/1.1" 400 172
+INFO 2025-01-03 19:02:18,502 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 19:07:30,400 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 19:07:30,400 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 19:07:31,920 basehttp "GET /charging-stations/user/ HTTP/1.1" 200 6227
+INFO 2025-01-03 19:07:32,434 basehttp "GET /charging-stations/user/ HTTP/1.1" 200 6227
+INFO 2025-01-03 19:09:53,122 autoreload C:\Users\zeyne\OneDrive\Belgeler\GitHub\EV-Charging-Management-System\backend\myapp\utils\geocoding.py changed, reloading.
+INFO 2025-01-03 19:09:54,651 autoreload Watching for file changes with StatReloader
+INFO 2025-01-03 19:10:04,319 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 19:10:04,847 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 19:10:05,757 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 7742
+INFO 2025-01-03 19:10:06,221 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 7742
+INFO 2025-01-03 19:10:26,564 autoreload C:\Users\zeyne\OneDrive\Belgeler\GitHub\EV-Charging-Management-System\backend\myapp\utils\geocoding.py changed, reloading.
+INFO 2025-01-03 19:10:28,154 autoreload Watching for file changes with StatReloader
+INFO 2025-01-03 19:10:33,809 basehttp "POST /login/ HTTP/1.1" 200 1214
+INFO 2025-01-03 19:10:34,341 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 19:10:36,250 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 7742
+INFO 2025-01-03 19:10:36,687 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 7742
+INFO 2025-01-03 19:16:40,499 autoreload C:\Users\zeyne\OneDrive\Belgeler\GitHub\EV-Charging-Management-System\backend\myapp\utils\geocoding.py changed, reloading.
+INFO 2025-01-03 19:16:42,551 autoreload Watching for file changes with StatReloader
+INFO 2025-01-03 19:17:03,550 autoreload C:\Users\zeyne\OneDrive\Belgeler\GitHub\EV-Charging-Management-System\backend\myapp\utils\geocoding.py changed, reloading.
+INFO 2025-01-03 19:17:05,054 autoreload Watching for file changes with StatReloader
+INFO 2025-01-03 19:17:22,054 autoreload C:\Users\zeyne\OneDrive\Belgeler\GitHub\EV-Charging-Management-System\backend\myapp\utils\geocoding.py changed, reloading.
+INFO 2025-01-03 19:17:23,723 autoreload Watching for file changes with StatReloader
+INFO 2025-01-03 19:17:34,289 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 19:17:35,834 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 7742
+INFO 2025-01-03 19:17:36,346 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 7742
+INFO 2025-01-03 19:18:00,519 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 19:18:01,058 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 19:18:01,786 basehttp "GET /charging-stations/user/ HTTP/1.1" 200 6227
+INFO 2025-01-03 19:18:02,229 basehttp "GET /charging-stations/user/ HTTP/1.1" 200 6227
+WARNING 2025-01-03 19:18:24,744 charging_station_views coordinates
+WARNING 2025-01-03 19:18:24,748 log Bad Request: /charging-stations/add/
+WARNING 2025-01-03 19:18:24,754 basehttp "POST /charging-stations/add/ HTTP/1.1" 400 62
+WARNING 2025-01-03 19:18:30,655 charging_station_views coordinates
+WARNING 2025-01-03 19:18:30,655 log Bad Request: /charging-stations/add/
+WARNING 2025-01-03 19:18:30,655 basehttp "POST /charging-stations/add/ HTTP/1.1" 400 62
+INFO 2025-01-03 19:26:30,159 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 19:26:31,943 basehttp "OPTIONS /reservations/most-visited/ HTTP/1.1" 200 0
+INFO 2025-01-03 19:26:31,944 basehttp "OPTIONS /reservations/most-visited/ HTTP/1.1" 200 0
+INFO 2025-01-03 19:26:32,424 basehttp "GET /reservations/most-visited/ HTTP/1.1" 200 148
+INFO 2025-01-03 19:26:32,918 basehttp "GET /reservations/most-visited/ HTTP/1.1" 200 148
+INFO 2025-01-03 19:26:46,191 autoreload C:\Users\zeyne\OneDrive\Belgeler\GitHub\EV-Charging-Management-System\backend\myapp\models.py changed, reloading.
+INFO 2025-01-03 19:26:47,926 autoreload Watching for file changes with StatReloader
+INFO 2025-01-03 19:27:02,152 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 19:27:02,657 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6902
+INFO 2025-01-03 19:27:03,160 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 6902
+INFO 2025-01-03 19:27:08,006 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 19:27:08,598 basehttp "GET /charging-stations/user/ HTTP/1.1" 200 5555
+INFO 2025-01-03 19:27:09,097 basehttp "GET /charging-stations/user/ HTTP/1.1" 200 5555
+WARNING 2025-01-03 19:27:30,210 charging_station_views coordinates
+WARNING 2025-01-03 19:27:30,220 log Bad Request: /charging-stations/add/
+WARNING 2025-01-03 19:27:30,225 basehttp "POST /charging-stations/add/ HTTP/1.1" 400 62
+WARNING 2025-01-03 19:27:35,814 charging_station_views coordinates
+WARNING 2025-01-03 19:27:35,814 log Bad Request: /charging-stations/add/
+WARNING 2025-01-03 19:27:35,820 basehttp "POST /charging-stations/add/ HTTP/1.1" 400 62
+INFO 2025-01-03 19:27:46,236 autoreload C:\Users\zeyne\OneDrive\Belgeler\GitHub\EV-Charging-Management-System\backend\myapp\utils\geocoding.py changed, reloading.
+INFO 2025-01-03 19:27:48,096 autoreload Watching for file changes with StatReloader
+WARNING 2025-01-03 19:28:04,643 charging_station_views coordinates
+INFO 2025-01-03 19:28:04,698 charging_station_views Charging station created: {'station_id': 32, 'location': 'yilmazlar sitesi istanbul', 'latitude': '41.013840', 'longitude': '28.949660', 'availability_status': 'available', 'charging_speed': 'slow', 'power_capacity': '25.00', 'price_per_kwh': '1.00', 'connector_types': 'ccs'}
+INFO 2025-01-03 19:28:04,698 basehttp "POST /charging-stations/add/ HTTP/1.1" 201 233
+INFO 2025-01-03 19:28:05,224 basehttp "GET /charging-stations/user/ HTTP/1.1" 200 5789
+INFO 2025-01-03 19:28:26,117 autoreload C:\Users\zeyne\OneDrive\Belgeler\GitHub\EV-Charging-Management-System\backend\myapp\utils\geocoding.py changed, reloading.
+INFO 2025-01-03 19:28:28,176 autoreload Watching for file changes with StatReloader
+WARNING 2025-01-03 19:28:35,277 charging_station_views coordinates
+WARNING 2025-01-03 19:28:35,293 log Bad Request: /charging-stations/add/
+WARNING 2025-01-03 19:28:35,293 basehttp "POST /charging-stations/add/ HTTP/1.1" 400 62
+WARNING 2025-01-03 19:28:40,340 charging_station_views coordinates
+WARNING 2025-01-03 19:28:40,347 log Bad Request: /charging-stations/add/
+WARNING 2025-01-03 19:28:40,349 basehttp "POST /charging-stations/add/ HTTP/1.1" 400 62
+WARNING 2025-01-03 19:28:59,022 charging_station_views coordinates
+WARNING 2025-01-03 19:28:59,022 log Bad Request: /charging-stations/add/
+WARNING 2025-01-03 19:28:59,038 basehttp "POST /charging-stations/add/ HTTP/1.1" 400 62
+INFO 2025-01-03 19:29:04,714 autoreload C:\Users\zeyne\OneDrive\Belgeler\GitHub\EV-Charging-Management-System\backend\myapp\utils\geocoding.py changed, reloading.
+INFO 2025-01-03 19:29:06,685 autoreload Watching for file changes with StatReloader
+WARNING 2025-01-03 19:29:14,440 charging_station_views coordinates
+ERROR 2025-01-03 19:29:14,448 charging_station_views Serializer errors: {'latitude': [ErrorDetail(string='Ensure that there are no more than 6 decimal places.', code='max_decimal_places')], 'longitude': [ErrorDetail(string='Ensure that there are no more than 6 decimal places.', code='max_decimal_places')]}
+WARNING 2025-01-03 19:29:14,453 log Bad Request: /charging-stations/add/
+WARNING 2025-01-03 19:29:14,458 basehttp "POST /charging-stations/add/ HTTP/1.1" 400 138
+INFO 2025-01-03 19:29:42,361 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 19:29:42,957 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 7136
+INFO 2025-01-03 19:29:43,517 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 7136
+INFO 2025-01-03 19:30:06,616 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 19:30:06,616 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 19:30:08,396 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 7136
+INFO 2025-01-03 19:30:08,856 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 7136
+INFO 2025-01-03 19:31:34,861 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 19:31:35,476 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 19:31:36,196 basehttp "GET /charging-stations/user/ HTTP/1.1" 200 5789
+INFO 2025-01-03 19:31:36,674 basehttp "GET /charging-stations/user/ HTTP/1.1" 200 5789
+WARNING 2025-01-03 19:31:48,493 charging_station_views coordinates
+INFO 2025-01-03 19:31:48,538 charging_station_views Charging station created: {'station_id': 33, 'location': 'Source London/Islington/Twyford Street 44 Twyford Street, Islington', 'latitude': '51.536220', 'longitude': '-0.103040', 'availability_status': 'available', 'charging_speed': 'slow', 'power_capacity': '47.00', 'price_per_kwh': '1.00', 'connector_types': 'ccs'}
+INFO 2025-01-03 19:31:48,551 basehttp "POST /charging-stations/add/ HTTP/1.1" 201 275
+INFO 2025-01-03 19:31:49,033 basehttp "GET /charging-stations/user/ HTTP/1.1" 200 6065
+INFO 2025-01-03 19:31:59,662 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 19:32:00,466 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 7412
+INFO 2025-01-03 19:32:00,883 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 7412
+INFO 2025-01-03 19:33:00,786 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 19:33:01,343 basehttp "GET /charging-stations/user/ HTTP/1.1" 200 6065
+INFO 2025-01-03 19:33:01,827 basehttp "GET /charging-stations/user/ HTTP/1.1" 200 6065
+WARNING 2025-01-03 19:33:13,541 charging_station_views coordinates
+WARNING 2025-01-03 19:33:13,549 log Bad Request: /charging-stations/add/
+WARNING 2025-01-03 19:33:13,554 basehttp "POST /charging-stations/add/ HTTP/1.1" 400 62
+WARNING 2025-01-03 19:33:24,602 charging_station_views coordinates
+ERROR 2025-01-03 19:33:24,605 charging_station_views Serializer errors: {'latitude': [ErrorDetail(string='Ensure that there are no more than 6 decimal places.', code='max_decimal_places')], 'longitude': [ErrorDetail(string='Ensure that there are no more than 6 decimal places.', code='max_decimal_places')]}
+WARNING 2025-01-03 19:33:24,607 log Bad Request: /charging-stations/add/
+WARNING 2025-01-03 19:33:24,608 basehttp "POST /charging-stations/add/ HTTP/1.1" 400 138
+WARNING 2025-01-03 19:33:39,134 charging_station_views coordinates
+ERROR 2025-01-03 19:33:39,144 charging_station_views Serializer errors: {'latitude': [ErrorDetail(string='Ensure that there are no more than 6 decimal places.', code='max_decimal_places')], 'longitude': [ErrorDetail(string='Ensure that there are no more than 6 decimal places.', code='max_decimal_places')]}
+WARNING 2025-01-03 19:33:39,148 log Bad Request: /charging-stations/add/
+WARNING 2025-01-03 19:33:39,155 basehttp "POST /charging-stations/add/ HTTP/1.1" 400 138
+WARNING 2025-01-03 19:33:51,477 charging_station_views coordinates
+ERROR 2025-01-03 19:33:51,478 charging_station_views Serializer errors: {'latitude': [ErrorDetail(string='Ensure that there are no more than 6 decimal places.', code='max_decimal_places')], 'longitude': [ErrorDetail(string='Ensure that there are no more than 6 decimal places.', code='max_decimal_places')]}
+WARNING 2025-01-03 19:33:51,486 log Bad Request: /charging-stations/add/
+WARNING 2025-01-03 19:33:51,487 basehttp "POST /charging-stations/add/ HTTP/1.1" 400 138
+WARNING 2025-01-03 19:33:55,887 charging_station_views coordinates
+INFO 2025-01-03 19:33:55,928 charging_station_views Charging station created: {'station_id': 34, 'location': 'Baynard House Car Park - BP Pulse 135 Queen Victoria Street', 'latitude': '51.511960', 'longitude': '-0.098780', 'availability_status': 'available', 'charging_speed': 'fast', 'power_capacity': '55.00', 'price_per_kwh': '1.00', 'connector_types': 'type2'}
+INFO 2025-01-03 19:33:55,929 basehttp "POST /charging-stations/add/ HTTP/1.1" 201 269
+INFO 2025-01-03 19:33:56,352 basehttp "GET /charging-stations/user/ HTTP/1.1" 200 6335
+INFO 2025-01-03 19:34:43,778 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 19:34:44,348 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 7682
+INFO 2025-01-03 19:34:44,791 basehttp "GET /charging-stations/all/ HTTP/1.1" 200 7682
+INFO 2025-01-03 19:35:18,669 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 19:35:19,335 basehttp "GET /charging-stations/user/ HTTP/1.1" 200 6335
+INFO 2025-01-03 19:35:19,846 basehttp "GET /charging-stations/user/ HTTP/1.1" 200 6335
+INFO 2025-01-03 19:35:26,918 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 19:35:26,918 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 19:35:28,699 basehttp "GET /charging-stations/user/ HTTP/1.1" 200 6335
+INFO 2025-01-03 19:35:29,165 basehttp "GET /charging-stations/user/ HTTP/1.1" 200 6335
+INFO 2025-01-03 19:35:32,743 autoreload C:\Users\zeyne\OneDrive\Belgeler\GitHub\EV-Charging-Management-System\backend\myapp\utils\geocoding.py changed, reloading.
+INFO 2025-01-03 19:35:34,475 autoreload Watching for file changes with StatReloader
+INFO 2025-01-03 19:35:41,418 autoreload C:\Users\zeyne\OneDrive\Belgeler\GitHub\EV-Charging-Management-System\backend\myapp\utils\geocoding.py changed, reloading.
+INFO 2025-01-03 19:35:43,657 autoreload Watching for file changes with StatReloader
+INFO 2025-01-03 19:36:08,643 autoreload C:\Users\zeyne\OneDrive\Belgeler\GitHub\EV-Charging-Management-System\backend\myapp\views\reservation_views.py changed, reloading.
+INFO 2025-01-03 19:36:10,611 autoreload Watching for file changes with StatReloader

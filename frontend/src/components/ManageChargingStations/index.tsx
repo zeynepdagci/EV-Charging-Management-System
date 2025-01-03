@@ -299,7 +299,7 @@ const ManageStations: React.FC = () => {
                     <td className="px-6 py-4">{station.availability_status}</td>
                     <td className="px-6 py-4">{station.charging_speed}</td>
                     <td className="px-6 py-4">{station.power_capacity}</td>
-                    <td className="px-6 py-4">${station.price_per_kwh}</td>
+                    <td className="px-6 py-4">£{station.price_per_kwh}</td>
                     <td className="px-6 py-4">{station.connector_types}</td>
                   </tr>
                 ))

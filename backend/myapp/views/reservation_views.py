@@ -2,10 +2,11 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status, permissions
 from django.utils import timezone
-from myapp.models import Reservation
+from myapp.models import Reservation, ChargingStation
 from myapp.serializers import ReservationSerializer
 from typing import Any
 from django.shortcuts import get_object_or_404
+from django.db.models import Count
 
 
 class CreateReservationView(APIView):
@@ -14,7 +15,6 @@ class CreateReservationView(APIView):
     def post(self, request):
         user_profile = request.user
 
-        # Check if the user has a 'buyer' role
         if user_profile.role != "buyer":
             return Response(
                 {"error": "You do not have permission to create a reservation."},
@@ -23,7 +23,6 @@ class CreateReservationView(APIView):
 
         serializer = ReservationSerializer(data=request.data)
         if serializer.is_valid():
-            # Save the reservation and send updates
             serializer.save(user=user_profile, created_at=timezone.now())
             return Response(serializer.data, status=status.HTTP_201_CREATED)
 
@@ -34,20 +33,16 @@ class GetUserReservationsView(APIView):
     permission_classes = [permissions.IsAuthenticated]
 
     def get(self, request: Any) -> Response:
-        # Ensure the user is authenticated
         user_profile = request.user
 
-        # Check if the user has a 'buyer' role
         if user_profile.role != "buyer":
             return Response(
                 {"error": "You do not have permission to create a reservation."},
                 status=status.HTTP_403_FORBIDDEN,
             )
 
-        # Fetch all reservations made by the authenticated user
         reservations = Reservation.objects.filter(user=user_profile)
 
-        # Serialize the reservation data
         serializer = ReservationSerializer(reservations, many=True)
         return Response(serializer.data, status=status.HTTP_200_OK)
 
@@ -58,12 +53,10 @@ class CancelReservationView(APIView):
     def delete(self, request: Any, reservation_id: int) -> Response:
         user_profile = request.user
 
-        # Fetch reservation and check ownership
         reservation = get_object_or_404(
             Reservation, id=reservation_id, user=user_profile
         )
 
-        # Delete reservation
         reservation.delete()
         return Response(
             {"message": "Reservation canceled successfully."},
@@ -80,10 +73,50 @@ class UpdateReservationView(APIView):
             Reservation, id=reservation_id, user=user_profile
         )
 
-        # Deserialize request
         serializer = ReservationSerializer(reservation, data=request.data, partial=True)
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data, status=status.HTTP_200_OK)
 
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+class MostVisitedStationView(APIView):
+    permission_classes = [permissions.IsAuthenticated]
+
+    def get(self, request):
+        # Get the most visited charging station
+        most_visited_station = (
+            Reservation.objects.values("charging_station_id")
+            .annotate(total_visits=Count("id"))
+            .order_by("-total_visits")
+            .first()
+        )
+
+        if most_visited_station:
+            station_id = most_visited_station["charging_station_id"]
+            station_details = ChargingStation.objects.filter(station_id=station_id).values(
+                "location",
+                "charging_speed",
+                "power_capacity",
+                "price_per_kwh",
+                "connector_types",
+            ).first()
+
+            if station_details:
+                # Merge visit count with station details
+                return Response(
+                    {
+                        **station_details,
+                        "visits": most_visited_station["total_visits"],
+                    },
+                    status=status.HTTP_200_OK,
+                )
+            else:
+                return Response(
+                    {"error": "Charging station details not found."},
+                    status=status.HTTP_404_NOT_FOUND,
+                )
+        else:
+            return Response(
+                {"error": "No reservations found."}, status=status.HTTP_404_NOT_FOUND
+            )

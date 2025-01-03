@@ -4,13 +4,12 @@ import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 import FilterSidebar from "../Map/FilterSideBar";
-import { IconButton, Typography, Button } from "@mui/material"; // Import Button from MUI
+import { IconButton, Button } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import { loadStripe } from "@stripe/stripe-js";
 import ReserveButton from "../Map/ReserveButton";
 import Cookies from "js-cookie";
 
-// Define the type for the charging station data
 interface ChargingStationData {
   station_id: number;
   location: string;
@@ -23,7 +22,6 @@ interface ChargingStationData {
   connector_types: string;
 }
 
-// Create a custom icon using images from the public folder
 const customIcon = new L.Icon({
   iconUrl: "/images/icon/marker-icon.png",
   shadowUrl: "/images/icon/marker-shadow.png",
@@ -33,7 +31,6 @@ const customIcon = new L.Icon({
   shadowSize: [41, 41],
 });
 
-// Fetch stations from backend
 const fetchStations = async () => {
   const token = Cookies.get("accessToken");
   if (token === undefined) {
@@ -59,43 +56,46 @@ const fetchStations = async () => {
 };
 
 export default function Dashboard() {
-  const [chargingStations, setChargingStations] = useState<
-    ChargingStationData[]
-  >([]);
-  const [filteredChargingStations, setFilteredChargingStations] = useState<
-    ChargingStationData[]
-  >([]);
+  const [chargingStations, setChargingStations] = useState<ChargingStationData[]>([]);
+  const [filteredChargingStations, setFilteredChargingStations] = useState<ChargingStationData[]>([]);
   const [isSidebarOpen, setSidebarOpen] = useState(false);
   const [filters, setFilters] = useState({
     minPowerKw: 50,
     distance: 10,
     status: "All",
   });
+  const [currentLocation, setCurrentLocation] = useState<[number, number] | null>(null); // Store the current location
 
-  // Filter stations based on the selected status and power filter
   useEffect(() => {
-    console.log("Filters:", filters);
     const { minPowerKw, status } = filters;
 
-    const filteredStations = chargingStations.filter(
-      (station: ChargingStationData) => {
-        const isPowerValid = station.power_capacity >= minPowerKw;
+    const filteredStations = chargingStations.filter((station: ChargingStationData) => {
+      const isPowerValid = station.power_capacity >= minPowerKw;
 
-        // Filter based on status
-        const isStatusValid =
-          status === "All" ||
-          (status === "Available" &&
-            station.availability_status === "available") ||
-          (status === "In Use" &&
-            station.availability_status === "unavailable");
+      const isStatusValid =
+        status === "All" ||
+        (status === "Available" && station.availability_status === "available") ||
+        (status === "In Use" && station.availability_status === "unavailable");
 
-        // Only return stations that pass both the power and status filters
-        return isPowerValid && isStatusValid;
-      },
-    );
+      return isPowerValid && isStatusValid;
+    });
 
     setFilteredChargingStations(filteredStations);
-  }, [filters, chargingStations]); // Re-filter stations when filters or stations change
+  }, [filters, chargingStations]);
+
+  useEffect(() => {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(
+        (position) => {
+          const { latitude, longitude } = position.coords;
+          setCurrentLocation([latitude, longitude]);
+        },
+        (error) => {
+          console.error("Error getting location: ", error);
+        }
+      );
+    }
+  }, []);
 
   useEffect(() => {
     fetchStations()
@@ -104,43 +104,26 @@ export default function Dashboard() {
       })
       .catch((error) => {
         console.error("Error fetching stations:", error);
-        // Redirect to login page as token is invalid or expired
         window.location.href = "/auth/signin";
       });
-  }, []); // Fetch stations when the component mounts (on initial render)
+  }, []);
 
-  const stripePromise = loadStripe(
-    "pk_test_51QTtdYIcvWpTvnoduZ2Pd0i5NblzFzfmlNP6wFzj8cFgFnlBkLhmWe9QTb5AiIbkdtZ4XpbJEQGrQYOfp6ji5ZzB00M3iaV4za",
-  ); // Replace with your Stripe public key
+  const stripePromise = loadStripe("pk_test_51QTtdYIcvWpTvnoduZ2Pd0i5NblzFzfmlNP6wFzj8cFgFnlBkLhmWe9QTb5AiIbkdtZ4XpbJEQGrQYOfp6ji5ZzB00M3iaV4za");
 
-  // Handler for the Reserve button
   const handleReserve = async (stationID: number) => {
-    // checkout();
-    // try {
-    //   const response = await fetch("/create-checkout-session", {  // Your backend endpoint
-    //     method: "POST",
-    //     body: JSON.stringify({ stationID }),
-    //     headers: {
-    //       "Content-Type": "application/json",
-    //     },
-    //   });
-
-    //   const session = await response.json();  // Session from your server
-    //   const stripe = await stripePromise;
-
-    //   // Redirect to Stripe Checkout page
-    //   const { error } = await stripe!.redirectToCheckout({
-    //     sessionId: session.id,
-    //   });
-
-    //   if (error) {
-    //     console.error("Error during Stripe Checkout:", error);
-    //   }
-    // } catch (error) {
-    //   console.error("Error during reservation:", error);
-    // }
     console.log(`Reserved charging station with ID: ${stationID}`);
-    // Add your reservation logic here (e.g., API call, state change, etc.)
+  };
+
+  const getStartTime = () => {
+    const date = new Date();
+    date.setMinutes(date.getMinutes()); // Start time is 30 minutes from now
+    return date.toISOString();
+  };
+
+  const getEndTime = () => {
+    const date = new Date();
+    date.setMinutes(date.getMinutes() + 90); // End time is 90 minutes from now
+    return date.toISOString();
   };
 
   return (
@@ -148,24 +131,15 @@ export default function Dashboard() {
       <IconButton onClick={() => setSidebarOpen(true)}>
         <MenuIcon />
       </IconButton>
-      <FilterSidebar
-        open={isSidebarOpen}
-        onClose={() => setSidebarOpen(false)}
-        filters={filters}
-        setFilters={setFilters}
-      />
+      <FilterSidebar open={isSidebarOpen} onClose={() => setSidebarOpen(false)} filters={filters} setFilters={setFilters} />
       <MapContainer
-        center={[51.509865, -0.118092]}
+        center={currentLocation || [51.509865, -0.118092]} // Default to London if location is unavailable
         zoom={13}
         style={{ height: "500px", width: "100%" }}
       >
         <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
         {filteredChargingStations.map((station) => (
-          <Marker
-            key={station.station_id}
-            position={[station.latitude, station.longitude]}
-            icon={customIcon}
-          >
+          <Marker key={station.station_id} position={[station.latitude, station.longitude]} icon={customIcon}>
             <Popup>
               <strong>{station.location}</strong>
               <br />
@@ -173,19 +147,7 @@ export default function Dashboard() {
               <br />
               <strong>Status:</strong> {station.availability_status}
               <br />
-              {/* <Button
-                    variant="contained"
-                    color="primary"
-                    onClick={() => handleReserve(station.ID)}
-                    style={{ marginTop: "10px" }}
-                  >
-                    Reserve
-                  </Button> */}
-              <ReserveButton
-                chargingStationId={1}
-                startTime="2024-12-30T13:30:00Z"
-                endTime="2024-12-30T14:00:00Z"
-              />
+              <ReserveButton chargingStationId={station.station_id} startTime={getStartTime()} endTime={getEndTime()} />
             </Popup>
           </Marker>
         ))}

@@ -1,131 +1,98 @@
-import { BRAND } from "@/types/brand";
-import Image from "next/image";
+"use client";
+import Cookies from "js-cookie";
+import React, { useState, useEffect } from "react";
 
-const brandData: BRAND[] = [
-  {
-    logo: "/images/brand/brand-01.svg",
-    name: "Google",
-    visitors: 3.5,
-    revenues: "5,768",
-    sales: 590,
-    conversion: 4.8,
-  },
-  {
-    logo: "/images/brand/brand-02.svg",
-    name: "X.com",
-    visitors: 2.2,
-    revenues: "4,635",
-    sales: 467,
-    conversion: 4.3,
-  },
-  {
-    logo: "/images/brand/brand-03.svg",
-    name: "Github",
-    visitors: 2.1,
-    revenues: "4,290",
-    sales: 420,
-    conversion: 3.7,
-  },
-  {
-    logo: "/images/brand/brand-04.svg",
-    name: "Vimeo",
-    visitors: 1.5,
-    revenues: "3,580",
-    sales: 389,
-    conversion: 2.5,
-  },
-  {
-    logo: "/images/brand/brand-05.svg",
-    name: "Facebook",
-    visitors: 1.2,
-    revenues: "2,740",
-    sales: 230,
-    conversion: 1.9,
-  },
-];
+interface MostVisitedStationData {
+  station_id: number;
+  location: string;
+  latitude: number;
+  longitude: number;
+  availability_status: string;
+  charging_speed: number;
+  power_capacity: number;
+  price_per_kwh: number;
+  connector_types: string;
+  visits: number;
+}
 
-const TableOne = () => {
+const MostVisitedStation: React.FC = () => {
+  const [data, setData] = useState<MostVisitedStationData | null>(null);
+  const [error, setError] = useState<string>("");
+  const [loading, setLoading] = useState<boolean>(true);
+
+  const token = Cookies.get("accessToken");
+
+  const fetchMostVisitedStation = async () => {
+    try {
+      setLoading(true);
+      if (!token) {
+        setError("Authorization token is missing.");
+        setLoading(false);
+        return;
+      }
+
+      const response = await fetch(
+        "http://127.0.0.1:8000/reservations/most-visited/", // API endpoint
+        {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${token}`,
+          },
+        }
+      );
+
+      if (!response.ok) {
+        throw new Error("Failed to fetch most visited station.");
+      }
+
+      const result: MostVisitedStationData = await response.json();
+      setData(result);
+    } catch (err: any) {
+      setError(err.message || "An unknown error occurred.");
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  useEffect(() => {
+    fetchMostVisitedStation();
+  }, []);
+
   return (
-    <div className="rounded-[10px] bg-white px-7.5 pb-4 pt-7.5 shadow-1 dark:bg-gray-dark dark:shadow-card">
-      <h4 className="mb-5.5 text-body-2xlg font-bold text-dark dark:text-white">
-        Top Channels
-      </h4>
-
-      <div className="flex flex-col">
-        <div className="grid grid-cols-3 sm:grid-cols-5">
-          <div className="px-2 pb-3.5">
-            <h5 className="text-sm font-medium uppercase xsm:text-base">
-              Source
-            </h5>
-          </div>
-          <div className="px-2 pb-3.5 text-center">
-            <h5 className="text-sm font-medium uppercase xsm:text-base">
-              Visitors
-            </h5>
-          </div>
-          <div className="px-2 pb-3.5 text-center">
-            <h5 className="text-sm font-medium uppercase xsm:text-base">
-              Revenues
-            </h5>
-          </div>
-          <div className="hidden px-2 pb-3.5 text-center sm:block">
-            <h5 className="text-sm font-medium uppercase xsm:text-base">
-              Sales
-            </h5>
-          </div>
-          <div className="hidden px-2 pb-3.5 text-center sm:block">
-            <h5 className="text-sm font-medium uppercase xsm:text-base">
-              Conversion
-            </h5>
-          </div>
-        </div>
-
-        {brandData.map((brand, key) => (
-          <div
-            className={`grid grid-cols-3 sm:grid-cols-5 ${
-              key === brandData.length - 1
-                ? ""
-                : "border-b border-stroke dark:border-dark-3"
-            }`}
-            key={key}
-          >
-            <div className="flex items-center gap-3.5 px-2 py-4">
-              <div className="flex-shrink-0">
-                <Image src={brand.logo} alt="Brand" width={48} height={48} />
-              </div>
-              <p className="hidden font-medium text-dark dark:text-white sm:block">
-                {brand.name}
-              </p>
-            </div>
-
-            <div className="flex items-center justify-center px-2 py-4">
-              <p className="font-medium text-dark dark:text-white">
-                {brand.visitors}K
-              </p>
-            </div>
-
-            <div className="flex items-center justify-center px-2 py-4">
-              <p className="font-medium text-green-light-1">
-                ${brand.revenues}
-              </p>
-            </div>
-
-            <div className="hidden items-center justify-center px-2 py-4 sm:flex">
-              <p className="font-medium text-dark dark:text-white">
-                {brand.sales}
-              </p>
-            </div>
-
-            <div className="hidden items-center justify-center px-2 py-4 sm:flex">
-              <p className="font-medium text-dark dark:text-white">
-                {brand.conversion}%
-              </p>
-            </div>
-          </div>
-        ))}
-      </div>
+    <div className="rounded-lg bg-white p-6 shadow-lg dark:bg-dark-2 dark:shadow-card">
+      {loading ? (
+        <p>Loading...</p>
+      ) : error ? (
+        <p className="text-red-500">Error: {error}</p>
+      ) : data ? (
+        <table className="min-w-full table-auto text-left text-sm text-gray-500 dark:text-white">
+          <thead className="bg-gray-100 dark:bg-dark-3">
+            <tr>
+              <th className="px-6 py-3 font-medium text-dark">Location</th>
+              <th className="px-6 py-3 font-medium text-dark">Charging Speed (kW)</th>
+              <th className="px-6 py-3 font-medium text-dark">Power Capacity (kW)</th>
+              <th className="px-6 py-3 font-medium text-dark">Price per kWh</th>
+              <th className="px-6 py-3 font-medium text-dark">Connector Types</th>
+              <th className="px-6 py-3 font-medium text-dark">Total Visits</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr className="border-t hover:bg-gray-50 dark:border-dark-3 dark:hover:bg-dark-2">
+              <td className="px-6 py-4">{data.location}</td>
+              <td className="px-6 py-4">{data.charging_speed}</td>
+              <td className="px-6 py-4">{data.power_capacity}</td>
+              <td className="px-6 py-4">{data.price_per_kwh}</td>
+              <td className="px-6 py-4">{data.connector_types}</td>
+              <td className="px-6 py-4">{data.visits}</td>
+            </tr>
+          </tbody>
+        </table>
+      ) : (
+        <p>No data available.</p>
+      )}
     </div>
   );
 };
 
-export default TableOne;
+export default MostVisitedStation;
