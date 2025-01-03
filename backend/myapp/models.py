@@ -40,10 +40,10 @@ class ChargingStation(models.Model):
         max_length=255
     )  # General location info
     latitude: models.DecimalField = models.DecimalField(
-        max_digits=9, decimal_places=6
+        max_digits=20, decimal_places=20
     )  # Latitude
     longitude: models.DecimalField = models.DecimalField(
-        max_digits=9, decimal_places=6
+        max_digits=20, decimal_places=20
     )  # Longitude
 
     availability_status: models.CharField = models.CharField(
