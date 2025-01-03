@@ -6929,3 +6929,47 @@ INFO 2025-01-03 23:04:30,921 basehttp "GET /charging-stations/user/ HTTP/1.1" 20
 INFO 2025-01-03 23:04:31,255 basehttp "POST /validate-token/ HTTP/1.1" 200 14
 INFO 2025-01-03 23:05:02,192 autoreload C:\Users\zeyne\OneDrive\Belgeler\GitHub\EV-Charging-Management-System\backend\myproject\settings.py changed, reloading.
 INFO 2025-01-03 23:05:04,641 autoreload Watching for file changes with StatReloader
+INFO 2025-01-03 23:05:09,344 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 23:05:15,290 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 23:05:15,381 basehttp "GET /charging-stations/user/ HTTP/1.1" 200 1275
+INFO 2025-01-03 23:05:15,914 basehttp "GET /charging-stations/user/ HTTP/1.1" 200 1275
+INFO 2025-01-03 23:05:32,761 basehttp "OPTIONS /charging-stations/33/update/ HTTP/1.1" 200 0
+INFO 2025-01-03 23:05:33,323 charging_station_views Charging station 33 updated by user sellerTest1@example.com
+INFO 2025-01-03 23:05:33,328 basehttp "PUT /charging-stations/33/update/ HTTP/1.1" 200 275
+INFO 2025-01-03 23:05:33,845 basehttp "GET /charging-stations/user/ HTTP/1.1" 200 1275
+INFO 2025-01-03 23:09:47,483 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 23:11:43,819 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 23:14:50,697 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 23:14:56,664 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 23:15:33,735 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 23:15:34,542 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 23:15:57,190 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 23:15:57,231 basehttp "GET /charging-stations/user/ HTTP/1.1" 200 1275
+INFO 2025-01-03 23:15:57,734 basehttp "GET /charging-stations/user/ HTTP/1.1" 200 1275
+INFO 2025-01-03 23:15:58,210 basehttp "GET /charging-stations/user/ HTTP/1.1" 200 1275
+INFO 2025-01-03 23:15:58,676 basehttp "GET /charging-stations/user/ HTTP/1.1" 200 1275
+WARNING 2025-01-03 23:16:43,865 charging_station_views coordinates
+INFO 2025-01-03 23:16:43,905 charging_station_views Charging station created: {'station_id': 37, 'location': 'yilmazlar sitesi istanbul', 'latitude': '41.013840', 'longitude': '28.949660', 'availability_status': 'available', 'charging_speed': 'slow', 'power_capacity': '30.00', 'price_per_kwh': '0.30', 'connector_types': 'type2'}
+INFO 2025-01-03 23:16:43,922 basehttp "POST /charging-stations/add/ HTTP/1.1" 201 235
+INFO 2025-01-03 23:16:44,407 basehttp "GET /charging-stations/user/ HTTP/1.1" 200 1511
+INFO 2025-01-03 23:17:03,100 basehttp "OPTIONS /charging-stations/37/update/ HTTP/1.1" 200 0
+INFO 2025-01-03 23:17:03,596 charging_station_views Charging station 37 updated by user sellerTest1@example.com
+INFO 2025-01-03 23:17:03,599 basehttp "PUT /charging-stations/37/update/ HTTP/1.1" 200 233
+INFO 2025-01-03 23:17:04,041 basehttp "GET /charging-stations/user/ HTTP/1.1" 200 1509
+INFO 2025-01-03 23:17:11,870 basehttp "OPTIONS /charging-stations/37/delete/ HTTP/1.1" 200 0
+INFO 2025-01-03 23:17:12,570 charging_station_views Charging station 37 deleted by user sellerTest1@example.com
+INFO 2025-01-03 23:17:12,575 basehttp "DELETE /charging-stations/37/delete/ HTTP/1.1" 204 52
+INFO 2025-01-03 23:17:44,079 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 23:17:56,042 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 23:19:14,173 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 23:19:16,786 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 23:19:33,846 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 23:19:50,378 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 23:20:59,400 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 23:21:59,192 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 23:22:33,245 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 23:23:07,671 basehttp "POST /validate-token/ HTTP/1.1" 200 14
+INFO 2025-01-03 23:23:27,395 basehttp "OPTIONS /charging-stations/8/update/ HTTP/1.1" 200 0
+INFO 2025-01-03 23:23:27,949 charging_station_views Charging station 8 updated by user sellerTest1@example.com
+INFO 2025-01-03 23:23:27,951 basehttp "PUT /charging-stations/8/update/ HTTP/1.1" 200 232
+INFO 2025-01-03 23:23:28,465 basehttp "GET /charging-stations/user/ HTTP/1.1" 200 1275
