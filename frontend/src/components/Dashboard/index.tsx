@@ -9,6 +9,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import { loadStripe } from "@stripe/stripe-js";
 import ReserveButton from "../Map/ReserveButton";
 import Cookies from "js-cookie";
+import { Server } from "@/server/requests";
 
 interface ChargingStationData {
   station_id: number;
@@ -37,13 +38,7 @@ const fetchStations = async () => {
     throw new Error("No access token found");
   }
 
-  const response = await fetch("http://127.0.0.1:8000/charging-stations/all/", {
-    method: "GET",
-    headers: {
-      "Content-Type": "application/json",
-      Authorization: `Bearer ${token}`, // Add Bearer token
-    },
-  });
+  const response = await Server.getAllChargingStations(token);
 
   const responseJSON = await response.json();
 
@@ -56,29 +51,39 @@ const fetchStations = async () => {
 };
 
 export default function Dashboard() {
-  const [chargingStations, setChargingStations] = useState<ChargingStationData[]>([]);
-  const [filteredChargingStations, setFilteredChargingStations] = useState<ChargingStationData[]>([]);
+  const [chargingStations, setChargingStations] = useState<
+    ChargingStationData[]
+  >([]);
+  const [filteredChargingStations, setFilteredChargingStations] = useState<
+    ChargingStationData[]
+  >([]);
   const [isSidebarOpen, setSidebarOpen] = useState(false);
   const [filters, setFilters] = useState({
     minPowerKw: 50,
     distance: 10,
     status: "All",
   });
-  const [currentLocation, setCurrentLocation] = useState<[number, number] | null>(null); // Store the current location
+  const [currentLocation, setCurrentLocation] = useState<
+    [number, number] | null
+  >(null); // Store the current location
 
   useEffect(() => {
     const { minPowerKw, status } = filters;
 
-    const filteredStations = chargingStations.filter((station: ChargingStationData) => {
-      const isPowerValid = station.power_capacity >= minPowerKw;
+    const filteredStations = chargingStations.filter(
+      (station: ChargingStationData) => {
+        const isPowerValid = station.power_capacity >= minPowerKw;
 
-      const isStatusValid =
-        status === "All" ||
-        (status === "Available" && station.availability_status === "available") ||
-        (status === "In Use" && station.availability_status === "unavailable");
+        const isStatusValid =
+          status === "All" ||
+          (status === "Available" &&
+            station.availability_status === "available") ||
+          (status === "In Use" &&
+            station.availability_status === "unavailable");
 
-      return isPowerValid && isStatusValid;
-    });
+        return isPowerValid && isStatusValid;
+      },
+    );
 
     setFilteredChargingStations(filteredStations);
   }, [filters, chargingStations]);
@@ -92,7 +97,7 @@ export default function Dashboard() {
         },
         (error) => {
           console.error("Error getting location: ", error);
-        }
+        },
       );
     }
   }, []);
@@ -108,7 +113,9 @@ export default function Dashboard() {
       });
   }, []);
 
-  const stripePromise = loadStripe("pk_test_51QTtdYIcvWpTvnoduZ2Pd0i5NblzFzfmlNP6wFzj8cFgFnlBkLhmWe9QTb5AiIbkdtZ4XpbJEQGrQYOfp6ji5ZzB00M3iaV4za");
+  const stripePromise = loadStripe(
+    "pk_test_51QTtdYIcvWpTvnoduZ2Pd0i5NblzFzfmlNP6wFzj8cFgFnlBkLhmWe9QTb5AiIbkdtZ4XpbJEQGrQYOfp6ji5ZzB00M3iaV4za",
+  );
 
   const handleReserve = async (stationID: number) => {
     console.log(`Reserved charging station with ID: ${stationID}`);
@@ -117,13 +124,14 @@ export default function Dashboard() {
   const getStartTime = () => {
     const date = new Date();
     date.setMinutes(date.getMinutes()); // Start time is 30 minutes from now
-    return date.toISOString();
+    return date.toISOString().replace("Z", "+00:00");
   };
 
   const getEndTime = () => {
     const date = new Date();
     date.setMinutes(date.getMinutes() + 90); // End time is 90 minutes from now
-    return date.toISOString();
+
+    return date.toISOString().replace("Z", "+00:00");
   };
 
   return (
@@ -131,7 +139,12 @@ export default function Dashboard() {
       <IconButton onClick={() => setSidebarOpen(true)}>
         <MenuIcon />
       </IconButton>
-      <FilterSidebar open={isSidebarOpen} onClose={() => setSidebarOpen(false)} filters={filters} setFilters={setFilters} />
+      <FilterSidebar
+        open={isSidebarOpen}
+        onClose={() => setSidebarOpen(false)}
+        filters={filters}
+        setFilters={setFilters}
+      />
       <MapContainer
         center={currentLocation || [51.509865, -0.118092]} // Default to London if location is unavailable
         zoom={13}
@@ -139,7 +152,11 @@ export default function Dashboard() {
       >
         <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
         {filteredChargingStations.map((station) => (
-          <Marker key={station.station_id} position={[station.latitude, station.longitude]} icon={customIcon}>
+          <Marker
+            key={station.station_id}
+            position={[station.latitude, station.longitude]}
+            icon={customIcon}
+          >
             <Popup>
               <strong>{station.location}</strong>
               <br />
@@ -147,7 +164,11 @@ export default function Dashboard() {
               <br />
               <strong>Status:</strong> {station.availability_status}
               <br />
-              <ReserveButton chargingStationId={station.station_id} startTime={getStartTime()} endTime={getEndTime()} />
+              <ReserveButton
+                chargingStationId={station.station_id}
+                startTime={getStartTime()}
+                endTime={getEndTime()}
+              />
             </Popup>
           </Marker>
         ))}

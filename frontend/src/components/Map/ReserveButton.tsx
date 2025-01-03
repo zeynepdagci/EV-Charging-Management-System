@@ -1,7 +1,7 @@
-import React, { useState } from "react";
-import { loadStripe } from "@stripe/stripe-js";
+import React from "react";
 import { Button } from "@mui/material";
 import Cookies from "js-cookie";
+import { Server } from "@/server/requests";
 
 interface ReserveButtonProps {
   chargingStationId: number;
@@ -15,23 +15,15 @@ const ReserveButton = ({
   endTime,
 }: ReserveButtonProps) => {
   const handleReserve = async () => {
-    const response = await fetch(
-      "http://127.0.0.1:8000/create-checkout-session/",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${Cookies.get("accessToken")}`,
-        },
-        body: JSON.stringify({
-          charging_station_id: chargingStationId,
-          start_time: startTime,
-          end_time: endTime,
-        }),
-      },
+    const response = await Server.createCheckoutSession(
+      Cookies.get("accessToken") ?? "",
+      chargingStationId,
+      startTime,
+      endTime,
     );
 
     const { url } = await response.json();
+    console.log("URL", url);
 
     // Redirect to Stripe Checkout
     window.location.href = url;

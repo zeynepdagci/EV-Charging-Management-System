@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import Cookies from "js-cookie";
+import { Server } from "@/server/requests";
 
 interface SignInData {
   email: string;
@@ -29,22 +30,17 @@ const SigninWithPassword: React.FC = () => {
     setError(""); // Reset error message
 
     try {
-      const response = await fetch("http://127.0.0.1:8000/login/", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          email: data.email,
-          password: data.password,
-        }),
-      });
+      const response = await Server.login(data);
 
       if (response.ok) {
-        const tokens = await response.json();
+        const responseJSON = await response.json();
 
-        Cookies.set("accessToken", tokens.access);
-        localStorage.setItem("role", tokens.userProfile.role);
+        Cookies.set("accessToken", responseJSON.access);
+        localStorage.setItem(
+          "userProfile",
+          JSON.stringify(responseJSON.userProfile),
+        );
+        localStorage.setItem("role", responseJSON.userProfile.role);
 
         console.log("Sign in successful");
 

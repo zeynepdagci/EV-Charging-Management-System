@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Link from "next/link";
+import { Server } from "@/server/requests";
 
 export default function SignupWithPassword() {
   const [data, setData] = useState({
@@ -36,19 +37,7 @@ export default function SignupWithPassword() {
     }
 
     try {
-      const response = await fetch("http://127.0.0.1:8000/signup/", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          email: data.email,
-          first_name: data.first_name,
-          last_name: data.last_name,
-          password: data.password,
-          role: data.role,
-        }),
-      });
+      const response = await Server.signup(data);
 
       if (response.ok) {
         setSuccess("Account created successfully. Please sign in.");
@@ -74,7 +63,10 @@ export default function SignupWithPassword() {
   return (
     <form onSubmit={handleSubmit}>
       <div className="mb-4">
-        <label htmlFor="email" className="mb-2.5 block font-medium text-dark dark:text-white">
+        <label
+          htmlFor="email"
+          className="mb-2.5 block font-medium text-dark dark:text-white"
+        >
           Email
         </label>
         <input
@@ -88,7 +80,10 @@ export default function SignupWithPassword() {
       </div>
 
       <div className="mb-4">
-        <label htmlFor="first_name" className="mb-2.5 block font-medium text-dark dark:text-white">
+        <label
+          htmlFor="first_name"
+          className="mb-2.5 block font-medium text-dark dark:text-white"
+        >
           First Name
         </label>
         <input
@@ -102,7 +97,10 @@ export default function SignupWithPassword() {
       </div>
 
       <div className="mb-4">
-        <label htmlFor="last_name" className="mb-2.5 block font-medium text-dark dark:text-white">
+        <label
+          htmlFor="last_name"
+          className="mb-2.5 block font-medium text-dark dark:text-white"
+        >
           Last Name
         </label>
         <input
@@ -116,7 +114,10 @@ export default function SignupWithPassword() {
       </div>
 
       <div className="mb-5">
-        <label htmlFor="password" className="mb-2.5 block font-medium text-dark dark:text-white">
+        <label
+          htmlFor="password"
+          className="mb-2.5 block font-medium text-dark dark:text-white"
+        >
           Password
         </label>
         <input
@@ -130,7 +131,10 @@ export default function SignupWithPassword() {
       </div>
 
       <div className="mb-5">
-        <label htmlFor="confirm_password" className="mb-2.5 block font-medium text-dark dark:text-white">
+        <label
+          htmlFor="confirm_password"
+          className="mb-2.5 block font-medium text-dark dark:text-white"
+        >
           Confirm Password
         </label>
         <input
@@ -144,7 +148,10 @@ export default function SignupWithPassword() {
       </div>
 
       <div className="mb-5">
-        <label htmlFor="role" className="mb-2.5 block font-medium text-dark dark:text-white">
+        <label
+          htmlFor="role"
+          className="mb-2.5 block font-medium text-dark dark:text-white"
+        >
           Role
         </label>
         <select
@@ -158,19 +165,16 @@ export default function SignupWithPassword() {
         </select>
       </div>
 
-      {error && (
-        <div className="mb-4 text-red-500 font-medium">
-          {error}
-        </div>
-      )}
+      {error && <div className="mb-4 font-medium text-red-500">{error}</div>}
       {success && (
-        <div className="mb-4 text-green-500 font-medium">
-          {success}
-        </div>
+        <div className="mb-4 font-medium text-green-500">{success}</div>
       )}
 
       <div className="mb-4.5">
-        <button type="submit" className="w-full rounded-lg bg-primary p-4 font-medium text-white hover:bg-opacity-90">
+        <button
+          type="submit"
+          className="w-full rounded-lg bg-primary p-4 font-medium text-white hover:bg-opacity-90"
+        >
           Create an account
         </button>
       </div>

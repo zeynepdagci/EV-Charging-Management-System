@@ -1,5 +1,5 @@
-import { validateToken } from "./server/validate-token";
+import { Server } from "./server/requests";
 
 export async function checkAuth(token?: string) {
-  return token !== undefined && (await validateToken(token));
+  return token !== undefined && (await Server.validateToken(token));
 }

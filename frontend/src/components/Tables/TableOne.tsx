@@ -1,4 +1,5 @@
 "use client";
+import { Server } from "@/server/requests";
 import Cookies from "js-cookie";
 import React, { useState, useEffect } from "react";
 
@@ -31,16 +32,7 @@ const MostVisitedStation: React.FC = () => {
         return;
       }
 
-      const response = await fetch(
-        "http://127.0.0.1:8000/reservations/most-visited/", // API endpoint
-        {
-          method: "GET",
-          headers: {
-            "Content-Type": "application/json",
-            Authorization: `Bearer ${token}`,
-          },
-        }
-      );
+      const response = await Server.getMostVisitedStation(token);
 
       if (!response.ok) {
         throw new Error("Failed to fetch most visited station.");
@@ -70,10 +62,16 @@ const MostVisitedStation: React.FC = () => {
           <thead className="bg-gray-100 dark:bg-dark-3">
             <tr>
               <th className="px-6 py-3 font-medium text-dark">Location</th>
-              <th className="px-6 py-3 font-medium text-dark">Charging Speed (kW)</th>
-              <th className="px-6 py-3 font-medium text-dark">Power Capacity (kW)</th>
+              <th className="px-6 py-3 font-medium text-dark">
+                Charging Speed (kW)
+              </th>
+              <th className="px-6 py-3 font-medium text-dark">
+                Power Capacity (kW)
+              </th>
               <th className="px-6 py-3 font-medium text-dark">Price per kWh</th>
-              <th className="px-6 py-3 font-medium text-dark">Connector Types</th>
+              <th className="px-6 py-3 font-medium text-dark">
+                Connector Types
+              </th>
               <th className="px-6 py-3 font-medium text-dark">Total Visits</th>
             </tr>
           </thead>

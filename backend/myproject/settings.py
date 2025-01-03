@@ -34,11 +34,7 @@ STRIPE_WEBHOOK_SECRET = "whsec_0OKWCuyaD7GXSdMXEbJ3dw9ScDhZzeCE"
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [
-    "127.0.0.1",
-    "localhost",
-    "b029-209-35-66-213.ngrok-free.app",
-]
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -163,6 +159,8 @@ CORS_ALLOWED_ORIGINS = [
     "http://127.0.0.1:3000",  # If using IP version of localhost
 ]
 
+CORS_ALLOW_ALL_ORIGINS = True
+
 # Optional: Allow all headers and methods for simplicity
 CORS_ALLOW_HEADERS = [
     "accept",
@@ -227,7 +225,7 @@ LOGGING = {
     },
 }
 
-CELERY_BROKER_URL = "redis://localhost:6379/0"  # Redis URL
+CELERY_BROKER_URL = "redis://redis-cxk9iy.serverless.eun1.cache.amazonaws.com:6379/0"
 CELERY_ACCEPT_CONTENT = ["json"]
 CELERY_TASK_SERIALIZER = "json"
 CELERY_TIMEZONE = "UTC"

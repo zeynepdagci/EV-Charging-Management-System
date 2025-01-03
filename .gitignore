@@ -4,5 +4,12 @@
 # Ignore all migrations directories
 backend/myapp/migrations/
 
+backend/debug.log
+
 # Optionally, ignore compiled Python files (.pyc)
 *.pyc
+
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml

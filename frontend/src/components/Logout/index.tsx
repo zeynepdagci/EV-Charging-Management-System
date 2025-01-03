@@ -3,6 +3,7 @@ import Cookies from "js-cookie";
 
 const Logout = () => {
   Cookies.remove("accessToken");
+  localStorage.removeItem("userProfile");
   localStorage.removeItem("role");
   console.log("Logout successful");
 
