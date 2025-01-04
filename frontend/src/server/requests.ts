@@ -16,6 +16,7 @@ async function validateToken(token: string) {
         Authorization: `Bearer ${token}`, // Add Bearer token
       },
     });
+    console.log("Response", response);
 
     return response.ok;
   } catch (error) {
