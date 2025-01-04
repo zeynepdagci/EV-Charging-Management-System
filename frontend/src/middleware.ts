@@ -21,6 +21,8 @@ export default async function middleware(req: NextRequest) {
 
   const cookieStore = cookies();
   const accessToken = cookieStore.get("accessToken")?.value;
+  console.log("Access token", accessToken);
+  
   const isAuthenticated = await checkAuth(accessToken);
 
   console.log("Authenticated", isAuthenticated, "Pathname", pathname);

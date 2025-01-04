@@ -6,6 +6,8 @@ const SERVER_IP = IS_LOCAL
 console.log("SERVER_IP", SERVER_IP);
 
 async function validateToken(token: string) {
+  console.log("Calling validateToken with token", token);
+  console.log("Calling validateToken with SERVER_IP", SERVER_IP);
   try {
     const response = await fetch(`http://${SERVER_IP}/validate-token/`, {
       method: "POST",
