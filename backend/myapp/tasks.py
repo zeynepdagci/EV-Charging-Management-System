@@ -10,6 +10,7 @@ logger = logging.getLogger(__name__)
 
 @shared_task
 def cleanup_unpaid_reservation(reservation_id):
+    logger.info("Running cleanup_unpaid_reservation task")
     try:
         with transaction.atomic():
             reservation = Reservation.objects.get(id=reservation_id, is_paid=False)

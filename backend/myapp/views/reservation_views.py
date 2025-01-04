@@ -15,12 +15,6 @@ class CreateReservationView(APIView):
     def post(self, request):
         user_profile = request.user
 
-        if user_profile.role != "buyer":
-            return Response(
-                {"error": "You do not have permission to create a reservation."},
-                status=status.HTTP_403_FORBIDDEN,
-            )
-
         serializer = ReservationSerializer(data=request.data)
         if serializer.is_valid():
             serializer.save(user=user_profile, created_at=timezone.now())
@@ -34,12 +28,6 @@ class GetUserReservationsView(APIView):
 
     def get(self, request: Any) -> Response:
         user_profile = request.user
-
-        if user_profile.role != "buyer":
-            return Response(
-                {"error": "You do not have permission to create a reservation."},
-                status=status.HTTP_403_FORBIDDEN,
-            )
 
         reservations = Reservation.objects.filter(user=user_profile)
 
@@ -80,6 +68,7 @@ class UpdateReservationView(APIView):
 
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
+
 class MostVisitedStationView(APIView):
     permission_classes = [permissions.IsAuthenticated]
 
@@ -94,13 +83,17 @@ class MostVisitedStationView(APIView):
 
         if most_visited_station:
             station_id = most_visited_station["charging_station_id"]
-            station_details = ChargingStation.objects.filter(station_id=station_id).values(
-                "location",
-                "charging_speed",
-                "power_capacity",
-                "price_per_kwh",
-                "connector_types",
-            ).first()
+            station_details = (
+                ChargingStation.objects.filter(station_id=station_id)
+                .values(
+                    "location",
+                    "charging_speed",
+                    "power_capacity",
+                    "price_per_kwh",
+                    "connector_types",
+                )
+                .first()
+            )
 
             if station_details:
                 # Merge visit count with station details
@@ -120,3 +113,27 @@ class MostVisitedStationView(APIView):
             return Response(
                 {"error": "No reservations found."}, status=status.HTTP_404_NOT_FOUND
             )
+
+
+class GetAllReservationsView(APIView):
+    permission_classes = [permissions.IsAuthenticated]
+
+    def get(self, request):
+        reservations = Reservation.objects.values(
+            "charging_station_id", "start_time", "end_time"
+        )
+
+        # Group reservations by charging station
+        grouped_reservations = {}
+        for res in reservations:
+            station_id = res["charging_station_id"]
+            if station_id not in grouped_reservations:
+                grouped_reservations[station_id] = []
+            grouped_reservations[station_id].append(
+                {
+                    "start_time": res["start_time"].isoformat(),
+                    "end_time": res["end_time"].isoformat(),
+                }
+            )
+
+        return Response(grouped_reservations, status=status.HTTP_200_OK)

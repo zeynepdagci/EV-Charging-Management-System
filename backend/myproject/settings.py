@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     "rest_framework",
     "rest_framework_simplejwt",
     "corsheaders",
+    "channels",
 ]
 
 MIDDLEWARE = [
@@ -225,7 +226,14 @@ LOGGING = {
     },
 }
 
-CELERY_BROKER_URL = "redis://redis-cxk9iy.serverless.eun1.cache.amazonaws.com:6379/0"
+CELERY_BROKER_URL = "redis://127.0.0.1:6379/1"
 CELERY_ACCEPT_CONTENT = ["json"]
 CELERY_TASK_SERIALIZER = "json"
 CELERY_TIMEZONE = "UTC"
+
+ASGI_APPLICATION = "myproject.asgi.application"
+CHANNEL_LAYERS = {
+    "default": {
+        "BACKEND": "channels.layers.InMemoryChannelLayer",
+    },
+}

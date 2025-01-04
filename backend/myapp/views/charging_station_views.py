@@ -51,7 +51,7 @@ class AddChargingStationView(APIView):
 
         if location:
             coordinates = get_coordinates_from_address(location)
-            logger.warning("coordinates")
+            logger.warning(f"coordinates {coordinates}")
             if coordinates:
                 serializer_data["latitude"] = coordinates[0]
                 serializer_data["longitude"] = coordinates[1]

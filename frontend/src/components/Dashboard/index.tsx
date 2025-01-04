@@ -4,11 +4,11 @@ import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 import FilterSidebar from "../Map/FilterSideBar";
-import { IconButton, Button } from "@mui/material";
+import { IconButton } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
-import { loadStripe } from "@stripe/stripe-js";
 import ReserveButton from "../Map/ReserveButton";
-import Cookies from "js-cookie";
+import useReservationUpdates from "@/hooks/useReservationUpdates";
+import { fetchStations } from "@/utils";
 import { Server } from "@/server/requests";
 
 interface ChargingStationData {
@@ -17,6 +17,7 @@ interface ChargingStationData {
   latitude: number;
   longitude: number;
   availability_status: string;
+  reservations: any[];
   charging_speed: string;
   power_capacity: number;
   price_per_kwh: number;
@@ -32,22 +33,23 @@ const customIcon = new L.Icon({
   shadowSize: [41, 41],
 });
 
-const fetchStations = async () => {
-  const token = Cookies.get("accessToken");
-  if (token === undefined) {
-    throw new Error("No access token found");
-  }
+const isStationAvailableNow = (station: ChargingStationData) => {
+  const now = new Date();
+  const hasActiveReservation = station.reservations.some(
+    (reservation) =>
+      new Date(reservation.start_time) <= now &&
+      new Date(reservation.end_time) >= now,
+  );
+  return station.availability_status === "available" && !hasActiveReservation;
+};
 
-  const response = await Server.getAllChargingStations(token);
-
-  const responseJSON = await response.json();
-
-  if (!response.ok) {
-    throw new Error(responseJSON);
-  }
-
-  console.log("Stations: ", responseJSON);
-  return responseJSON;
+const checkAvailability = (stations: any, setAvailability: Function) => {
+  const updatedAvailability: Record<number, boolean> = {};
+  stations.forEach((station: any) => {
+    updatedAvailability[station.station_id] = isStationAvailableNow(station);
+  });
+  console.log("Updated availability: ", updatedAvailability);
+  setAvailability(updatedAvailability);
 };
 
 export default function Dashboard() {
@@ -67,6 +69,10 @@ export default function Dashboard() {
     [number, number] | null
   >(null); // Store the current location
 
+  const [availability, setAvailability] = useState<Record<number, boolean>>({});
+
+  useReservationUpdates(setChargingStations);
+
   useEffect(() => {
     const { minPowerKw, status } = filters;
 
@@ -76,10 +82,8 @@ export default function Dashboard() {
 
         const isStatusValid =
           status === "All" ||
-          (status === "Available" &&
-            station.availability_status === "available") ||
-          (status === "In Use" &&
-            station.availability_status === "unavailable");
+          (status === "Available" && availability[station.station_id]) ||
+          (status === "In Use" && !availability[station.station_id]);
 
         return isPowerValid && isStatusValid;
       },
@@ -113,13 +117,18 @@ export default function Dashboard() {
       });
   }, []);
 
-  const stripePromise = loadStripe(
-    "pk_test_51QTtdYIcvWpTvnoduZ2Pd0i5NblzFzfmlNP6wFzj8cFgFnlBkLhmWe9QTb5AiIbkdtZ4XpbJEQGrQYOfp6ji5ZzB00M3iaV4za",
-  );
+  useEffect(() => {
+    // Run the check immediately on mount
+    checkAvailability(chargingStations, setAvailability);
 
-  const handleReserve = async (stationID: number) => {
-    console.log(`Reserved charging station with ID: ${stationID}`);
-  };
+    // Set up an interval to check availability periodically (e.g., every 10 seconds)
+    const intervalId = setInterval(() => {
+      checkAvailability(chargingStations, setAvailability);
+    }, 2000); // 10,000 ms = 10 seconds
+
+    // Clean up the interval on component unmount
+    return () => clearInterval(intervalId);
+  }, [chargingStations]);
 
   const getStartTime = () => {
     const date = new Date();
@@ -162,7 +171,8 @@ export default function Dashboard() {
               <br />
               <strong>Power:</strong> {station.power_capacity} kW
               <br />
-              <strong>Status:</strong> {station.availability_status}
+              <strong>Status:</strong>{" "}
+              {availability[station.station_id] ? "Available" : "In Use"}
               <br />
               <ReserveButton
                 chargingStationId={station.station_id}

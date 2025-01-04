@@ -11,11 +11,34 @@ from django.db import transaction
 from datetime import datetime
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
+from asgiref.sync import async_to_sync
+from channels.layers import get_channel_layer
 
 # Configure Stripe with the secret key
 stripe.api_key = settings.STRIPE_SECRET_KEY
 
 logger = logging.getLogger(__name__)
+
+
+def get_all_reservations_for_all_charging_stations():
+    reservations = Reservation.objects.values(
+        "charging_station_id", "start_time", "end_time"
+    )
+
+    # Group reservations by charging station
+    grouped_reservations = {}
+    for res in reservations:
+        station_id = res["charging_station_id"]
+        if station_id not in grouped_reservations:
+            grouped_reservations[station_id] = []
+        grouped_reservations[station_id].append(
+            {
+                "start_time": res["start_time"].isoformat(),
+                "end_time": res["end_time"].isoformat(),
+            }
+        )
+
+    return grouped_reservations
 
 
 class CreateCheckoutSessionView(APIView):
@@ -71,16 +94,28 @@ class CreateCheckoutSessionView(APIView):
                 )
                 logger.info(f"Created reservation: {reservation.id}")
 
-            # Schedule cleanup task after reservation creation
-            # cleanup_unpaid_reservation.apply_async(
-            #     args=[reservation.id], countdown=1800
-            # )
         except Exception as e:
             logger.error(f"Error during reservation creation: {e}")
             return Response(
                 {"error": "An error occurred while creating the reservation."},
                 status=status.HTTP_500_INTERNAL_SERVER_ERROR,
             )
+
+        # Notify all users about the update
+        all_reservations = get_all_reservations_for_all_charging_stations()
+        logger.info(f"Sending reservation update to all users: {all_reservations}")
+
+        channel_layer = get_channel_layer()
+        async_to_sync(channel_layer.group_send)(
+            "reservations",
+            {
+                "type": "notify_reservation",
+                "data": all_reservations,
+            },
+        )
+
+        # Schedule cleanup task after reservation creation
+        cleanup_unpaid_reservation.apply_async(args=[reservation.id], countdown=1800)
 
         # Create a Stripe Checkout Session
         try:
@@ -99,8 +134,8 @@ class CreateCheckoutSessionView(APIView):
                     },
                 ],
                 mode="payment",
-                success_url="http://127.0.0.1:8000/",
-                cancel_url="http://127.0.0.1:8000/",
+                success_url="http://127.0.0.1:3000/",
+                cancel_url="http://127.0.0.1:3000/",
                 metadata={"reservation_id": reservation.id},
             )
             logger.info(f"Created Stripe Checkout Session: {session.url}")

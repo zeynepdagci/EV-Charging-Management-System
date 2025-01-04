@@ -10,4 +10,5 @@ mysqlclient
 stripe
 celery[redis]
 django-celery-beat
-gunicorn
+daphne
+channels

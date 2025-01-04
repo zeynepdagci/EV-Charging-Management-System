@@ -31,10 +31,11 @@ from myapp.views.cognito_auth_views import (
 )
 from myapp.views.reservation_views import (
     CreateReservationView,
+    GetAllReservationsView,
     GetUserReservationsView,
     CancelReservationView,
     UpdateReservationView,
-    MostVisitedStationView
+    MostVisitedStationView,
 )
 from myapp.views.stripe_views import (
     CreateCheckoutSessionView,
@@ -69,6 +70,11 @@ urlpatterns = [
         "get-user-reservations",
         GetUserReservationsView.as_view(),
         name="get-user-reservations",
+    ),
+    path(
+        "get-all-reservations/",
+        GetAllReservationsView.as_view(),
+        name="get-all-reservations",
     ),
     path(
         "charging-stations/<int:station_id>/delete/",

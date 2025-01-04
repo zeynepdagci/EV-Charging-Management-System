@@ -3,8 +3,9 @@
 
 # Ignore all migrations directories
 backend/myapp/migrations/
-
 backend/debug.log
+
+.DS_Store/
 
 # Optionally, ignore compiled Python files (.pyc)
 *.pyc

@@ -1,13 +1,13 @@
 const IS_LOCAL = process.env.NEXT_PUBLIC_IS_LOCAL === "true";
-const API_URL = IS_LOCAL
-  ? process.env.NEXT_PUBLIC_LOCAL_SERVER_URL
-  : process.env.NEXT_PUBLIC_DEPLOYED_SERVER_URL;
+const SERVER_IP = IS_LOCAL
+  ? process.env.NEXT_PUBLIC_LOCAL_SERVER_IP
+  : process.env.NEXT_PUBLIC_DEPLOYED_SERVER_IP;
 
-console.log("API_URL", API_URL);
+console.log("SERVER_IP", SERVER_IP);
 
 async function validateToken(token: string) {
   try {
-    const response = await fetch(`${API_URL}/validate-token/`, {
+    const response = await fetch(`http://${SERVER_IP}/validate-token/`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -23,7 +23,7 @@ async function validateToken(token: string) {
 }
 
 async function login({ email, password }: { email: string; password: string }) {
-  return fetch(`${API_URL}/login/`, {
+  return fetch(`http://${SERVER_IP}/login/`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -48,7 +48,7 @@ async function signup({
   password: string;
   role: string;
 }) {
-  return fetch(`${API_URL}/signup/`, {
+  return fetch(`http://${SERVER_IP}/signup/`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -64,7 +64,7 @@ async function signup({
 }
 
 async function getAllChargingStations(token: string) {
-  return fetch(`${API_URL}/charging-stations/all/`, {
+  return fetch(`http://${SERVER_IP}/charging-stations/all/`, {
     method: "GET",
     headers: {
       "Content-Type": "application/json",
@@ -74,7 +74,7 @@ async function getAllChargingStations(token: string) {
 }
 
 async function getChargingStationsForUser(token: string) {
-  return fetch(`${API_URL}/charging-stations/user/`, {
+  return fetch(`http://${SERVER_IP}/charging-stations/user/`, {
     method: "GET",
     headers: {
       "Content-Type": "application/json",
@@ -84,7 +84,7 @@ async function getChargingStationsForUser(token: string) {
 }
 
 async function addChargingStation(token: string, data: any) {
-  return fetch(`${API_URL}/charging-stations/add/`, {
+  return fetch(`http://${SERVER_IP}/charging-stations/add/`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -95,7 +95,7 @@ async function addChargingStation(token: string, data: any) {
 }
 
 async function deleteChargingStation(token: string, stationId: number) {
-  return fetch(`http://127.0.0.1:8000/charging-stations/${stationId}/delete/`, {
+  return fetch(`http://${SERVER_IP}/charging-stations/${stationId}/delete/`, {
     method: "DELETE",
     headers: {
       "Content-Type": "application/json",
@@ -110,7 +110,7 @@ async function createCheckoutSession(
   startTime: string,
   endTime: string,
 ) {
-  return fetch(`${API_URL}/create-checkout-session/`, {
+  return fetch(`http://${SERVER_IP}/create-checkout-session/`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -125,7 +125,17 @@ async function createCheckoutSession(
 }
 
 async function getMostVisitedStation(token: string) {
-  return fetch(`${API_URL}/reservations/most-visited/`, {
+  return fetch(`http://${SERVER_IP}/reservations/most-visited/`, {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${token}`,
+    },
+  });
+}
+
+async function getAllReservations(token: string) {
+  return fetch(`http://${SERVER_IP}/get-all-reservations/`, {
     method: "GET",
     headers: {
       "Content-Type": "application/json",
@@ -135,7 +145,7 @@ async function getMostVisitedStation(token: string) {
 }
 
 async function updateChargingStation(token: string, stationId: number) {
-  return fetch(`http://127.0.0.1:8000/charging-stations/${stationId}/update/`, {
+  return fetch(`http://${SERVER_IP}/charging-stations/${stationId}/update/`, {
     method: "PUT",
     headers: {
       "Content-Type": "application/json",
@@ -154,7 +164,9 @@ const Server = {
   deleteChargingStation,
   createCheckoutSession,
   getMostVisitedStation,
-  updateChargingStation
+  updateChargingStation,
+  getAllReservations,
+  SERVER_IP,
 };
 
 export { Server };
