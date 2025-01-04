@@ -9,7 +9,6 @@ import MenuIcon from "@mui/icons-material/Menu";
 import ReserveButton from "../Map/ReserveButton";
 import useReservationUpdates from "@/hooks/useReservationUpdates";
 import { fetchStations } from "@/utils";
-import { Server } from "@/server/requests";
 
 interface ChargingStationData {
   station_id: number;

@@ -1,3 +1,4 @@
+"use client";
 import { useEffect } from "react";
 import { Server } from "@/server/requests";
 import { fetchStations } from "@/utils";

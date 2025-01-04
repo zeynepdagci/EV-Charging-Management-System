@@ -1,13 +1,21 @@
 "use client";
+import { useEffect } from "react";
 import Cookies from "js-cookie";
 
 const Logout = () => {
-  Cookies.remove("accessToken");
-  localStorage.removeItem("userProfile");
-  localStorage.removeItem("role");
-  console.log("Logout successful");
+  useEffect(() => {
+    // Remove the access token cookie
+    Cookies.remove("accessToken");
 
-  window.location.href = "/auth/signin";
+    // Remove items from localStorage
+    localStorage.removeItem("userProfile");
+    localStorage.removeItem("role");
+
+    console.log("Logout successful");
+
+    // Redirect to the sign-in page
+    window.location.href = "/auth/signin";
+  }, []);
 
   return null;
 };

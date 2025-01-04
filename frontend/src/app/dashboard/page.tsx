@@ -1,8 +1,8 @@
-import OpenChargeMap from "@/components/Dashboard";
 import { Metadata } from "next";
 import DefaultLayout from "@/components/Layouts/DefaultLayout";
-import React from "react";
+import React, { useMemo } from "react";
 import Breadcrumb from "@/components/Breadcrumbs/Breadcrumb";
+import dynamic from "next/dynamic";
 
 export const metadata: Metadata = {
   title: "Find Charging Stations",
@@ -10,6 +10,13 @@ export const metadata: Metadata = {
 };
 
 export default function Home() {
+  const OpenChargeMap = useMemo(
+    () =>
+      dynamic(() => import("@/components/Dashboard"), {
+        ssr: false,
+      }),
+    [],
+  );
   return (
     <>
       <DefaultLayout>
