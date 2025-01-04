@@ -1,15 +1,16 @@
 const IS_LOCAL = process.env.NEXT_PUBLIC_IS_LOCAL === "true";
-const SERVER_IP = IS_LOCAL
-  ? process.env.NEXT_PUBLIC_LOCAL_SERVER_IP
-  : process.env.NEXT_PUBLIC_DEPLOYED_SERVER_IP;
+const SERVER_URL = IS_LOCAL
+  ? process.env.NEXT_PUBLIC_LOCAL_SERVER_URL
+  : process.env.NEXT_PUBLIC_DEPLOYED_SERVER_URL;
+const SERVER_URL_SOCKET = IS_LOCAL
+  ? process.env.NEXT_PUBLIC_LOCAL_SERVER_URL_SOCKET
+  : process.env.NEXT_PUBLIC_DEPLOYED_SERVER_URL_SOKET;
 
-console.log("SERVER_IP", SERVER_IP);
+console.log("SERVER_URL", SERVER_URL);
 
 async function validateToken(token: string) {
-  console.log("Calling validateToken with token", token);
-  console.log("Calling validateToken with SERVER_IP", SERVER_IP);
   try {
-    const response = await fetch(`${SERVER_IP}/validate-token/`, {
+    const response = await fetch(`${SERVER_URL}/validate-token/`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -26,7 +27,7 @@ async function validateToken(token: string) {
 }
 
 async function login({ email, password }: { email: string; password: string }) {
-  return fetch(`${SERVER_IP}/login/`, {
+  return fetch(`${SERVER_URL}/login/`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -51,7 +52,7 @@ async function signup({
   password: string;
   role: string;
 }) {
-  return fetch(`${SERVER_IP}/signup/`, {
+  return fetch(`${SERVER_URL}/signup/`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -67,7 +68,7 @@ async function signup({
 }
 
 async function getAllChargingStations(token: string) {
-  return fetch(`${SERVER_IP}/charging-stations/all/`, {
+  return fetch(`${SERVER_URL}/charging-stations/all/`, {
     method: "GET",
     headers: {
       "Content-Type": "application/json",
@@ -77,7 +78,7 @@ async function getAllChargingStations(token: string) {
 }
 
 async function getChargingStationsForUser(token: string) {
-  return fetch(`${SERVER_IP}/charging-stations/user/`, {
+  return fetch(`${SERVER_URL}/charging-stations/user/`, {
     method: "GET",
     headers: {
       "Content-Type": "application/json",
@@ -87,7 +88,7 @@ async function getChargingStationsForUser(token: string) {
 }
 
 async function addChargingStation(token: string, data: any) {
-  return fetch(`${SERVER_IP}/charging-stations/add/`, {
+  return fetch(`${SERVER_URL}/charging-stations/add/`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -98,7 +99,7 @@ async function addChargingStation(token: string, data: any) {
 }
 
 async function deleteChargingStation(token: string, stationId: number) {
-  return fetch(`${SERVER_IP}/charging-stations/${stationId}/delete/`, {
+  return fetch(`${SERVER_URL}/charging-stations/${stationId}/delete/`, {
     method: "DELETE",
     headers: {
       "Content-Type": "application/json",
@@ -113,7 +114,7 @@ async function createCheckoutSession(
   startTime: string,
   endTime: string,
 ) {
-  return fetch(`${SERVER_IP}/create-checkout-session/`, {
+  return fetch(`${SERVER_URL}/create-checkout-session/`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -128,7 +129,7 @@ async function createCheckoutSession(
 }
 
 async function getMostVisitedStation(token: string) {
-  return fetch(`${SERVER_IP}/reservations/most-visited/`, {
+  return fetch(`${SERVER_URL}/reservations/most-visited/`, {
     method: "GET",
     headers: {
       "Content-Type": "application/json",
@@ -138,7 +139,7 @@ async function getMostVisitedStation(token: string) {
 }
 
 async function getAllReservations(token: string) {
-  return fetch(`${SERVER_IP}/get-all-reservations/`, {
+  return fetch(`${SERVER_URL}/get-all-reservations/`, {
     method: "GET",
     headers: {
       "Content-Type": "application/json",
@@ -148,7 +149,7 @@ async function getAllReservations(token: string) {
 }
 
 async function getUserReservations(token: string) {
-  return fetch(`${SERVER_IP}/get-user-reservations/`, {
+  return fetch(`${SERVER_URL}/get-user-reservations/`, {
     method: "GET",
     headers: {
       "Content-Type": "application/json",
@@ -158,7 +159,7 @@ async function getUserReservations(token: string) {
 }
 
 async function updateChargingStation(token: string, stationId: number) {
-  return fetch(`${SERVER_IP}/charging-stations/${stationId}/update/`, {
+  return fetch(`${SERVER_URL}/charging-stations/${stationId}/update/`, {
     method: "PUT",
     headers: {
       "Content-Type": "application/json",
@@ -168,7 +169,7 @@ async function updateChargingStation(token: string, stationId: number) {
 }
 
 async function cancelReservation(token: string, reservationId: string) {
-  return fetch(`${SERVER_IP}/reservations/${reservationId}/cancel/`, {
+  return fetch(`${SERVER_URL}/reservations/${reservationId}/cancel/`, {
     method: "DELETE",
     headers: {
       "Content-Type": "application/json",
@@ -191,7 +192,8 @@ const Server = {
   getAllReservations,
   getUserReservations,
   cancelReservation,
-  SERVER_IP,
+  SERVER_URL,
+  SERVER_URL_SOCKET,
 };
 
 export { Server };

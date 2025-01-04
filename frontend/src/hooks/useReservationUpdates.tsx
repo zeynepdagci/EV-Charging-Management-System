@@ -5,7 +5,9 @@ import { fetchStations } from "@/utils";
 
 function useReservationUpdates(setChargingStations: Function) {
   useEffect(() => {
-    const socket = new WebSocket(`ws://${Server.SERVER_IP}/ws/reservations/`);
+    const socket = new WebSocket(
+      `${Server.SERVER_URL_SOCKET}/ws/reservations/`,
+    );
 
     socket.onmessage = async (event) => {
       console.log("Update received, refetching data for stations");
