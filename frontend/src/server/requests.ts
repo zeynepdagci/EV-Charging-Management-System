@@ -144,9 +144,29 @@ async function getAllReservations(token: string) {
   });
 }
 
+async function getUserReservations(token: string) {
+  return fetch(`http://${SERVER_IP}/get-user-reservations/`, {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${token}`,
+    },
+  });
+}
+
 async function updateChargingStation(token: string, stationId: number) {
   return fetch(`http://${SERVER_IP}/charging-stations/${stationId}/update/`, {
     method: "PUT",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${token}`,
+    },
+  });
+}
+
+async function cancelReservation(token: string, reservationId: string) {
+  return fetch(`http://${SERVER_IP}/reservations/${reservationId}/cancel/`, {
+    method: "DELETE",
     headers: {
       "Content-Type": "application/json",
       Authorization: `Bearer ${token}`,
@@ -166,6 +186,8 @@ const Server = {
   getMostVisitedStation,
   updateChargingStation,
   getAllReservations,
+  getUserReservations,
+  cancelReservation,
   SERVER_IP,
 };
 

@@ -9,7 +9,8 @@ const routes = [
   "/",
   "/dashboard",
   "/manage-charging-stations",
-  "/profile"
+  "/reservations",
+  "/profile",
 ];
 
 export default async function middleware(req: NextRequest) {

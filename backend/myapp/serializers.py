@@ -21,9 +21,7 @@ class ChargingStationSerializer(serializers.ModelSerializer):
 
 class ReservationSerializer(serializers.ModelSerializer):
     user = serializers.PrimaryKeyRelatedField(read_only=True)
-    charging_station = serializers.PrimaryKeyRelatedField(
-        queryset=ChargingStation.objects.all()
-    )
+    charging_station = serializers.SerializerMethodField()
 
     class Meta:
         model = Reservation
@@ -36,6 +34,10 @@ class ReservationSerializer(serializers.ModelSerializer):
             "created_at",
         ]
         read_only_fields = ["id", "created_at", "user"]
+
+    def get_charging_station(self, obj):
+        """Return the location of the charging station."""
+        return obj.charging_station.location
 
     def validate(self, data):
         """Ensure the reservation times are valid and the charging station is available."""

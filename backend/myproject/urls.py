@@ -67,7 +67,7 @@ urlpatterns = [
         name="create-reservation",
     ),
     path(
-        "get-user-reservations",
+        "get-user-reservations/",
         GetUserReservationsView.as_view(),
         name="get-user-reservations",
     ),
@@ -94,7 +94,7 @@ urlpatterns = [
     path(
         "reservations/<int:reservation_id>/update/",
         UpdateReservationView.as_view(),
-        name="cancel-reservation",
+        name="update-reservation",
     ),
     path(
         "create-checkout-session/",

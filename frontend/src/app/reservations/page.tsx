@@ -1,12 +1,12 @@
-import OpenChargeMap from "@/components/Dashboard";
 import { Metadata } from "next";
 import DefaultLayout from "@/components/Layouts/DefaultLayout";
 import React from "react";
 import Breadcrumb from "@/components/Breadcrumbs/Breadcrumb";
+import Reservations from "@/components/Reservations";
 
 export const metadata: Metadata = {
-  title: "Find Charging Stations",
-  description: "Find charging stations",
+  title: "Reservations",
+  description: "My Reservations",
 };
 
 export default function Home() {
@@ -14,9 +14,9 @@ export default function Home() {
     <>
       <DefaultLayout>
         <div className="w-full max-w-[970px]">
-          <Breadcrumb pageName="" />
+          <Breadcrumb pageName="My Reservations" />
 
-          <OpenChargeMap />
+          <Reservations />
         </div>
       </DefaultLayout>
     </>
