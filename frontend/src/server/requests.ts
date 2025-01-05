@@ -14,6 +14,7 @@ async function validateToken(token: string) {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
+        "X-Frontend-Origin": "ev-charging-management-system.vercel.app",
         Authorization: `Bearer ${token}`,
       },
     });
@@ -31,6 +32,7 @@ async function login({ email, password }: { email: string; password: string }) {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
+      "X-Frontend-Origin": "ev-charging-management-system.vercel.app",
     },
     body: JSON.stringify({
       email,
@@ -56,6 +58,7 @@ async function signup({
     method: "POST",
     headers: {
       "Content-Type": "application/json",
+      "X-Frontend-Origin": "ev-charging-management-system.vercel.app",
     },
     body: JSON.stringify({
       email,
@@ -72,6 +75,7 @@ async function getAllChargingStations(token: string) {
     method: "GET",
     headers: {
       "Content-Type": "application/json",
+      "X-Frontend-Origin": "ev-charging-management-system.vercel.app",
       Authorization: `Bearer ${token}`,
     },
   });
@@ -82,6 +86,7 @@ async function getChargingStationsForUser(token: string) {
     method: "GET",
     headers: {
       "Content-Type": "application/json",
+      "X-Frontend-Origin": "ev-charging-management-system.vercel.app",
       Authorization: `Bearer ${token}`,
     },
   });
@@ -92,6 +97,7 @@ async function addChargingStation(token: string, data: any) {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
+      "X-Frontend-Origin": "ev-charging-management-system.vercel.app",
       Authorization: `Bearer ${token}`,
     },
     body: JSON.stringify(data),
@@ -103,6 +109,7 @@ async function deleteChargingStation(token: string, stationId: number) {
     method: "DELETE",
     headers: {
       "Content-Type": "application/json",
+      "X-Frontend-Origin": "ev-charging-management-system.vercel.app",
       Authorization: `Bearer ${token}`,
     },
   });
@@ -118,6 +125,7 @@ async function createCheckoutSession(
     method: "POST",
     headers: {
       "Content-Type": "application/json",
+      "X-Frontend-Origin": "ev-charging-management-system.vercel.app",
       Authorization: `Bearer ${token}`,
     },
     body: JSON.stringify({
@@ -133,6 +141,7 @@ async function getMostVisitedStation(token: string) {
     method: "GET",
     headers: {
       "Content-Type": "application/json",
+      "X-Frontend-Origin": "ev-charging-management-system.vercel.app",
       Authorization: `Bearer ${token}`,
     },
   });
@@ -143,6 +152,7 @@ async function getAllReservations(token: string) {
     method: "GET",
     headers: {
       "Content-Type": "application/json",
+      "X-Frontend-Origin": "ev-charging-management-system.vercel.app",
       Authorization: `Bearer ${token}`,
     },
   });
@@ -153,6 +163,7 @@ async function getUserReservations(token: string) {
     method: "GET",
     headers: {
       "Content-Type": "application/json",
+      "X-Frontend-Origin": "ev-charging-management-system.vercel.app",
       Authorization: `Bearer ${token}`,
     },
   });
@@ -163,6 +174,7 @@ async function updateChargingStation(token: string, stationId: number) {
     method: "PUT",
     headers: {
       "Content-Type": "application/json",
+      "X-Frontend-Origin": "ev-charging-management-system.vercel.app",
       Authorization: `Bearer ${token}`,
     },
   });
@@ -173,6 +185,7 @@ async function cancelReservation(token: string, reservationId: string) {
     method: "DELETE",
     headers: {
       "Content-Type": "application/json",
+      "X-Frontend-Origin": "ev-charging-management-system.vercel.app",
       Authorization: `Bearer ${token}`,
     },
   });
@@ -183,6 +196,7 @@ async function requestNotification(token: string, chargingStationId: number) {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
+      "X-Frontend-Origin": "ev-charging-management-system.vercel.app",
       Authorization: `Bearer ${token}`,
     },
     body: JSON.stringify({
@@ -196,6 +210,7 @@ async function getUserPayments(token: string) {
     method: "GET",
     headers: {
       "Content-Type": "application/json",
+      "X-Frontend-Origin": "ev-charging-management-system.vercel.app",
       Authorization: `Bearer ${token}`,
     },
   });
