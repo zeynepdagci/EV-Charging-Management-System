@@ -11,9 +11,8 @@ export const metadata: Metadata = {
 const ManageChargingStations = () => {
   return (
     <DefaultLayout>
-      <div className="w-full max-w-[970px]">
-        <Breadcrumb pageName="Manage Charging Stations" />
-
+      <Breadcrumb pageName="Manage Charging Stations" />
+      <div className="flex flex-col gap-10">
         <ManageStations />
       </div>
     </DefaultLayout>

@@ -13,9 +13,8 @@ export default function Home() {
   return (
     <>
       <DefaultLayout>
-        <div className="w-full max-w-[970px]">
-          <Breadcrumb pageName="My Reservations" />
-
+        <Breadcrumb pageName="My Reservations" />
+        <div className="flex flex-col gap-10">
           <Reservations />
         </div>
       </DefaultLayout>

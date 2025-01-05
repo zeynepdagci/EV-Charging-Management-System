@@ -30,7 +30,7 @@ const ManageStations: React.FC = () => {
   const [isEditMode, setIsEditMode] = useState(false);
 
   const token: string = Cookies.get("accessToken") ?? "";
-  
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
 
@@ -43,7 +43,7 @@ const ManageStations: React.FC = () => {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setError("");
-  
+
     if (
       !data.location ||
       !data.availability_status ||
@@ -55,22 +55,25 @@ const ManageStations: React.FC = () => {
       setError("Please fill in all fields.");
       return;
     }
-  
+
     if (!token) {
       setError("Authorization token is missing.");
       return;
     }
-  
+
     try {
-      if(isEditMode)
-      {
-        const response = await Server.updateChargingStation(token, data.station_id)
+      let response;
+      if (isEditMode) {
+        response = await Server.updateChargingStation(token, data.station_id);
+      } else {
+        response = await Server.addChargingStation(token, data);
       }
-      const response = await Server.addChargingStation(token, data)
-  
+
       if (response.ok) {
         console.log(
-          isEditMode ? "Charging station updated successfully" : "Charging station added successfully"
+          isEditMode
+            ? "Charging station updated successfully"
+            : "Charging station added successfully",
         );
         setOpen(false);
         fetchChargingStations();
@@ -90,7 +93,7 @@ const ManageStations: React.FC = () => {
           errorData.message ||
             (isEditMode
               ? "Failed to update charging station. Please try again."
-              : "Failed to add charging station. Please try again.")
+              : "Failed to add charging station. Please try again."),
         );
       }
     } catch (error) {
@@ -103,7 +106,7 @@ const ManageStations: React.FC = () => {
     setOpen(true);
     setData(station);
   };
-    
+
   const handleOpen = () => {
     setOpen(true);
   };
@@ -111,7 +114,7 @@ const ManageStations: React.FC = () => {
   const handleClose = () => {
     setOpen(false);
   };
-  
+
   const fetchChargingStations = async () => {
     if (!token) {
       setError("Authorization token is missing.");
@@ -136,7 +139,7 @@ const ManageStations: React.FC = () => {
 
   const handleDelete = async (stationId: number) => {
     const confirmDelete = window.confirm(
-      "Are you sure you want to delete this station?"
+      "Are you sure you want to delete this station?",
     );
     if (!confirmDelete) return;
 
@@ -150,13 +153,14 @@ const ManageStations: React.FC = () => {
 
       if (response.ok) {
         setStations((prevStations) =>
-          prevStations.filter((station) => station.station_id !== stationId)
+          prevStations.filter((station) => station.station_id !== stationId),
         );
         alert("Charging station deleted successfully.");
       } else {
         const errorData = await response.json();
         setError(
-          errorData.message || "Failed to delete charging station. Please try again."
+          errorData.message ||
+            "Failed to delete charging station. Please try again.",
         );
       }
     } catch (error) {
@@ -171,7 +175,9 @@ const ManageStations: React.FC = () => {
 
   return (
     <>
-      <div style={{ display: "flex", justifyContent: "flex-start", width: "auto" }}>
+      <div
+        style={{ display: "flex", justifyContent: "flex-start", width: "auto" }}
+      >
         <button
           className="flex w-auto justify-center rounded-lg bg-primary p-4 font-medium text-white hover:bg-opacity-90"
           onClick={handleOpen}
@@ -179,14 +185,16 @@ const ManageStations: React.FC = () => {
           Add Charging Station
         </button>
       </div>
-        <br />
       {open && (
         <form
           onSubmit={handleSubmit}
-          className="mt-6 rounded-lg bg-white p-6 shadow-lg dark:bg-dark-2"
+          className="rounded-lg bg-white p-6 shadow-lg dark:bg-dark-2"
         >
           <div className="mb-4">
-            <label htmlFor="location" className="mb-2.5 block font-medium text-dark dark:text-white">
+            <label
+              htmlFor="location"
+              className="mb-2.5 block font-medium text-dark dark:text-white"
+            >
               Location
             </label>
             <input
@@ -200,7 +208,10 @@ const ManageStations: React.FC = () => {
           </div>
 
           <div className="mb-4">
-            <label htmlFor="availabilityStatus" className="mb-2.5 block font-medium text-dark dark:text-white">
+            <label
+              htmlFor="availabilityStatus"
+              className="mb-2.5 block font-medium text-dark dark:text-white"
+            >
               Availability Status
             </label>
             <input
@@ -214,7 +225,10 @@ const ManageStations: React.FC = () => {
           </div>
 
           <div className="mb-4">
-            <label htmlFor="chargingSpeed" className="mb-2.5 block font-medium text-dark dark:text-white">
+            <label
+              htmlFor="chargingSpeed"
+              className="mb-2.5 block font-medium text-dark dark:text-white"
+            >
               Charging Speed
             </label>
             <input
@@ -228,7 +242,10 @@ const ManageStations: React.FC = () => {
           </div>
 
           <div className="mb-4">
-            <label htmlFor="power_capacity" className="mb-2.5 block font-medium text-dark dark:text-white">
+            <label
+              htmlFor="power_capacity"
+              className="mb-2.5 block font-medium text-dark dark:text-white"
+            >
               Power Capacity
             </label>
             <input
@@ -242,7 +259,10 @@ const ManageStations: React.FC = () => {
           </div>
 
           <div className="mb-4">
-            <label htmlFor="price_per_kwh" className="mb-2.5 block font-medium text-dark dark:text-white">
+            <label
+              htmlFor="price_per_kwh"
+              className="mb-2.5 block font-medium text-dark dark:text-white"
+            >
               Price Per KWh
             </label>
             <input
@@ -256,7 +276,10 @@ const ManageStations: React.FC = () => {
           </div>
 
           <div className="mb-4">
-            <label htmlFor="connectorTypes" className="mb-2.5 block font-medium text-dark dark:text-white">
+            <label
+              htmlFor="connectorTypes"
+              className="mb-2.5 block font-medium text-dark dark:text-white"
+            >
               Connector Types
             </label>
             <input
@@ -268,7 +291,7 @@ const ManageStations: React.FC = () => {
               className="w-full rounded-lg border border-stroke bg-transparent py-[15px] pl-6 pr-11 font-medium text-dark outline-none focus:border-primary focus-visible:shadow-none dark:border-dark-3 dark:bg-dark-2 dark:text-white dark:focus:border-primary"
             />
           </div>
-          
+
           <button
             type="submit"
             className="w-full rounded-lg bg-primary p-4 text-center font-medium text-white hover:bg-opacity-90"
@@ -278,7 +301,7 @@ const ManageStations: React.FC = () => {
           <button
             type="button"
             onClick={handleClose}
-            className="w-full mt-2 rounded-lg bg-gray-500 p-4 text-center font-medium text-white hover:bg-opacity-90"
+            className="mt-2 w-full rounded-lg bg-gray-500 p-4 text-center font-medium text-white hover:bg-opacity-90"
           >
             Close
           </button>
@@ -325,12 +348,12 @@ const ManageStations: React.FC = () => {
                       Delete
                     </button>
                     <td>
-                    <button
-                      onClick={() => handleEdit(station)}
-                      className="rounded-lg bg-blue-500 p-2 font-medium text-white hover:bg-blue-600"
-                    >
-                      Update
-                    </button>
+                      <button
+                        onClick={() => handleEdit(station)}
+                        className="rounded-lg bg-blue-500 p-2 font-medium text-white hover:bg-blue-600"
+                      >
+                        Update
+                      </button>
                     </td>
                   </td>
                 </tr>

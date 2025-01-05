@@ -1,3 +1,4 @@
+import uuid
 from django.db import models
 from django.utils import timezone
 from django.db import IntegrityError
@@ -112,6 +113,7 @@ class Reservation(models.Model):
 
 
 class Payment(models.Model):
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     user = models.ForeignKey(
         UserProfile,
         on_delete=models.CASCADE,

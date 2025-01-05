@@ -1,15 +1,5 @@
-# Ignore all __pycache__ directories
 **/__pycache__/
 
-# Ignore all migrations directories
 backend/debug.log
+.DS_Store
 
-.DS_Store/
-
-# Optionally, ignore compiled Python files (.pyc)
-*.pyc
-
-# Elastic Beanstalk Files
-.elasticbeanstalk/*
-!.elasticbeanstalk/*.cfg.yml
-!.elasticbeanstalk/*.global.yml

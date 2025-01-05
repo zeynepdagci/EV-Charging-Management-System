@@ -106,9 +106,9 @@ const Reservations: React.FC = () => {
   };
 
   return (
-    <div className="p-6">
+    <div className="w-full p-6">
       {/* Tabs */}
-      <ul className="mb-6 flex items-center justify-center gap-4">
+      <ul className="mx-auto mb-6 flex w-full max-w-7xl items-center justify-center gap-4">
         {["active", "upcoming", "past"].map((tab, index) => (
           <React.Fragment key={tab}>
             <li className="flex-1 text-center">
@@ -133,7 +133,7 @@ const Reservations: React.FC = () => {
       </ul>
 
       {/* Table */}
-      <div className="overflow-x-auto bg-white shadow-md dark:bg-dark-2">
+      <div className="mx-auto w-full max-w-7xl overflow-x-auto bg-white shadow-md dark:bg-dark-2">
         <table className="min-w-full table-auto">
           <thead>
             <tr className="border-b dark:border-dark-3">
