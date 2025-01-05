@@ -1,5 +1,6 @@
 from django.urls import path
 
+from myapp.views.health_view import health_check
 from myapp.views.charging_station_views import (
     AddChargingStationView,
     GetUserChargingStationsView,
@@ -28,6 +29,7 @@ from myapp.views.payment_views import UserPaymentsView
 from myapp.views.notification_views import RequestNotificationView
 
 urlpatterns = [
+    path("health/", health_check, name="health_check"),
     path("signup/", CognitoSignupView.as_view(), name="signup"),
     path("login/", CognitoLoginView.as_view(), name="login"),
     path("validate-token/", ValidateTokenView.as_view(), name="validate-token"),

@@ -7,7 +7,7 @@ on:
 env:
   AWS_REGION: eu-north-1 # set this to your preferred AWS region, e.g. us-west-1
   ECR_REPOSITORY: docker-images # set this to your Amazon ECR repository name
-  ECS_SERVICE: backend-django-service-https-final # set this to your Amazon ECS service name
+  ECS_SERVICE: final-backend-django-service # set this to your Amazon ECS service name
   ECS_CLUSTER: BackendCluster # set this to your Amazon ECS cluster name
   ECS_TASK_DEFINITION:
     ./backend/task-definition.json # set this to the path to your Amazon ECS task definition
