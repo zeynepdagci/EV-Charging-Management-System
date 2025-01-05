@@ -185,8 +185,8 @@ CORS_ALLOW_METHODS = [
 ]
 
 LOGGING = {
-    "version": 1,  # Indicates the format of the logging configuration
-    "disable_existing_loggers": False,  # Retain Django's default loggers
+    "version": 1, 
+    "disable_existing_loggers": False, 
     "formatters": {
         "verbose": {
             "format": "{levelname} {asctime} {module} {message}",
@@ -201,22 +201,22 @@ LOGGING = {
         "console": {
             "level": "DEBUG",
             "class": "logging.StreamHandler",
-            "formatter": "simple",  # Use the "simple" formatter
+            "formatter": "simple", 
         },
         "file": {
             "level": "DEBUG",
             "class": "logging.FileHandler",
             "filename": os.path.join(
                 BASE_DIR, "debug.log"
-            ),  # Log to a file named debug.log
-            "formatter": "verbose",  # Use the "verbose" formatter
+            ), 
+            "formatter": "verbose",
         },
     },
     "loggers": {
         "django": {
             "handlers": ["console", "file"],
             "level": "INFO",
-            "propagate": True,  # Pass logs to parent loggers
+            "propagate": True,
         },
         "myapp": {
             "handlers": ["console", "file"],

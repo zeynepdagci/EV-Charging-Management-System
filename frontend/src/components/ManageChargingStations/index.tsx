@@ -62,20 +62,12 @@ const ManageStations: React.FC = () => {
     }
   
     try {
-      const url = isEditMode
-        ? `http://127.0.0.1:8000/charging-stations/${data.station_id}/update/`
-        : "http://127.0.0.1:8000/charging-stations/add/";
-      const method = isEditMode ? "PUT" : "POST";
+      if(isEditMode)
+      {
+        const response = await Server.updateChargingStation(token, data.station_id)
+      }
+      const response = await Server.addChargingStation(token, data)
   
-      const response = await fetch(url, {
-        method,
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${token}`,
-        },
-        body: JSON.stringify(data),
-      });
-
       if (response.ok) {
         console.log(
           isEditMode ? "Charging station updated successfully" : "Charging station added successfully"

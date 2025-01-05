@@ -27,7 +27,7 @@ const SigninWithPassword: React.FC = () => {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setError(""); // Reset error message
+    setError("");
 
     try {
       const response = await Server.login(data);
@@ -44,7 +44,6 @@ const SigninWithPassword: React.FC = () => {
 
         console.log("Sign in successful");
 
-        // Redirect to dashboard page
         window.location.href = "/dashboard";
       } else {
         const errorData = await response.json();

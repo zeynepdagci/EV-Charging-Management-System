@@ -32,14 +32,12 @@ export default function FilterSidebar({
   filters,
   setFilters,
 }: FilterSidebarProps) {
-  // Make sure localFilters has the correct type
   const [localFilters, setLocalFilters] = useState<{
     minPowerKw: number;
     distance: number;
     status: string;
   }>(filters);
 
-  // Handle input change and update local filters
   const handleFilterChange = (
     e: React.ChangeEvent<
       HTMLInputElement | { name?: string | undefined; value: unknown }
@@ -51,12 +49,10 @@ export default function FilterSidebar({
     });
   };
 
-  // Handle status change (Select component)
   const handleStatusChange = (e: SelectChangeEvent<string>) => {
     setLocalFilters({ ...localFilters, status: e.target.value });
   };
 
-  // Apply filters and close the sidebar
   const applyFilters = () => {
     setFilters(localFilters);
     onClose();
@@ -77,7 +73,7 @@ export default function FilterSidebar({
             value={localFilters.minPowerKw}
             onChange={handleFilterChange}
             fullWidth
-            slotProps={{ htmlInput: { min: 0 } }} // Ensure non-negative numbers for power
+            slotProps={{ htmlInput: { min: 0 } }}
           />
         </Box>
 
@@ -89,7 +85,7 @@ export default function FilterSidebar({
             value={localFilters.distance}
             onChange={handleFilterChange}
             fullWidth
-            slotProps={{ htmlInput: { min: 0 } }} // Ensure distance is at least 0 km
+            slotProps={{ htmlInput: { min: 0 } }}
           />
         </Box>
 

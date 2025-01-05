@@ -14,7 +14,6 @@ def get_coordinates_from_address(address: str) -> Optional[Tuple[float, float]]:
         response_data = response.json()
         if response_data.get("results"):
             location = response_data["results"][0]["geometry"]
-            # Return latitude and longitude with 6 decimal places
             return round(location["lat"], 6), round(location["lng"], 6)
     except Exception as e:
         logger.error(f"Error fetching coordinates for address {address}: {e}")

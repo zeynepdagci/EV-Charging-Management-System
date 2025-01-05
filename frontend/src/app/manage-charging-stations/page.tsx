@@ -4,8 +4,8 @@ import DefaultLayout from "@/components/Layouts/DefaultLayout";
 import ManageStations from "@/components/ManageChargingStations";
 
 export const metadata: Metadata = {
-  title: "Next.js Profile Page | NextAdmin - Next.js Dashboard Kit",
-  description: "This is Next.js Profile page for NextAdmin Dashboard Kit",
+  title: "Manage Charging Stations",
+  description: "Manage Charging Stations",
 };
 
 const ManageChargingStations = () => {

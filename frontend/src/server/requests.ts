@@ -14,7 +14,7 @@ async function validateToken(token: string) {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        Authorization: `Bearer ${token}`, // Add Bearer token
+        Authorization: `Bearer ${token}`,
       },
     });
     console.log("Response", response);
@@ -72,7 +72,7 @@ async function getAllChargingStations(token: string) {
     method: "GET",
     headers: {
       "Content-Type": "application/json",
-      Authorization: `Bearer ${token}`, // Add Bearer token
+      Authorization: `Bearer ${token}`,
     },
   });
 }
@@ -82,7 +82,7 @@ async function getChargingStationsForUser(token: string) {
     method: "GET",
     headers: {
       "Content-Type": "application/json",
-      Authorization: `Bearer ${token}`, // Add Bearer token
+      Authorization: `Bearer ${token}`,
     },
   });
 }
@@ -92,7 +92,7 @@ async function addChargingStation(token: string, data: any) {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
-      Authorization: `Bearer ${token}`, // Add Bearer token
+      Authorization: `Bearer ${token}`,
     },
     body: JSON.stringify(data),
   });

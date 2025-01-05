@@ -3,8 +3,8 @@ import React from "react";
 import Dashboard from "@/app/dashboard/page";
 
 export const metadata: Metadata = {
-  title: "Next.js EV Dashboard Page | NextAdmin - Next.js Dashboard Kit",
-  description: "This is Next.js Home page for NextAdmin Dashboard Kit",
+  title: "Dashboard",
+  description: "Dashboard",
 };
 
 const Home = () => {

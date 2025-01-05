@@ -45,13 +45,11 @@ class ReservationSerializer(serializers.ModelSerializer):
         end_time = data.get("end_time")
         charging_station = data.get("charging_station")
 
-        # Ensure that start_time is before end_time
         if start_time >= end_time:
             raise serializers.ValidationError(
                 {"end_time": "End time must be after the start time."}
             )
 
-        # Check if the charging station is available during the requested time
         overlapping_reservations = Reservation.objects.filter(
             charging_station=charging_station,
             start_time__lt=end_time,

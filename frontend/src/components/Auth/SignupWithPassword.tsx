@@ -16,7 +16,6 @@ export default function SignupWithPassword() {
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
 
-  // Handle form input changes
   const handleChange = (e: any) => {
     const { name, value } = e.target;
     setData((prevData) => ({
@@ -25,11 +24,10 @@ export default function SignupWithPassword() {
     }));
   };
 
-  // Handle form submission for signing up
   const handleSubmit = async (e: any) => {
     e.preventDefault();
-    setError(""); // Reset error message
-    setSuccess(""); // Reset success message
+    setError("");
+    setSuccess("");
 
     if (data.password !== data.confirm_password) {
       setError("Passwords do not match.");

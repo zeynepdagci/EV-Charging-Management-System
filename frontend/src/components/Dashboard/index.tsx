@@ -66,7 +66,7 @@ export default function Dashboard() {
   });
   const [currentLocation, setCurrentLocation] = useState<
     [number, number] | null
-  >(null); // Store the current location
+  >(null);
 
   const [availability, setAvailability] = useState<Record<number, boolean>>({});
 
@@ -117,27 +117,24 @@ export default function Dashboard() {
   }, []);
 
   useEffect(() => {
-    // Run the check immediately on mount
     checkAvailability(chargingStations, setAvailability);
 
-    // Set up an interval to check availability periodically (e.g., every 10 seconds)
     const intervalId = setInterval(() => {
       checkAvailability(chargingStations, setAvailability);
-    }, 2000); // 10,000 ms = 10 seconds
+    }, 2000);
 
-    // Clean up the interval on component unmount
     return () => clearInterval(intervalId);
   }, [chargingStations]);
 
   const getStartTime = () => {
     const date = new Date();
-    date.setMinutes(date.getMinutes()); // Start time is 30 minutes from now
+    date.setMinutes(date.getMinutes());
     return date.toISOString().replace("Z", "+00:00");
   };
 
   const getEndTime = () => {
     const date = new Date();
-    date.setMinutes(date.getMinutes() + 90); // End time is 90 minutes from now
+    date.setMinutes(date.getMinutes() + 90);
 
     return date.toISOString().replace("Z", "+00:00");
   };
@@ -154,7 +151,7 @@ export default function Dashboard() {
         setFilters={setFilters}
       />
       <MapContainer
-        center={currentLocation || [51.509865, -0.118092]} // Default to London if location is unavailable
+        center={currentLocation || [51.509865, -0.118092]}
         zoom={13}
         style={{ height: "500px", width: "100%" }}
       >

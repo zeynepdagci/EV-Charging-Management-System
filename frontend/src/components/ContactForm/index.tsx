@@ -15,7 +15,6 @@ const ContactForm = () => {
     message: "",
   });
 
-  // Handle form input changes
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
@@ -26,7 +25,6 @@ const ContactForm = () => {
     }));
   };
 
-  // Handle form submission
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     try {
@@ -58,7 +56,6 @@ const ContactForm = () => {
 
   return (
     <div className="flex flex-col items-center justify-center px-4">
-      {/* Centered Contact Form */}
       <div className="w-full max-w-4xl rounded-lg border-4 border-white bg-white shadow-lg dark:border-dark-3 dark:bg-gray-dark">
         <div className="border-b-4 border-white px-8 py-6 dark:border-dark-3">
           <h3 className="text-xl font-semibold text-dark dark:text-white">
@@ -66,11 +63,9 @@ const ContactForm = () => {
           </h3>
         </div>
 
-        {/* Wrap the form content inside the form tag */}
         <form onSubmit={handleSubmit}>
           <div className="p-8 sm:p-10 md:p-12">
             {" "}
-            {/* Adjusted padding for responsiveness */}
             <div className="mb-6 flex flex-col gap-6 xl:flex-row">
               <InputGroup
                 label="First name"

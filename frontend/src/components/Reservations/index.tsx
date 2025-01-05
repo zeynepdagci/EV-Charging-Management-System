@@ -31,13 +31,12 @@ const Reservations: React.FC = () => {
     fetchReservations();
   }, []);
 
-  // Set up a timer to update currentTime every minute for dynamic calculations
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentTime(new Date());
-    }, 60 * 1000); // 1 minute
+    }, 60 * 1000);
 
-    return () => clearInterval(timer); // Cleanup on unmount
+    return () => clearInterval(timer);
   }, []);
 
   const calculateBatteryLevel = (startTime: Date, endTime: Date) => {
@@ -93,7 +92,7 @@ const Reservations: React.FC = () => {
 
     const token = Cookies.get("accessToken") ?? "";
     try {
-      await Server.cancelReservation(token, reservationToCancel); // Assume a `cancelReservation` method exists in the Server object
+      await Server.cancelReservation(token, reservationToCancel);
       setReservations((prev) =>
         prev.filter((reservation) => reservation.id !== reservationToCancel),
       );
@@ -215,15 +214,12 @@ const Reservations: React.FC = () => {
         </table>
       </div>
 
-      {/* Confirmation Popup */}
       {showPopup && (
         <div className="fixed inset-0 z-50 flex items-center justify-center">
-          {/* Semi-transparent overlay */}
           <div
             className="absolute inset-0 bg-black bg-opacity-50"
-            onClick={closeCancelPopup} // Close popup when clicking the overlay
+            onClick={closeCancelPopup}
           ></div>
-          {/* Popup content */}
           <div className="z-60 relative rounded bg-white p-6 shadow-lg dark:bg-dark-3">
             <h2 className="mb-4 text-lg font-bold">Cancel Reservation</h2>
             <p className="mb-4">
