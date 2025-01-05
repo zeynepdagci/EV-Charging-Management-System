@@ -3,19 +3,20 @@ import hmac
 import hashlib
 import base64
 from botocore.exceptions import ClientError
+from django.conf import settings
+from django.shortcuts import get_object_or_404
 from rest_framework import permissions
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework.request import Request
 from rest_framework import status, permissions
 from rest_framework_simplejwt.tokens import RefreshToken
-from django.shortcuts import get_object_or_404
 from myapp.models import UserProfile
 
 cognito_client = boto3.client("cognito-idp", region_name="eu-north-1")
-USER_POOL_ID = "eu-north-1_Of3sycnhD"
-CLIENT_ID = "13o77rhl3m3inmn0nl31dpd1m1"
-CLIENT_SECRET = "ediog9l9u7vr684tvbi7lfjn31echckfbnr1jaje11amvifgurq"
+USER_POOL_ID = settings.COGNITO_USER_POOL
+CLIENT_ID = settings.COGNITO_AUDIENCE
+CLIENT_SECRET = settings.COGNITO_CLIENT_SECRET
 
 
 def get_secret_hash(username):
@@ -33,14 +34,12 @@ class CognitoSignupView(APIView):
     permission_classes = [permissions.AllowAny]
 
     def post(self, request):
-        # Extract data from request
         email = request.data.get("email")
         first_name = request.data.get("first_name")
         last_name = request.data.get("last_name")
         password = request.data.get("password")
         role = request.data.get("role", "buyer")
 
-        # Your AWS Cognito signup logic
         try:
             secret_hash = get_secret_hash(email)
 
@@ -53,7 +52,7 @@ class CognitoSignupView(APIView):
                     {"Name": "email", "Value": email},
                 ],
             )
-            # Create local UserProfile instance
+
             UserProfile.objects.create(
                 user_id=response["UserSub"],
                 email=email,
@@ -80,10 +79,8 @@ class CognitoLoginView(APIView):
         password = request.data.get("password")
 
         try:
-            # Generate SECRET_HASH
             secret_hash = get_secret_hash(email)
 
-            # Authenticate user with AWS Cognito
             response = cognito_client.initiate_auth(
                 ClientId=CLIENT_ID,
                 AuthFlow="USER_PASSWORD_AUTH",
@@ -93,7 +90,7 @@ class CognitoLoginView(APIView):
                     "SECRET_HASH": secret_hash,
                 },
             )
-            # Generate JWT Tokens for user
+
             id_token = response["AuthenticationResult"]["IdToken"]
             user = get_object_or_404(UserProfile, email=email)
             return Response(

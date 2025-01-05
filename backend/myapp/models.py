@@ -1,11 +1,11 @@
 import uuid
 from django.db import models
 from django.utils import timezone
-from django.db import IntegrityError
 from django.contrib.auth.models import AbstractBaseUser, PermissionsMixin
 from django.contrib.auth.models import UserManager as _UserManager
 
 
+# Needed for django_cognito_jwt
 class UserManager(_UserManager):
     def get_or_create_for_cognito(self, payload):
         cognito_id = payload["sub"]
@@ -14,13 +14,7 @@ class UserManager(_UserManager):
 
 
 class UserProfile(AbstractBaseUser, PermissionsMixin):
-    last_login = None
-    password = None
-    is_superuser = None
-
-    user_id: models.CharField = models.CharField(
-        max_length=255, unique=True
-    )  # Stores Cognito User ID
+    user_id: models.CharField = models.CharField(max_length=255, unique=True)
     email: models.EmailField = models.EmailField(unique=True)
     first_name: models.CharField = models.CharField(max_length=255)
     last_name: models.CharField = models.CharField(max_length=255)
@@ -29,29 +23,27 @@ class UserProfile(AbstractBaseUser, PermissionsMixin):
         choices=[("buyer", "Buyer"), ("seller", "Seller"), ("admin", "Admin")],
     )
 
+    # Needed for django_cognito_jwt
+    last_login = None
+    password = None
+    is_superuser = None
     USERNAME_FIELD = "email"
     REQUIRED_FIELDS = []
-
     objects = UserManager()
+
+    def __str__(self) -> str:
+        return f"User {self.first_name} {self.last_name} ({self.email}) - {self.role}"
 
 
 class ChargingStation(models.Model):
     station_id: models.AutoField = models.AutoField(primary_key=True)
-    location: models.CharField = models.CharField(
-        max_length=255
-    )  # General location info
-    latitude: models.DecimalField = models.DecimalField(
-        max_digits=9, decimal_places=6
-    )  # Latitude
-    longitude: models.DecimalField = models.DecimalField(
-        max_digits=9, decimal_places=6
-    )  # Longitude
-
+    location: models.CharField = models.CharField(max_length=255)
+    latitude: models.DecimalField = models.DecimalField(max_digits=9, decimal_places=6)
+    longitude: models.DecimalField = models.DecimalField(max_digits=9, decimal_places=6)
     availability_status: models.CharField = models.CharField(
         max_length=20,
         choices=[
             ("available", "Available"),
-            ("unavailable", "Unavailable"),
             ("out_of_order", "Out of Order"),
             ("maintenance", "Maintenance"),
         ],
@@ -62,11 +54,10 @@ class ChargingStation(models.Model):
     )
     power_capacity: models.DecimalField = models.DecimalField(
         max_digits=5, decimal_places=2
-    )  # Power capacity in kW
+    )
     price_per_kwh: models.DecimalField = models.DecimalField(
         max_digits=10, decimal_places=2
-    )  # Pricing per kWh
-
+    )
     connector_types: models.CharField = models.CharField(
         max_length=100,
         choices=[
@@ -83,7 +74,6 @@ class ChargingStation(models.Model):
         related_name="charging_stations",
         limit_choices_to={"role": "seller"},
     )
-
     created_at: models.DateTimeField = models.DateTimeField(auto_now_add=True)
     updated_at: models.DateTimeField = models.DateTimeField(auto_now=True)
 
@@ -106,11 +96,6 @@ class Reservation(models.Model):
     def __str__(self) -> str:
         return f"Reservation by {self.user.email} at {self.charging_station.location} from {self.start_time} to {self.end_time}"
 
-    def duration(self) -> int:
-        """Returns the duration of the reservation in minutes."""
-        delta = self.end_time - self.start_time
-        return delta.total_seconds() // 60
-
 
 class Payment(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
@@ -123,27 +108,32 @@ class Payment(models.Model):
         Reservation,
         on_delete=models.CASCADE,
         related_name="payment",
-        verbose_name="Reservation",
     )
     amount = models.DecimalField(
         max_digits=10,
         decimal_places=2,
-        verbose_name="Amount Paid",
     )
     payment_date = models.DateTimeField(
         auto_now_add=True,
-        verbose_name="Payment Date",
     )
     location = models.CharField(
         max_length=255,
-        verbose_name="Charging Station Location",
     )
-    start_time = models.DateTimeField(
-        verbose_name="Reservation Start Time",
-    )
-    end_time = models.DateTimeField(
-        verbose_name="Reservation End Time",
-    )
+    start_time = models.DateTimeField()
+    end_time = models.DateTimeField()
 
     def __str__(self):
         return f"Payment by {self.user} - {self.amount} GBP on {self.payment_date}"
+
+
+class NotificationRequest(models.Model):
+    user = models.ForeignKey(
+        UserProfile, on_delete=models.CASCADE, related_name="notifications"
+    )
+    charging_station = models.ForeignKey(
+        ChargingStation, on_delete=models.CASCADE, related_name="notifications"
+    )
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f"Notification for {self.charging_station} by {self.user}"

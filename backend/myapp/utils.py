@@ -1,13 +1,16 @@
 import requests
-from typing import Tuple, Optional
 import logging
+from django.conf import settings
+from typing import Tuple, Optional
+
+from myapp.models import Reservation
 
 logger = logging.getLogger(__name__)
 
 
 def get_coordinates_from_address(address: str) -> Optional[Tuple[float, float]]:
-    API_URL = "https://api.opencagedata.com/geocode/v1/json"
-    API_KEY = "43960256a12f41bfbe540100a73617ee"
+    API_URL = settings.OPENCAGE_URL
+    API_KEY = settings.OPENCAGE_API_KEY
 
     try:
         response = requests.get(API_URL, params={"q": address, "key": API_KEY})

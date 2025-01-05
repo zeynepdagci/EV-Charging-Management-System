@@ -1,6 +1,8 @@
 from celery import shared_task
+from django.conf import settings
+from django.core.mail import send_mail
 from django.utils.timezone import now
-from myapp.models import Reservation
+from myapp.models import NotificationRequest, Reservation
 from datetime import timedelta
 import logging
 from django.db import transaction
@@ -29,3 +31,26 @@ def cleanup_unpaid_reservation(reservation_id):
                 )
     except Reservation.DoesNotExist:
         logger.info(f"Reservation with ID: {reservation_id} already deleted or paid.")
+
+
+@shared_task
+def send_availability_notification(notification_id):
+    logger.info("Running send_availability_notification task")
+    try:
+        notification = NotificationRequest.objects.get(id=notification_id)
+        user = notification.user
+        charging_station = notification.charging_station
+    except NotificationRequest.DoesNotExist:
+        logger.error(f"Notification request with ID: {notification_id} not found.")
+
+    try:
+        send_mail(
+            subject="Charging Station Available",
+            message=f"The charging station at {charging_station.location} is now available for booking.",
+            from_email=settings.DEFAULT_FROM_EMAIL,
+            recipient_list=[user.email],
+        )
+    except Exception as e:
+        logger.error(f"Error sending notification email: {e}")
+
+    notification.delete()

@@ -11,16 +11,17 @@ export default function SignupWithPassword() {
     password: "",
     confirm_password: "",
     role: "buyer", // Default role for signup
+    is_seller: false, // New field to track if the user wants to sell energy
   });
 
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
 
   const handleChange = (e: any) => {
-    const { name, value } = e.target;
+    const { name, value, type, checked } = e.target;
     setData((prevData) => ({
       ...prevData,
-      [name]: value,
+      [name]: type === "checkbox" ? checked : value,
     }));
   };
 
@@ -35,7 +36,10 @@ export default function SignupWithPassword() {
     }
 
     try {
-      const response = await Server.signup(data);
+      // Update role based on the checkbox
+      const signupData = { ...data, role: data.is_seller ? "seller" : "buyer" };
+
+      const response = await Server.signup(signupData);
 
       if (response.ok) {
         setSuccess("Account created successfully. Please sign in.");
@@ -45,7 +49,8 @@ export default function SignupWithPassword() {
           last_name: "",
           password: "",
           confirm_password: "",
-          role: "",
+          role: "buyer",
+          is_seller: false,
         });
         window.location.href = "/auth/signin";
       } else {
@@ -85,7 +90,7 @@ export default function SignupWithPassword() {
           First Name
         </label>
         <input
-          type="first_name"
+          type="text"
           name="first_name"
           value={data.first_name}
           onChange={handleChange}
@@ -102,7 +107,7 @@ export default function SignupWithPassword() {
           Last Name
         </label>
         <input
-          type="last_name"
+          type="text"
           name="last_name"
           value={data.last_name}
           onChange={handleChange}
@@ -146,21 +151,16 @@ export default function SignupWithPassword() {
       </div>
 
       <div className="mb-5">
-        <label
-          htmlFor="role"
-          className="mb-2.5 block font-medium text-dark dark:text-white"
-        >
-          Role
+        <label className="mb-2.5 block font-medium text-dark dark:text-white">
+          <input
+            type="checkbox"
+            name="is_seller"
+            checked={data.is_seller}
+            onChange={handleChange}
+            className="mr-2"
+          />
+          I also want to sell energy
         </label>
-        <select
-          name="role"
-          value={data.role}
-          onChange={handleChange}
-          className="w-full rounded-lg border border-stroke bg-transparent py-[15px] pl-6 pr-11 font-medium text-dark outline-none focus:border-primary focus-visible:shadow-none dark:border-dark-3 dark:bg-dark-2 dark:text-white dark:focus:border-primary"
-        >
-          <option value="buyer">Buyer</option>
-          <option value="seller">Seller</option>
-        </select>
       </div>
 
       {error && <div className="mb-4 font-medium text-red-500">{error}</div>}

@@ -12,3 +12,4 @@ celery[redis]
 django-celery-beat
 daphne
 channels
+python-dotenv

@@ -1,12 +1,17 @@
+import logging
+from typing import Any
+from django.db.models import Count
+from django.shortcuts import get_object_or_404
+from django.utils import timezone
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status, permissions
-from django.utils import timezone
+from asgiref.sync import async_to_sync
+from channels.layers import get_channel_layer
 from myapp.models import Reservation, ChargingStation
 from myapp.serializers import ReservationSerializer
-from typing import Any
-from django.shortcuts import get_object_or_404
-from django.db.models import Count
+
+logger = logging.getLogger(__name__)
 
 
 class CreateReservationView(APIView):
@@ -46,6 +51,18 @@ class CancelReservationView(APIView):
         )
 
         reservation.delete()
+
+        logger.info(f"Sending availability update to all users")
+
+        channel_layer = get_channel_layer()
+        async_to_sync(channel_layer.group_send)(
+            "reservations",
+            {
+                "type": "availability_update",
+                "data": {},
+            },
+        )
+
         return Response(
             {"message": "Reservation canceled successfully."},
             status=status.HTTP_200_OK,
@@ -73,7 +90,6 @@ class MostVisitedStationView(APIView):
     permission_classes = [permissions.IsAuthenticated]
 
     def get(self, request):
-        # Get the most visited charging station
         most_visited_station = (
             Reservation.objects.values("charging_station_id")
             .annotate(total_visits=Count("id"))
@@ -96,7 +112,6 @@ class MostVisitedStationView(APIView):
             )
 
             if station_details:
-                # Merge visit count with station details
                 return Response(
                     {
                         **station_details,
@@ -123,7 +138,6 @@ class GetAllReservationsView(APIView):
             "charging_station_id", "start_time", "end_time"
         )
 
-        # Group reservations by charging station
         grouped_reservations = {}
         for res in reservations:
             station_id = res["charging_station_id"]

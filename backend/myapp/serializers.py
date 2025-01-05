@@ -36,11 +36,9 @@ class ReservationSerializer(serializers.ModelSerializer):
         read_only_fields = ["id", "created_at", "user"]
 
     def get_charging_station(self, obj):
-        """Return the location of the charging station."""
         return obj.charging_station.location
 
     def validate(self, data):
-        """Ensure the reservation times are valid and the charging station is available."""
         start_time = data.get("start_time")
         end_time = data.get("end_time")
         charging_station = data.get("charging_station")
