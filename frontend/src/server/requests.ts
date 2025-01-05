@@ -178,6 +178,19 @@ async function cancelReservation(token: string, reservationId: string) {
   });
 }
 
+async function requestNotification(token: string, chargingStationId: number) {
+  return fetch(`${SERVER_URL}/notifications/request/`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${token}`,
+    },
+    body: JSON.stringify({
+      charging_station_id: chargingStationId,
+    }),
+  });
+}
+
 const Server = {
   validateToken,
   login,
@@ -192,6 +205,7 @@ const Server = {
   getAllReservations,
   getUserReservations,
   cancelReservation,
+  requestNotification,
   SERVER_URL,
   SERVER_URL_SOCKET,
 };
