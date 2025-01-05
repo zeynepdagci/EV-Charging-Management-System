@@ -191,6 +191,16 @@ async function requestNotification(token: string, chargingStationId: number) {
   });
 }
 
+async function getUserPayments(token: string) {
+  return fetch(`${SERVER_URL}/payments/`, {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${token}`,
+    },
+  });
+}
+
 const Server = {
   validateToken,
   login,
@@ -206,6 +216,7 @@ const Server = {
   getUserReservations,
   cancelReservation,
   requestNotification,
+  getUserPayments,
   SERVER_URL,
   SERVER_URL_SOCKET,
 };
