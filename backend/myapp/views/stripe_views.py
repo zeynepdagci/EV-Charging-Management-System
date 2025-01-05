@@ -4,7 +4,7 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status, permissions
 from django.conf import settings
-from myapp.models import Reservation, ChargingStation
+from myapp.models import Reservation, ChargingStation, Payment
 from myapp.tasks import cleanup_unpaid_reservation
 from django.shortcuts import get_object_or_404
 from django.db import transaction
@@ -169,15 +169,36 @@ def stripe_webhook(request):
             logger.error("Missing reservation ID in webhook metadata.")
             return JsonResponse({"error": "Missing reservation ID."}, status=400)
 
-        # Finalize the reservation payment
         try:
             with transaction.atomic():
                 reservation = Reservation.objects.select_for_update().get(
                     id=reservation_id
                 )
+
+                if reservation.is_paid:
+                    logger.info(
+                        f"Reservation {reservation_id} is already marked as paid."
+                    )
+                    return JsonResponse({"status": "success"}, status=200)
+
+                amount = session.get("amount_total", 0) / 100  # Convert from cents
+
+                # Create a Payment record
+                Payment.objects.create(
+                    user=reservation.user,
+                    reservation=reservation,
+                    location=reservation.charging_station.location,
+                    start_time=reservation.start_time,
+                    end_time=reservation.end_time,
+                    amount=amount,
+                )
+
                 reservation.is_paid = True
                 reservation.save()
-                logger.info(f"Reservation {reservation_id} marked as paid.")
+                logger.info(
+                    f"Reservation {reservation_id} marked as paid and payment record created."
+                )
+
         except Exception as e:
             logger.error(f"Error finalizing reservation: {e}")
             return JsonResponse({"error": "An error occurred."}, status=500)

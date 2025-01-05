@@ -2,7 +2,6 @@
 **/__pycache__/
 
 # Ignore all migrations directories
-backend/myapp/migrations/
 backend/debug.log
 
 .DS_Store/
