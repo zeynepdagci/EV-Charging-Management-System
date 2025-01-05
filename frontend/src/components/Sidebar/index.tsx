@@ -130,26 +130,6 @@ const menuGroups = [
       {
         icon: (
           <svg
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="currentColor"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path d="M20 4H4C2.9 4 2 4.9 2 6V18C2 19.11 2.9 20 4 20H20C21.11 20 22 19.11 22 18V6C22 4.9 21.11 4 20 4ZM20 8L12 13L4 8V6L12 11L20 6V8Z" />
-
-            <path d="M15.5 3.5H17L14.5 8V5.5H13L15.5 3.5Z" />
-          </svg>
-        ),
-        label: "Contact Us",
-        route: "#",
-        children: [
-          { label: "Contact Form", route: "/forms/form-layout" },
-        ],
-      },
-      {
-        icon: (
-          <svg
             className="fill-current"
             width="24"
             height="24"
