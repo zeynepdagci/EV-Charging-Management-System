@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import ChargingStation, Reservation, UserProfile
+from .models import ChargingStation, Reservation, Payment
 
 
 class ChargingStationSerializer(serializers.ModelSerializer):
@@ -65,3 +65,19 @@ class ReservationSerializer(serializers.ModelSerializer):
             )
 
         return data
+
+
+class PaymentSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Payment
+        fields = [
+            "id",
+            "user",
+            "reservation",
+            "amount",
+            "payment_date",
+            "location",
+            "start_time",
+            "end_time",
+        ]
+        read_only_fields = ["id", "user", "payment_date"]

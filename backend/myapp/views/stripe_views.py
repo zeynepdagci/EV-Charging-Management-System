@@ -134,8 +134,8 @@ class CreateCheckoutSessionView(APIView):
                     },
                 ],
                 mode="payment",
-                success_url="http://127.0.0.1:3000/",
-                cancel_url="http://127.0.0.1:3000/",
+                success_url="https://ev-charging-management-system.vercel.app/",
+                cancel_url="https://ev-charging-management-system.vercel.app/",
                 metadata={"reservation_id": reservation.id},
             )
             logger.info(f"Created Stripe Checkout Session: {session.url}")

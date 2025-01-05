@@ -109,3 +109,39 @@ class Reservation(models.Model):
         """Returns the duration of the reservation in minutes."""
         delta = self.end_time - self.start_time
         return delta.total_seconds() // 60
+
+
+class Payment(models.Model):
+    user = models.ForeignKey(
+        UserProfile,
+        on_delete=models.CASCADE,
+        related_name="payments",
+    )
+    reservation = models.OneToOneField(
+        Reservation,
+        on_delete=models.CASCADE,
+        related_name="payment",
+        verbose_name="Reservation",
+    )
+    amount = models.DecimalField(
+        max_digits=10,
+        decimal_places=2,
+        verbose_name="Amount Paid",
+    )
+    payment_date = models.DateTimeField(
+        auto_now_add=True,
+        verbose_name="Payment Date",
+    )
+    location = models.CharField(
+        max_length=255,
+        verbose_name="Charging Station Location",
+    )
+    start_time = models.DateTimeField(
+        verbose_name="Reservation Start Time",
+    )
+    end_time = models.DateTimeField(
+        verbose_name="Reservation End Time",
+    )
+
+    def __str__(self):
+        return f"Payment by {self.user} - {self.amount} GBP on {self.payment_date}"

@@ -41,6 +41,7 @@ from myapp.views.stripe_views import (
     CreateCheckoutSessionView,
     stripe_webhook,
 )
+from myapp.views.payment_views import UserPaymentsView
 
 urlpatterns = [
     path("signup/", CognitoSignupView.as_view(), name="signup"),
@@ -107,4 +108,5 @@ urlpatterns = [
         MostVisitedStationView.as_view(),
         name="most-visited-station",
     ),
+    path("payments/", UserPaymentsView.as_view(), name="user_payments"),
 ]

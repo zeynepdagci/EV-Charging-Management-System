@@ -170,8 +170,14 @@ export default function Dashboard() {
               <br />
               <strong>Power:</strong> {station.power_capacity} kW
               <br />
-              <strong>Status:</strong>{" "}
-              {availability[station.station_id] ? "Available" : "In Use"}
+              <strong>Status: </strong>
+              <span
+                style={{
+                  color: availability[station.station_id] ? "green" : "red",
+                }}
+              >
+                {availability[station.station_id] ? "Available" : "In Use"}
+              </span>
               <br />
               <ReserveButton
                 chargingStationId={station.station_id}
