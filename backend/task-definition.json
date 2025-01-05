@@ -1,20 +1,19 @@
 {
-  "taskDefinitionArn": "arn:aws:ecs:eu-north-1:762233758504:task-definition/backend-django-arm:1",
   "containerDefinitions": [
     {
-      "name": "backend-django-arm",
+      "name": "backend-django",
       "image": "762233758504.dkr.ecr.eu-north-1.amazonaws.com/docker-images:latest",
       "cpu": 0,
       "portMappings": [
         {
-          "name": "backend-django-arm-80-tcp",
+          "name": "backend-django-80-tcp",
           "containerPort": 80,
           "hostPort": 80,
           "protocol": "tcp",
           "appProtocol": "http"
         },
         {
-          "name": "backend-django-arm-8000-tcp",
+          "name": "backend-django-8000-tcp",
           "containerPort": 8000,
           "hostPort": 8000,
           "protocol": "tcp",
@@ -42,7 +41,7 @@
       "systemControls": []
     }
   ],
-  "family": "backend-django-arm",
+  "family": "backend-django",
   "executionRoleArn": "arn:aws:iam::762233758504:role/ecsTaskExecutionRole",
   "networkMode": "awsvpc",
   "revision": 1,
@@ -83,7 +82,7 @@
   "cpu": "1024",
   "memory": "3072",
   "runtimePlatform": {
-    "cpuArchitecture": "ARM64",
+    "cpuArchitecture": "X86_64",
     "operatingSystemFamily": "LINUX"
   },
   "registeredAt": "2025-01-04T01:18:18.815Z",
