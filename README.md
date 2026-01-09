@@ -1,5 +1,5 @@
 # EV-Charging-Management-System
-See the presentation document below for further information.
+See the presentation document for further information.
 [EV Charging Management System Presentation.pdf](https://github.com/user-attachments/files/24523878/EV.Charging.Management.System.Presentation.pdf)
 
 
