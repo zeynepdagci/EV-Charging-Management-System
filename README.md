@@ -1,4 +1,7 @@
 # EV-Charging-Management-System
+See the presentation document below for further information.
+[EV Charging Management System Presentation.pdf](https://github.com/user-attachments/files/24523878/EV.Charging.Management.System.Presentation.pdf)
+
 
 You can access the web application [here](https://ev-charging-management-system.vercel.app/).
 
@@ -42,5 +45,6 @@ A full-stack web application for managing Electric Vehicle (EV) charging station
 ---
 
 **Note:** This project is developed for educational and demonstration purposes. Do not reuse or submit this work for academic credit.
+
 
 
